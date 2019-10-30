@@ -5,7 +5,8 @@ Assignment : 1
 Date : November 6th 2019
 Professor : Gerry Hurdle
 **************************************/
-
+#define LEFT 1
+#define RIGHT 2
 struct Person {
 	int ID;
 	int Weight;
@@ -21,38 +22,46 @@ struct display_response {
 
 #define STATES 13;
 typedef enum {
-	START_STATE = 0,
-	LEFT_SCAN = 1,
-	RIGHT_SCAN = 2,
-	GLU_STATE = 3,
-	GRU_STATE = 4,
-	LO_STATE = 5,
-	RO_STATE = 6,
-	WEIGHT_STATE = 7,
-	LEFT_CLOSE_STATE = 8,
-	RIGHT_CLOSE_STATE = 9,
-	GL_LOCK_STATE = 10,
-	GR_LOCK_STATE = 11,
-	EXIT = 12
+	START = 0;
+	ENTER_UNLOCK = 1;
+	ENTER_OPEN = 2;
+	WEIGHT = 3;
+	ENTER_CLOSE = 4;
+	ENTER_LOCK = 5;
+	EXIT_UNLOCK = 6;
+	EXIT_OPEM = 7;
+	EXIT_CLOSE = 8;
+	EXIT_LOCK = 9;
 } States;
 
-#define NUM_INPUTS 12
-const char *entrance[NUM_INPUTS] = {
+#define NUM_INPUTS 10
+const char *left_side[NUM_INPUTS] = {
 	"ls",
-	"rs",
 	"glu",
+	"lo",
+	"ws",
+	"lc"
+	"gll",
 	"gru",
-	"lo"
+	"ro",
+	"rc",
+	"grl"
+};
+const char *right_side[NUM_INPUTS] = {
+	"rs",
+	"gru",
 	"ro",
 	"ws",
-	"lc",
 	"rc",
-	"gll",
 	"grl",
-	"exit"
-};
+	"glu",
+	"lo",
+	"lc",
+	"gll"
+}
 
-void(*STATE_HANDLER)(char*);
+
+
 
 void SCAN_FUNC(char* input);
 void UNLOCK_FUNC(char* input);
@@ -65,8 +74,5 @@ void EXIT_CLOSE_FUNC(char* input);
 void GUARD_EXIT_LOCK_FUNC(char* input);
 void EXIT_FUNC(char* input);
 
-STATE_HANDLER state_table[] = {
-*scan_func, *unlock_func, *open_func, *weight_func,
-*close_func, *guard_exit_unl_func, *guard_exit_open_func,
-*exit_close_func, *guard_exit_lock_func, *exit_func
-};
+void(*STATE_HANDLER[10])(char* input);
+

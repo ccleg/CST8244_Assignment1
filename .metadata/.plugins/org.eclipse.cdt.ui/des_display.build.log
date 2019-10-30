@@ -1,7 +1,74 @@
-13:30:57 **** Build of configuration x86_64-debug for project des_display ****
+17:44:38 **** Incremental Build of configuration x86_64-debug for project des_display ****
 make -j4 all 
 qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_display.d,-MT,build/x86_64-debug/src/des_display.o -o build/x86_64-debug/src/des_display.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_display.c
-qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_display   build/x86_64-debug/src/des_display.o  
+src/des_display.c: In function 'main':
+src/des_display.c:36:28: error: 'SCAN' undeclared (first use in this function)
+         if(person_state == SCAN){
+                            ^
+src/des_display.c:36:28: note: each undeclared identifier is reported only once for each function it appears in
+src/des_display.c:37:23: error: assignment to expression with array type
+          response.msg = "Enter the Person's ID:\n";
+                       ^
+src/des_display.c:40:23: error: assignment to expression with array type
+          response.msg = "Left door unlocked\n";
+                       ^
+src/des_display.c:42:33: error: 'GRU_STATE' undeclared (first use in this function)
+         else if(person_state == GRU_STATE){
+                                 ^
+src/des_display.c:43:23: error: assignment to expression with array type
+          response.msg = "Right door unlocked\n";
+                       ^
+src/des_display.c:45:33: error: 'LO_STATE' undeclared (first use in this function)
+         else if(person_state == LO_STATE){
+                                 ^
+src/des_display.c:46:23: error: assignment to expression with array type
+          response.msg = "Left door open\n";
+                       ^
+src/des_display.c:48:33: error: 'RO_STATE' undeclared (first use in this function)
+         else if(person_state == RO_STATE){
+                                 ^
+src/des_display.c:49:23: error: assignment to expression with array type
+          response.msg ="Right door open\n";
+                       ^
+src/des_display.c:51:33: error: 'WEIGHT_STATE' undeclared (first use in this function)
+         else if(person_state == WEIGHT_STATE){
+                                 ^
+src/des_display.c:52:23: error: assignment to expression with array type
+          response.msg ="Enter your weight:\n";
+                       ^
+src/des_display.c:54:33: error: 'LEFT_CLOSE_STATE' undeclared (first use in this function)
+         else if(person_state == LEFT_CLOSE_STATE){
+                                 ^
+src/des_display.c:55:23: error: assignment to expression with array type
+          response.msg ="Left door close\n";
+                       ^
+src/des_display.c:57:33: error: 'RIGHT_CLOSE_STATE' undeclared (first use in this function)
+         else if(person_state == RIGHT_CLOSE_STATE){
+                                 ^
+src/des_display.c:58:23: error: assignment to expression with array type
+          response.msg ="Right door close\n";
+                       ^
+src/des_display.c:60:33: error: 'GL_LOCK_STATE' undeclared (first use in this function)
+         else if(person_state == GL_LOCK_STATE){
+                                 ^
+src/des_display.c:61:23: error: assignment to expression with array type
+          response.msg ="Guard left locked\n";
+                       ^
+src/des_display.c:64:23: error: assignment to expression with array type
+          response.msg ="Guard right locked\n";
+                       ^
+src/des_display.c:66:33: error: 'EXIT' undeclared (first use in this function)
+         else if(person_state == EXIT){
+                                 ^
+src/des_display.c:67:23: error: assignment to expression with array type
+          response.msg = "Exiting.";
+                       ^
+src/des_display.c:70:28: error: assignment to expression with array type
+          response.errorMsg ="Invalid input.\n";
+                            ^
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_display.o' failed
+make: *** [build/x86_64-debug/src/des_display.o] Error 1
 
-13:30:59 Build Finished (took 2s.59ms)
+17:44:39 Build Finished (took 265ms)
 

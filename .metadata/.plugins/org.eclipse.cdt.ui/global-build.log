@@ -10,3 +10,1562 @@ qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_inputs   build/x86_64-debug/src/de
 make -j4 all 
 qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
 qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_controller   build/x86_64-debug/src/des_controller.o  
+16:39:07 **** Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+In file included from src/des_controller.c:8:0:
+src/ASS1.h:64:1: error: expected ',' or ';' before 'void'
+ void(*STATE_HANDLER)(char*);
+ ^
+src/ASS1.h:77:1: error: unknown type name 'STATE_HANDLER'
+ STATE_HANDLER state_table[] = {
+ ^
+src/ASS1.h:78:2: error: 'scan_func' undeclared here (not in a function)
+ *scan_func, *unlock_func, *open_func, *weight_func,
+  ^
+src/ASS1.h:78:14: error: 'unlock_func' undeclared here (not in a function)
+ *scan_func, *unlock_func, *open_func, *weight_func,
+              ^
+src/ASS1.h:78:28: error: 'open_func' undeclared here (not in a function)
+ *scan_func, *unlock_func, *open_func, *weight_func,
+                            ^
+src/ASS1.h:78:40: error: 'weight_func' undeclared here (not in a function)
+ *scan_func, *unlock_func, *open_func, *weight_func,
+                                        ^
+src/ASS1.h:79:2: error: 'close_func' undeclared here (not in a function)
+ *close_func, *guard_exit_unl_func, *guard_exit_open_func,
+  ^
+src/ASS1.h:79:15: error: 'guard_exit_unl_func' undeclared here (not in a function)
+ *close_func, *guard_exit_unl_func, *guard_exit_open_func,
+               ^
+src/ASS1.h:79:37: error: 'guard_exit_open_func' undeclared here (not in a function)
+ *close_func, *guard_exit_unl_func, *guard_exit_open_func,
+                                     ^
+src/ASS1.h:80:2: error: 'exit_close_func' undeclared here (not in a function)
+ *exit_close_func, *guard_exit_lock_func, *exit_func
+  ^
+src/ASS1.h:80:20: error: 'guard_exit_lock_func' undeclared here (not in a function)
+ *exit_close_func, *guard_exit_lock_func, *exit_func
+                    ^
+src/ASS1.h:80:43: error: 'exit_func' undeclared here (not in a function)
+ *exit_close_func, *guard_exit_lock_func, *exit_func
+                                           ^
+src/des_controller.c:10:5: warning: second argument of 'main' should be 'char **' [-Wmain]
+ int main(int argc, char* argv) {
+     ^
+src/des_controller.c: In function 'main':
+src/des_controller.c:17:27: warning: passing argument 1 of 'atoi' makes pointer from integer without a cast [-Wint-conversion]
+  pid_t display_pid = atoi(argv[1]);
+                           ^
+In file included from src/des_controller.c:2:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/stdlib.h:111:12: note: expected 'const char *' but argument is of type 'char'
+ extern int atoi(const char *__nptr);
+            ^
+src/des_controller.c:29:23: error: 'ND_LOCAL_NODE' undeclared (first use in this function)
+  coid = ConnectAttach(ND_LOCAL_NODE, input_pid, 1, _NTO_SIDE_CHANNEL, 0);
+                       ^
+src/des_controller.c:29:23: note: each undeclared identifier is reported only once for each function it appears in
+src/des_controller.c:29:38: error: 'input_pid' undeclared (first use in this function)
+  coid = ConnectAttach(ND_LOCAL_NODE, input_pid, 1, _NTO_SIDE_CHANNEL, 0);
+                                      ^
+src/des_controller.c:29:23: warning: passing argument 1 of 'ConnectAttach' makes integer from pointer without a cast [-Wint-conversion]
+  coid = ConnectAttach(ND_LOCAL_NODE, input_pid, 1, _NTO_SIDE_CHANNEL, 0);
+                       ^
+In file included from src/des_controller.c:6:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/sys/neutrino.h:721:12: note: expected '_Uint32t {aka unsigned int}' but argument is of type 'int *'
+ extern int ConnectAttach(_Uint32t __nd, pid_t __pid, int __chid, unsigned __index, int __flags);
+            ^
+src/des_controller.c:29:38: warning: passing argument 2 of 'ConnectAttach' makes integer from pointer without a cast [-Wint-conversion]
+  coid = ConnectAttach(ND_LOCAL_NODE, input_pid, 1, _NTO_SIDE_CHANNEL, 0);
+                                      ^
+In file included from src/des_controller.c:6:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/sys/neutrino.h:721:12: note: expected 'pid_t {aka int}' but argument is of type 'int *'
+ extern int ConnectAttach(_Uint32t __nd, pid_t __pid, int __chid, unsigned __index, int __flags);
+            ^
+src/des_controller.c:36:2: warning: implicit declaration of function 'setStartSide' [-Wimplicit-function-declaration]
+  setStartSide(input_msg);
+  ^
+src/des_controller.c:37:14: error: expected expression before 'States'
+  state_table[States];
+              ^
+src/des_controller.c:37:13: error: array subscript is not an integer
+  state_table[States];
+             ^
+src/des_controller.c:37:2: warning: statement with no effect [-Wunused-value]
+  state_table[States];
+  ^
+src/des_controller.c:22:6: warning: variable 'rcvid' set but not used [-Wunused-but-set-variable]
+  int rcvid;
+      ^
+src/des_controller.c:20:8: warning: unused variable 'display_msg' [-Wunused-variable]
+  char* display_msg;
+        ^
+src/des_controller.c:17:8: warning: unused variable 'display_pid' [-Wunused-variable]
+  pid_t display_pid = atoi(argv[1]);
+        ^
+src/des_controller.c: At top level:
+src/des_controller.c:52:6: warning: conflicting types for 'setStartSide'
+ void setStartSide(char* side){
+      ^
+src/des_controller.c:36:2: note: previous implicit declaration of 'setStartSide' was here
+  setStartSide(input_msg);
+  ^
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_controller.o' failed
+make: *** [build/x86_64-debug/src/des_controller.o] Error 1
+16:39:24 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+In file included from src/des_controller.c:8:0:
+src/ASS1.h:64:1: error: expected ',' or ';' before 'void'
+ void(*STATE_HANDLER)(char*);
+ ^
+src/ASS1.h:77:1: error: unknown type name 'STATE_HANDLER'
+ STATE_HANDLER state_table[] = {
+ ^
+src/ASS1.h:78:2: error: 'scan_func' undeclared here (not in a function)
+ *scan_func, *unlock_func, *open_func, *weight_func,
+  ^
+src/ASS1.h:78:14: error: 'unlock_func' undeclared here (not in a function)
+ *scan_func, *unlock_func, *open_func, *weight_func,
+              ^
+src/ASS1.h:78:28: error: 'open_func' undeclared here (not in a function)
+ *scan_func, *unlock_func, *open_func, *weight_func,
+                            ^
+src/ASS1.h:78:40: error: 'weight_func' undeclared here (not in a function)
+ *scan_func, *unlock_func, *open_func, *weight_func,
+                                        ^
+src/ASS1.h:79:2: error: 'close_func' undeclared here (not in a function)
+ *close_func, *guard_exit_unl_func, *guard_exit_open_func,
+  ^
+src/ASS1.h:79:15: error: 'guard_exit_unl_func' undeclared here (not in a function)
+ *close_func, *guard_exit_unl_func, *guard_exit_open_func,
+               ^
+src/ASS1.h:79:37: error: 'guard_exit_open_func' undeclared here (not in a function)
+ *close_func, *guard_exit_unl_func, *guard_exit_open_func,
+                                     ^
+src/ASS1.h:80:2: error: 'exit_close_func' undeclared here (not in a function)
+ *exit_close_func, *guard_exit_lock_func, *exit_func
+  ^
+src/ASS1.h:80:20: error: 'guard_exit_lock_func' undeclared here (not in a function)
+ *exit_close_func, *guard_exit_lock_func, *exit_func
+                    ^
+src/ASS1.h:80:43: error: 'exit_func' undeclared here (not in a function)
+ *exit_close_func, *guard_exit_lock_func, *exit_func
+                                           ^
+src/des_controller.c:10:5: warning: second argument of 'main' should be 'char **' [-Wmain]
+ int main(int argc, char* argv) {
+     ^
+src/des_controller.c: In function 'main':
+src/des_controller.c:17:27: warning: passing argument 1 of 'atoi' makes pointer from integer without a cast [-Wint-conversion]
+  pid_t display_pid = atoi(argv[1]);
+                           ^
+In file included from src/des_controller.c:2:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/stdlib.h:111:12: note: expected 'const char *' but argument is of type 'char'
+ extern int atoi(const char *__nptr);
+            ^
+src/des_controller.c:29:23: error: 'ND_LOCAL_NODE' undeclared (first use in this function)
+  coid = ConnectAttach(ND_LOCAL_NODE, input_pid, 1, _NTO_SIDE_CHANNEL, 0);
+                       ^
+src/des_controller.c:29:23: note: each undeclared identifier is reported only once for each function it appears in
+src/des_controller.c:29:38: error: 'input_pid' undeclared (first use in this function)
+  coid = ConnectAttach(ND_LOCAL_NODE, input_pid, 1, _NTO_SIDE_CHANNEL, 0);
+                                      ^
+src/des_controller.c:29:23: warning: passing argument 1 of 'ConnectAttach' makes integer from pointer without a cast [-Wint-conversion]
+  coid = ConnectAttach(ND_LOCAL_NODE, input_pid, 1, _NTO_SIDE_CHANNEL, 0);
+                       ^
+In file included from src/des_controller.c:6:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/sys/neutrino.h:721:12: note: expected '_Uint32t {aka unsigned int}' but argument is of type 'int *'
+ extern int ConnectAttach(_Uint32t __nd, pid_t __pid, int __chid, unsigned __index, int __flags);
+            ^
+src/des_controller.c:29:38: warning: passing argument 2 of 'ConnectAttach' makes integer from pointer without a cast [-Wint-conversion]
+  coid = ConnectAttach(ND_LOCAL_NODE, input_pid, 1, _NTO_SIDE_CHANNEL, 0);
+                                      ^
+In file included from src/des_controller.c:6:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/sys/neutrino.h:721:12: note: expected 'pid_t {aka int}' but argument is of type 'int *'
+ extern int ConnectAttach(_Uint32t __nd, pid_t __pid, int __chid, unsigned __index, int __flags);
+            ^
+src/des_controller.c:36:2: warning: implicit declaration of function 'setStartSide' [-Wimplicit-function-declaration]
+  setStartSide(input_msg);
+  ^
+src/des_controller.c:37:2: warning: statement with no effect [-Wunused-value]
+  state_table[3];
+  ^
+src/des_controller.c:22:6: warning: variable 'rcvid' set but not used [-Wunused-but-set-variable]
+  int rcvid;
+      ^
+src/des_controller.c:20:8: warning: unused variable 'display_msg' [-Wunused-variable]
+  char* display_msg;
+        ^
+src/des_controller.c:17:8: warning: unused variable 'display_pid' [-Wunused-variable]
+  pid_t display_pid = atoi(argv[1]);
+        ^
+src/des_controller.c: At top level:
+src/des_controller.c:52:6: warning: conflicting types for 'setStartSide'
+ void setStartSide(char* side){
+      ^
+src/des_controller.c:36:2: note: previous implicit declaration of 'setStartSide' was here
+  setStartSide(input_msg);
+  ^
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_controller.o' failed
+make: *** [build/x86_64-debug/src/des_controller.o] Error 1
+16:44:52 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+In file included from src/des_controller.c:8:0:
+src/ASS1.h:64:1: error: expected ',' or ';' before 'typedef'
+ typedef Des_Token(*STATE_HANDLER)(char* input);
+ ^
+src/ASS1.h:66:1: error: unknown type name 'Des_Token'
+ Des_Token SCAN_FUNC(char* input);
+ ^
+src/ASS1.h:67:1: error: unknown type name 'Des_Token'
+ Des_Token UNLOCK_FUNC(char* input);
+ ^
+src/ASS1.h:68:1: error: unknown type name 'Des_Token'
+ Des_Token OPEN_FUNC(char* input);
+ ^
+src/ASS1.h:69:1: error: unknown type name 'Des_Token'
+ Des_Token WEIGHT_FUNC(char* input);
+ ^
+src/ASS1.h:70:1: error: unknown type name 'Des_Token'
+ Des_Token CLOSE_FUNC(char* input);
+ ^
+src/ASS1.h:71:1: error: unknown type name 'Des_Token'
+ Des_Token GUARD_EXIT_UNL_FUNC(char* input);
+ ^
+src/ASS1.h:72:1: error: unknown type name 'Des_Token'
+ Des_Token GUARD_EXIT_OPEN_FUNC(char* input);
+ ^
+src/ASS1.h:73:1: error: unknown type name 'Des_Token'
+ Des_Token EXIT_CLOSE_FUNC(char* input);
+ ^
+src/ASS1.h:74:1: error: unknown type name 'Des_Token'
+ Des_Token GUARD_EXIT_LOCK_FUNC(char* input);
+ ^
+src/ASS1.h:75:1: error: unknown type name 'Des_Token'
+ Des_Token EXIT_FUNC(char* input);
+ ^
+src/ASS1.h:77:1: error: unknown type name 'STATE_HANDLER'
+ STATE_HANDLER state_table[] = {
+ ^
+src/ASS1.h:78:2: error: 'scan_func' undeclared here (not in a function)
+ *scan_func, *unlock_func, *open_func, *weight_func,
+  ^
+src/ASS1.h:78:14: error: 'unlock_func' undeclared here (not in a function)
+ *scan_func, *unlock_func, *open_func, *weight_func,
+              ^
+src/ASS1.h:78:28: error: 'open_func' undeclared here (not in a function)
+ *scan_func, *unlock_func, *open_func, *weight_func,
+                            ^
+src/ASS1.h:78:40: error: 'weight_func' undeclared here (not in a function)
+ *scan_func, *unlock_func, *open_func, *weight_func,
+                                        ^
+src/ASS1.h:79:2: error: 'close_func' undeclared here (not in a function)
+ *close_func, *guard_exit_unl_func, *guard_exit_open_func,
+  ^
+src/ASS1.h:79:15: error: 'guard_exit_unl_func' undeclared here (not in a function)
+ *close_func, *guard_exit_unl_func, *guard_exit_open_func,
+               ^
+src/ASS1.h:79:37: error: 'guard_exit_open_func' undeclared here (not in a function)
+ *close_func, *guard_exit_unl_func, *guard_exit_open_func,
+                                     ^
+src/ASS1.h:80:2: error: 'exit_close_func' undeclared here (not in a function)
+ *exit_close_func, *guard_exit_lock_func, *exit_func
+  ^
+src/ASS1.h:80:20: error: 'guard_exit_lock_func' undeclared here (not in a function)
+ *exit_close_func, *guard_exit_lock_func, *exit_func
+                    ^
+src/ASS1.h:80:43: error: 'exit_func' undeclared here (not in a function)
+ *exit_close_func, *guard_exit_lock_func, *exit_func
+                                           ^
+src/des_controller.c:10:1: error: unknown type name 'Des_Token'
+ Des_Token t = {0};
+ ^
+src/des_controller.c:11:5: warning: second argument of 'main' should be 'char **' [-Wmain]
+ int main(int argc, char* argv) {
+     ^
+src/des_controller.c: In function 'main':
+src/des_controller.c:18:27: warning: passing argument 1 of 'atoi' makes pointer from integer without a cast [-Wint-conversion]
+  pid_t display_pid = atoi(argv[1]);
+                           ^
+In file included from src/des_controller.c:2:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/stdlib.h:111:12: note: expected 'const char *' but argument is of type 'char'
+ extern int atoi(const char *__nptr);
+            ^
+src/des_controller.c:30:23: error: 'ND_LOCAL_NODE' undeclared (first use in this function)
+  coid = ConnectAttach(ND_LOCAL_NODE, display_pid, 1, _NTO_SIDE_CHANNEL, 0);
+                       ^
+src/des_controller.c:30:23: note: each undeclared identifier is reported only once for each function it appears in
+src/des_controller.c:30:23: warning: passing argument 1 of 'ConnectAttach' makes integer from pointer without a cast [-Wint-conversion]
+In file included from src/des_controller.c:6:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/sys/neutrino.h:721:12: note: expected '_Uint32t {aka unsigned int}' but argument is of type 'int *'
+ extern int ConnectAttach(_Uint32t __nd, pid_t __pid, int __chid, unsigned __index, int __flags);
+            ^
+src/des_controller.c:37:2: warning: implicit declaration of function 'setStartSide' [-Wimplicit-function-declaration]
+  setStartSide(input_msg);
+  ^
+src/des_controller.c:38:2: warning: statement with no effect [-Wunused-value]
+  state_table[3];
+  ^
+src/des_controller.c:23:6: warning: variable 'rcvid' set but not used [-Wunused-but-set-variable]
+  int rcvid;
+      ^
+src/des_controller.c:21:8: warning: unused variable 'display_msg' [-Wunused-variable]
+  char* display_msg;
+        ^
+src/des_controller.c: At top level:
+src/des_controller.c:53:6: warning: conflicting types for 'setStartSide'
+ void setStartSide(char* side){
+      ^
+src/des_controller.c:37:2: note: previous implicit declaration of 'setStartSide' was here
+  setStartSide(input_msg);
+  ^
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_controller.o' failed
+make: *** [build/x86_64-debug/src/des_controller.o] Error 1
+16:47:29 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+In file included from src/des_controller.c:10:0:
+src/ASS1.h:64:1: error: expected ',' or ';' before 'typedef'
+ typedef Des_Token(*STATE_HANDLER)(char* input);
+ ^
+src/ASS1.h:66:1: error: unknown type name 'Des_Token'
+ Des_Token SCAN_FUNC(char* input);
+ ^
+src/ASS1.h:67:1: error: unknown type name 'Des_Token'
+ Des_Token UNLOCK_FUNC(char* input);
+ ^
+src/ASS1.h:68:1: error: unknown type name 'Des_Token'
+ Des_Token OPEN_FUNC(char* input);
+ ^
+src/ASS1.h:69:1: error: unknown type name 'Des_Token'
+ Des_Token WEIGHT_FUNC(char* input);
+ ^
+src/ASS1.h:70:1: error: unknown type name 'Des_Token'
+ Des_Token CLOSE_FUNC(char* input);
+ ^
+src/ASS1.h:71:1: error: unknown type name 'Des_Token'
+ Des_Token GUARD_EXIT_UNL_FUNC(char* input);
+ ^
+src/ASS1.h:72:1: error: unknown type name 'Des_Token'
+ Des_Token GUARD_EXIT_OPEN_FUNC(char* input);
+ ^
+src/ASS1.h:73:1: error: unknown type name 'Des_Token'
+ Des_Token EXIT_CLOSE_FUNC(char* input);
+ ^
+src/ASS1.h:74:1: error: unknown type name 'Des_Token'
+ Des_Token GUARD_EXIT_LOCK_FUNC(char* input);
+ ^
+src/ASS1.h:75:1: error: unknown type name 'Des_Token'
+ Des_Token EXIT_FUNC(char* input);
+ ^
+src/ASS1.h:77:1: error: unknown type name 'STATE_HANDLER'
+ STATE_HANDLER state_table[] = {
+ ^
+src/ASS1.h:78:2: error: 'scan_func' undeclared here (not in a function)
+ *scan_func, *unlock_func, *open_func, *weight_func,
+  ^
+src/ASS1.h:78:14: error: 'unlock_func' undeclared here (not in a function)
+ *scan_func, *unlock_func, *open_func, *weight_func,
+              ^
+src/ASS1.h:78:28: error: 'open_func' undeclared here (not in a function)
+ *scan_func, *unlock_func, *open_func, *weight_func,
+                            ^
+src/ASS1.h:78:40: error: 'weight_func' undeclared here (not in a function)
+ *scan_func, *unlock_func, *open_func, *weight_func,
+                                        ^
+src/ASS1.h:79:2: error: 'close_func' undeclared here (not in a function)
+ *close_func, *guard_exit_unl_func, *guard_exit_open_func,
+  ^
+src/ASS1.h:79:15: error: 'guard_exit_unl_func' undeclared here (not in a function)
+ *close_func, *guard_exit_unl_func, *guard_exit_open_func,
+               ^
+src/ASS1.h:79:37: error: 'guard_exit_open_func' undeclared here (not in a function)
+ *close_func, *guard_exit_unl_func, *guard_exit_open_func,
+                                     ^
+src/ASS1.h:80:2: error: 'exit_close_func' undeclared here (not in a function)
+ *exit_close_func, *guard_exit_lock_func, *exit_func
+  ^
+src/ASS1.h:80:20: error: 'guard_exit_lock_func' undeclared here (not in a function)
+ *exit_close_func, *guard_exit_lock_func, *exit_func
+                    ^
+src/ASS1.h:80:43: error: 'exit_func' undeclared here (not in a function)
+ *exit_close_func, *guard_exit_lock_func, *exit_func
+                                           ^
+src/des_controller.c:12:1: error: unknown type name 'Des_Token'
+ Des_Token t;
+ ^
+src/des_controller.c:13:5: warning: second argument of 'main' should be 'char **' [-Wmain]
+ int main(int argc, char* argv) {
+     ^
+src/des_controller.c: In function 'main':
+src/des_controller.c:20:27: warning: passing argument 1 of 'atoi' makes pointer from integer without a cast [-Wint-conversion]
+  pid_t display_pid = atoi(argv[1]);
+                           ^
+In file included from src/des_controller.c:2:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/stdlib.h:111:12: note: expected 'const char *' but argument is of type 'char'
+ extern int atoi(const char *__nptr);
+            ^
+src/des_controller.c:32:23: error: 'ND_LOCAL_NODE' undeclared (first use in this function)
+  coid = ConnectAttach(ND_LOCAL_NODE, display_pid, 1, _NTO_SIDE_CHANNEL, 0);
+                       ^
+src/des_controller.c:32:23: note: each undeclared identifier is reported only once for each function it appears in
+src/des_controller.c:32:23: warning: passing argument 1 of 'ConnectAttach' makes integer from pointer without a cast [-Wint-conversion]
+In file included from src/des_controller.c:6:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/sys/neutrino.h:721:12: note: expected '_Uint32t {aka unsigned int}' but argument is of type 'int *'
+ extern int ConnectAttach(_Uint32t __nd, pid_t __pid, int __chid, unsigned __index, int __flags);
+            ^
+src/des_controller.c:39:2: warning: implicit declaration of function 'setStartSide' [-Wimplicit-function-declaration]
+  setStartSide(input_msg);
+  ^
+src/des_controller.c:40:2: warning: statement with no effect [-Wunused-value]
+  state_table[3];
+  ^
+src/des_controller.c:25:6: warning: variable 'rcvid' set but not used [-Wunused-but-set-variable]
+  int rcvid;
+      ^
+src/des_controller.c:23:8: warning: unused variable 'display_msg' [-Wunused-variable]
+  char* display_msg;
+        ^
+src/des_controller.c: At top level:
+src/des_controller.c:55:6: warning: conflicting types for 'setStartSide'
+ void setStartSide(char* side){
+      ^
+src/des_controller.c:39:2: note: previous implicit declaration of 'setStartSide' was here
+  setStartSide(input_msg);
+  ^
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_controller.o' failed
+make: *** [build/x86_64-debug/src/des_controller.o] Error 1
+16:48:04 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+In file included from src/des_controller.c:11:0:
+src/ASS1.h:64:1: error: expected ',' or ';' before 'typedef'
+ typedef Des_Token(*STATE_HANDLER)(char* input);
+ ^
+src/ASS1.h:66:1: error: unknown type name 'Des_Token'
+ Des_Token SCAN_FUNC(char* input);
+ ^
+src/ASS1.h:67:1: error: unknown type name 'Des_Token'
+ Des_Token UNLOCK_FUNC(char* input);
+ ^
+src/ASS1.h:68:1: error: unknown type name 'Des_Token'
+ Des_Token OPEN_FUNC(char* input);
+ ^
+src/ASS1.h:69:1: error: unknown type name 'Des_Token'
+ Des_Token WEIGHT_FUNC(char* input);
+ ^
+src/ASS1.h:70:1: error: unknown type name 'Des_Token'
+ Des_Token CLOSE_FUNC(char* input);
+ ^
+src/ASS1.h:71:1: error: unknown type name 'Des_Token'
+ Des_Token GUARD_EXIT_UNL_FUNC(char* input);
+ ^
+src/ASS1.h:72:1: error: unknown type name 'Des_Token'
+ Des_Token GUARD_EXIT_OPEN_FUNC(char* input);
+ ^
+src/ASS1.h:73:1: error: unknown type name 'Des_Token'
+ Des_Token EXIT_CLOSE_FUNC(char* input);
+ ^
+src/ASS1.h:74:1: error: unknown type name 'Des_Token'
+ Des_Token GUARD_EXIT_LOCK_FUNC(char* input);
+ ^
+src/ASS1.h:75:1: error: unknown type name 'Des_Token'
+ Des_Token EXIT_FUNC(char* input);
+ ^
+src/ASS1.h:77:1: error: unknown type name 'STATE_HANDLER'
+ STATE_HANDLER state_table[] = {
+ ^
+src/ASS1.h:78:2: error: 'scan_func' undeclared here (not in a function)
+ *scan_func, *unlock_func, *open_func, *weight_func,
+  ^
+src/ASS1.h:78:14: error: 'unlock_func' undeclared here (not in a function)
+ *scan_func, *unlock_func, *open_func, *weight_func,
+              ^
+src/ASS1.h:78:28: error: 'open_func' undeclared here (not in a function)
+ *scan_func, *unlock_func, *open_func, *weight_func,
+                            ^
+src/ASS1.h:78:40: error: 'weight_func' undeclared here (not in a function)
+ *scan_func, *unlock_func, *open_func, *weight_func,
+                                        ^
+src/ASS1.h:79:2: error: 'close_func' undeclared here (not in a function)
+ *close_func, *guard_exit_unl_func, *guard_exit_open_func,
+  ^
+src/ASS1.h:79:15: error: 'guard_exit_unl_func' undeclared here (not in a function)
+ *close_func, *guard_exit_unl_func, *guard_exit_open_func,
+               ^
+src/ASS1.h:79:37: error: 'guard_exit_open_func' undeclared here (not in a function)
+ *close_func, *guard_exit_unl_func, *guard_exit_open_func,
+                                     ^
+src/ASS1.h:80:2: error: 'exit_close_func' undeclared here (not in a function)
+ *exit_close_func, *guard_exit_lock_func, *exit_func
+  ^
+src/ASS1.h:80:20: error: 'guard_exit_lock_func' undeclared here (not in a function)
+ *exit_close_func, *guard_exit_lock_func, *exit_func
+                    ^
+src/ASS1.h:80:43: error: 'exit_func' undeclared here (not in a function)
+ *exit_close_func, *guard_exit_lock_func, *exit_func
+                                           ^
+src/des_controller.c:13:1: error: unknown type name 'Des_Token'
+ Des_Token t;
+ ^
+src/des_controller.c:14:5: warning: second argument of 'main' should be 'char **' [-Wmain]
+ int main(int argc, char* argv) {
+     ^
+src/des_controller.c: In function 'main':
+src/des_controller.c:21:27: warning: passing argument 1 of 'atoi' makes pointer from integer without a cast [-Wint-conversion]
+  pid_t display_pid = atoi(argv[1]);
+                           ^
+In file included from src/des_controller.c:2:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/stdlib.h:111:12: note: expected 'const char *' but argument is of type 'char'
+ extern int atoi(const char *__nptr);
+            ^
+src/des_controller.c:40:2: warning: implicit declaration of function 'setStartSide' [-Wimplicit-function-declaration]
+  setStartSide(input_msg);
+  ^
+src/des_controller.c:41:2: warning: statement with no effect [-Wunused-value]
+  state_table[3];
+  ^
+src/des_controller.c:26:6: warning: variable 'rcvid' set but not used [-Wunused-but-set-variable]
+  int rcvid;
+      ^
+src/des_controller.c:24:8: warning: unused variable 'display_msg' [-Wunused-variable]
+  char* display_msg;
+        ^
+src/des_controller.c: At top level:
+src/des_controller.c:56:6: warning: conflicting types for 'setStartSide'
+ void setStartSide(char* side){
+      ^
+src/des_controller.c:40:2: note: previous implicit declaration of 'setStartSide' was here
+  setStartSide(input_msg);
+  ^
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_controller.o' failed
+make: *** [build/x86_64-debug/src/des_controller.o] Error 1
+16:48:46 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+In file included from src/des_controller.c:11:0:
+src/ASS1.h:64:1: error: expected ',' or ';' before 'typedef'
+ typedef Des_Token(*STATE_HANDLER)(char* input);
+ ^
+src/ASS1.h:66:1: error: unknown type name 'Des_Token'
+ Des_Token SCAN_FUNC(char* input);
+ ^
+src/ASS1.h:67:1: error: unknown type name 'Des_Token'
+ Des_Token UNLOCK_FUNC(char* input);
+ ^
+src/ASS1.h:68:1: error: unknown type name 'Des_Token'
+ Des_Token OPEN_FUNC(char* input);
+ ^
+src/ASS1.h:69:1: error: unknown type name 'Des_Token'
+ Des_Token WEIGHT_FUNC(char* input);
+ ^
+src/ASS1.h:70:1: error: unknown type name 'Des_Token'
+ Des_Token CLOSE_FUNC(char* input);
+ ^
+src/ASS1.h:71:1: error: unknown type name 'Des_Token'
+ Des_Token GUARD_EXIT_UNL_FUNC(char* input);
+ ^
+src/ASS1.h:72:1: error: unknown type name 'Des_Token'
+ Des_Token GUARD_EXIT_OPEN_FUNC(char* input);
+ ^
+src/ASS1.h:73:1: error: unknown type name 'Des_Token'
+ Des_Token EXIT_CLOSE_FUNC(char* input);
+ ^
+src/ASS1.h:74:1: error: unknown type name 'Des_Token'
+ Des_Token GUARD_EXIT_LOCK_FUNC(char* input);
+ ^
+src/ASS1.h:75:1: error: unknown type name 'Des_Token'
+ Des_Token EXIT_FUNC(char* input);
+ ^
+src/ASS1.h:77:1: error: unknown type name 'STATE_HANDLER'
+ STATE_HANDLER state_table[] = {
+ ^
+src/ASS1.h:78:2: error: 'scan_func' undeclared here (not in a function)
+ *scan_func, *unlock_func, *open_func, *weight_func,
+  ^
+src/ASS1.h:78:14: error: 'unlock_func' undeclared here (not in a function)
+ *scan_func, *unlock_func, *open_func, *weight_func,
+              ^
+src/ASS1.h:78:28: error: 'open_func' undeclared here (not in a function)
+ *scan_func, *unlock_func, *open_func, *weight_func,
+                            ^
+src/ASS1.h:78:40: error: 'weight_func' undeclared here (not in a function)
+ *scan_func, *unlock_func, *open_func, *weight_func,
+                                        ^
+src/ASS1.h:79:2: error: 'close_func' undeclared here (not in a function)
+ *close_func, *guard_exit_unl_func, *guard_exit_open_func,
+  ^
+src/ASS1.h:79:15: error: 'guard_exit_unl_func' undeclared here (not in a function)
+ *close_func, *guard_exit_unl_func, *guard_exit_open_func,
+               ^
+src/ASS1.h:79:37: error: 'guard_exit_open_func' undeclared here (not in a function)
+ *close_func, *guard_exit_unl_func, *guard_exit_open_func,
+                                     ^
+src/ASS1.h:80:2: error: 'exit_close_func' undeclared here (not in a function)
+ *exit_close_func, *guard_exit_lock_func, *exit_func
+  ^
+src/ASS1.h:80:20: error: 'guard_exit_lock_func' undeclared here (not in a function)
+ *exit_close_func, *guard_exit_lock_func, *exit_func
+                    ^
+src/ASS1.h:80:43: error: 'exit_func' undeclared here (not in a function)
+ *exit_close_func, *guard_exit_lock_func, *exit_func
+                                           ^
+src/des_controller.c:14:5: warning: second argument of 'main' should be 'char **' [-Wmain]
+ int main(int argc, char* argv) {
+     ^
+src/des_controller.c: In function 'main':
+src/des_controller.c:21:27: warning: passing argument 1 of 'atoi' makes pointer from integer without a cast [-Wint-conversion]
+  pid_t display_pid = atoi(argv[1]);
+                           ^
+In file included from src/des_controller.c:2:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/stdlib.h:111:12: note: expected 'const char *' but argument is of type 'char'
+ extern int atoi(const char *__nptr);
+            ^
+src/des_controller.c:41:2: warning: statement with no effect [-Wunused-value]
+  state_table[3];
+  ^
+src/des_controller.c:26:6: warning: variable 'rcvid' set but not used [-Wunused-but-set-variable]
+  int rcvid;
+      ^
+src/des_controller.c:24:8: warning: unused variable 'display_msg' [-Wunused-variable]
+  char* display_msg;
+        ^
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_controller.o' failed
+make: *** [build/x86_64-debug/src/des_controller.o] Error 1
+17:00:22 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+In file included from src/des_controller.c:11:0:
+src/ASS1.h:65:1: error: expected ',' or ';' before 'void'
+ void SCAN_FUNC(char* input);
+ ^
+src/des_controller.c:14:5: warning: second argument of 'main' should be 'char **' [-Wmain]
+ int main(int argc, char* argv) {
+     ^
+src/des_controller.c: In function 'main':
+src/des_controller.c:21:27: warning: passing argument 1 of 'atoi' makes pointer from integer without a cast [-Wint-conversion]
+  pid_t display_pid = atoi(argv[1]);
+                           ^
+In file included from src/des_controller.c:2:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/stdlib.h:111:12: note: expected 'const char *' but argument is of type 'char'
+ extern int atoi(const char *__nptr);
+            ^
+src/des_controller.c:26:6: warning: variable 'rcvid' set but not used [-Wunused-but-set-variable]
+  int rcvid;
+      ^
+src/des_controller.c:24:8: warning: unused variable 'display_msg' [-Wunused-variable]
+  char* display_msg;
+        ^
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_controller.o' failed
+make: *** [build/x86_64-debug/src/des_controller.o] Error 1
+17:01:17 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+src/des_controller.c:14:5: warning: second argument of 'main' should be 'char **' [-Wmain]
+ int main(int argc, char* argv) {
+     ^
+src/des_controller.c: In function 'main':
+src/des_controller.c:21:27: warning: passing argument 1 of 'atoi' makes pointer from integer without a cast [-Wint-conversion]
+  pid_t display_pid = atoi(argv[1]);
+                           ^
+In file included from src/des_controller.c:2:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/stdlib.h:111:12: note: expected 'const char *' but argument is of type 'char'
+ extern int atoi(const char *__nptr);
+            ^
+src/des_controller.c:26:6: warning: variable 'rcvid' set but not used [-Wunused-but-set-variable]
+  int rcvid;
+      ^
+src/des_controller.c:24:8: warning: unused variable 'display_msg' [-Wunused-variable]
+  char* display_msg;
+        ^
+src/des_controller.c:39:8: warning: 'input_msg' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  rcvid = MsgReceive(chid, input_msg, sizeof(input_msg), NULL);
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_controller   build/x86_64-debug/src/des_controller.o  
+17:02:40 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+src/des_controller.c:14:5: warning: second argument of 'main' should be 'char **' [-Wmain]
+ int main(int argc, char* argv) {
+     ^
+src/des_controller.c: In function 'main':
+src/des_controller.c:21:27: warning: passing argument 1 of 'atoi' makes pointer from integer without a cast [-Wint-conversion]
+  pid_t display_pid = atoi(argv[1]);
+                           ^
+In file included from src/des_controller.c:2:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/stdlib.h:111:12: note: expected 'const char *' but argument is of type 'char'
+ extern int atoi(const char *__nptr);
+            ^
+src/des_controller.c:26:6: warning: variable 'rcvid' set but not used [-Wunused-but-set-variable]
+  int rcvid;
+      ^
+src/des_controller.c:24:8: warning: unused variable 'display_msg' [-Wunused-variable]
+  char* display_msg;
+        ^
+src/des_controller.c: In function 'SCAN_FUNC':
+src/des_controller.c:65:8: error: 'Person_T {aka struct Person}' has no member named 'state'
+  person.state = States++;
+        ^
+src/des_controller.c:65:17: error: expected expression before 'States'
+  person.state = States++;
+                 ^
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_controller.o' failed
+make: *** [build/x86_64-debug/src/des_controller.o] Error 1
+17:03:04 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+src/des_controller.c:14:5: warning: second argument of 'main' should be 'char **' [-Wmain]
+ int main(int argc, char* argv) {
+     ^
+src/des_controller.c: In function 'main':
+src/des_controller.c:21:27: warning: passing argument 1 of 'atoi' makes pointer from integer without a cast [-Wint-conversion]
+  pid_t display_pid = atoi(argv[1]);
+                           ^
+In file included from src/des_controller.c:2:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/stdlib.h:111:12: note: expected 'const char *' but argument is of type 'char'
+ extern int atoi(const char *__nptr);
+            ^
+src/des_controller.c:26:6: warning: variable 'rcvid' set but not used [-Wunused-but-set-variable]
+  int rcvid;
+      ^
+src/des_controller.c:24:8: warning: unused variable 'display_msg' [-Wunused-variable]
+  char* display_msg;
+        ^
+src/des_controller.c: In function 'SCAN_FUNC':
+src/des_controller.c:65:24: error: expected expression before 'States'
+  person.currentState = States++;
+                        ^
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_controller.o' failed
+make: *** [build/x86_64-debug/src/des_controller.o] Error 1
+17:03:27 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+src/des_controller.c:14:5: warning: second argument of 'main' should be 'char **' [-Wmain]
+ int main(int argc, char* argv) {
+     ^
+src/des_controller.c: In function 'main':
+src/des_controller.c:21:27: warning: passing argument 1 of 'atoi' makes pointer from integer without a cast [-Wint-conversion]
+  pid_t display_pid = atoi(argv[1]);
+                           ^
+In file included from src/des_controller.c:2:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/stdlib.h:111:12: note: expected 'const char *' but argument is of type 'char'
+ extern int atoi(const char *__nptr);
+            ^
+src/des_controller.c:26:6: warning: variable 'rcvid' set but not used [-Wunused-but-set-variable]
+  int rcvid;
+      ^
+src/des_controller.c:24:8: warning: unused variable 'display_msg' [-Wunused-variable]
+  char* display_msg;
+        ^
+src/des_controller.c:39:8: warning: 'input_msg' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  rcvid = MsgReceive(chid, input_msg, sizeof(input_msg), NULL);
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_controller   build/x86_64-debug/src/des_controller.o  
+17:14:53 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+In file included from src/des_controller.c:11:0:
+src/ASS1.h:62:23: error: 'NUM_ERRORS' undeclared here (not in a function)
+ const char *error_msg[NUM_ERRORS] = {
+                       ^
+src/des_controller.c:14:5: warning: second argument of 'main' should be 'char **' [-Wmain]
+ int main(int argc, char* argv) {
+     ^
+src/des_controller.c: In function 'main':
+src/des_controller.c:21:27: warning: passing argument 1 of 'atoi' makes pointer from integer without a cast [-Wint-conversion]
+  pid_t display_pid = atoi(argv[1]);
+                           ^
+In file included from src/des_controller.c:2:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/stdlib.h:111:12: note: expected 'const char *' but argument is of type 'char'
+ extern int atoi(const char *__nptr);
+            ^
+src/des_controller.c:40:27: error: 'input_msg' undeclared (first use in this function)
+  rcvid = MsgReceive(chid, input_msg, sizeof(input_msg), NULL);
+                           ^
+src/des_controller.c:40:27: note: each undeclared identifier is reported only once for each function it appears in
+src/des_controller.c:24:8: warning: unused variable 'display_msg' [-Wunused-variable]
+  char* display_msg;
+        ^
+src/des_controller.c:23:6: warning: variable 'error' set but not used [-Wunused-but-set-variable]
+  int error;
+      ^
+src/des_controller.c: At top level:
+src/des_controller.c:59:5: error: conflicting types for 'setStartSide'
+ int setStartSide(char* side){
+     ^
+src/des_controller.c:12:6: note: previous declaration of 'setStartSide' was here
+ void setStartSide(char* side);
+      ^
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_controller.o' failed
+make: *** [build/x86_64-debug/src/des_controller.o] Error 1
+17:15:16 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+In file included from src/des_controller.c:11:0:
+src/ASS1.h:62:23: error: 'NUM_ERRORS' undeclared here (not in a function)
+ const char *error_msg[NUM_ERRORS] = {
+                       ^
+src/des_controller.c:14:5: warning: second argument of 'main' should be 'char **' [-Wmain]
+ int main(int argc, char* argv) {
+     ^
+src/des_controller.c: In function 'main':
+src/des_controller.c:21:27: warning: passing argument 1 of 'atoi' makes pointer from integer without a cast [-Wint-conversion]
+  pid_t display_pid = atoi(argv[1]);
+                           ^
+In file included from src/des_controller.c:2:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/stdlib.h:111:12: note: expected 'const char *' but argument is of type 'char'
+ extern int atoi(const char *__nptr);
+            ^
+src/des_controller.c:42:13: error: void value not ignored as it ought to be
+  int side = setStartSide(input_msg);
+             ^
+src/des_controller.c:25:8: warning: unused variable 'display_msg' [-Wunused-variable]
+  char* display_msg;
+        ^
+src/des_controller.c:23:6: warning: variable 'error' set but not used [-Wunused-but-set-variable]
+  int error;
+      ^
+src/des_controller.c: At top level:
+src/des_controller.c:60:5: error: conflicting types for 'setStartSide'
+ int setStartSide(char* side){
+     ^
+src/des_controller.c:12:6: note: previous declaration of 'setStartSide' was here
+ void setStartSide(char* side);
+      ^
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_controller.o' failed
+make: *** [build/x86_64-debug/src/des_controller.o] Error 1
+17:15:40 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+src/des_controller.c:14:5: warning: second argument of 'main' should be 'char **' [-Wmain]
+ int main(int argc, char* argv) {
+     ^
+src/des_controller.c: In function 'main':
+src/des_controller.c:21:27: warning: passing argument 1 of 'atoi' makes pointer from integer without a cast [-Wint-conversion]
+  pid_t display_pid = atoi(argv[1]);
+                           ^
+In file included from src/des_controller.c:2:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/stdlib.h:111:12: note: expected 'const char *' but argument is of type 'char'
+ extern int atoi(const char *__nptr);
+            ^
+src/des_controller.c:42:13: error: void value not ignored as it ought to be
+  int side = setStartSide(input_msg);
+             ^
+src/des_controller.c:25:8: warning: unused variable 'display_msg' [-Wunused-variable]
+  char* display_msg;
+        ^
+src/des_controller.c: At top level:
+src/des_controller.c:60:5: error: conflicting types for 'setStartSide'
+ int setStartSide(char* side){
+     ^
+src/des_controller.c:12:6: note: previous declaration of 'setStartSide' was here
+ void setStartSide(char* side);
+      ^
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_controller.o' failed
+make: *** [build/x86_64-debug/src/des_controller.o] Error 1
+17:15:56 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+src/des_controller.c:14:5: warning: second argument of 'main' should be 'char **' [-Wmain]
+ int main(int argc, char* argv) {
+     ^
+src/des_controller.c: In function 'main':
+src/des_controller.c:21:27: warning: passing argument 1 of 'atoi' makes pointer from integer without a cast [-Wint-conversion]
+  pid_t display_pid = atoi(argv[1]);
+                           ^
+In file included from src/des_controller.c:2:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/stdlib.h:111:12: note: expected 'const char *' but argument is of type 'char'
+ extern int atoi(const char *__nptr);
+            ^
+src/des_controller.c:25:8: warning: unused variable 'display_msg' [-Wunused-variable]
+  char* display_msg;
+        ^
+src/des_controller.c:41:8: warning: 'input_msg' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  rcvid = MsgReceive(chid, input_msg, sizeof(input_msg), NULL);
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_controller   build/x86_64-debug/src/des_controller.o  
+17:33:31 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+src/des_controller.c:14:5: warning: second argument of 'main' should be 'char **' [-Wmain]
+ int main(int argc, char* argv) {
+     ^
+src/des_controller.c: In function 'main':
+src/des_controller.c:21:27: warning: passing argument 1 of 'atoi' makes pointer from integer without a cast [-Wint-conversion]
+  pid_t display_pid = atoi(argv[1]);
+                           ^
+In file included from src/des_controller.c:2:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/stdlib.h:111:12: note: expected 'const char *' but argument is of type 'char'
+ extern int atoi(const char *__nptr);
+            ^
+src/des_controller.c:25:8: warning: unused variable 'display_msg' [-Wunused-variable]
+  char* display_msg;
+        ^
+src/des_controller.c: In function 'setStartSide':
+src/des_controller.c:73:11: error: 'rcvid' undeclared (first use in this function)
+  MsgReply(rcvid, EOK, reply_msg[0] , sizeof(reply_msg[0]));
+           ^
+src/des_controller.c:73:11: note: each undeclared identifier is reported only once for each function it appears in
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_controller.o' failed
+make: *** [build/x86_64-debug/src/des_controller.o] Error 1
+17:34:15 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+src/des_controller.c:15:5: warning: second argument of 'main' should be 'char **' [-Wmain]
+ int main(int argc, char* argv) {
+     ^
+src/des_controller.c: In function 'main':
+src/des_controller.c:22:27: warning: passing argument 1 of 'atoi' makes pointer from integer without a cast [-Wint-conversion]
+  pid_t display_pid = atoi(argv[1]);
+                           ^
+In file included from src/des_controller.c:2:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/stdlib.h:111:12: note: expected 'const char *' but argument is of type 'char'
+ extern int atoi(const char *__nptr);
+            ^
+src/des_controller.c:26:8: warning: unused variable 'display_msg' [-Wunused-variable]
+  char* display_msg;
+        ^
+src/des_controller.c:42:10: warning: 'input_msg' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  rcvid = MsgReceive(chid, input_msg, sizeof(input_msg), NULL);
+          ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_controller   build/x86_64-debug/src/des_controller.o  
+17:34:17 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:36:21 **** Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:36:30 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:36:33 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+17:37:00 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_display.d,-MT,build/x86_64-debug/src/des_display.o -o build/x86_64-debug/src/des_display.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_display.c
+In file included from src/des_display.c:8:0:
+src/ASS1.h:25:11: error: expected ',' or '}' before ';' token
+  START = 0;
+           ^
+src/ASS1.h:64:1: error: expected ',' or ';' before 'void'
+ void(*STATE_HANDLER)(char*);
+ ^
+src/ASS1.h:77:1: error: unknown type name 'STATE_HANDLER'
+ STATE_HANDLER state_table[] = {
+ ^
+src/ASS1.h:78:2: error: 'scan_func' undeclared here (not in a function)
+ *scan_func, *unlock_func, *open_func, *weight_func,
+  ^
+src/ASS1.h:78:14: error: 'unlock_func' undeclared here (not in a function)
+ *scan_func, *unlock_func, *open_func, *weight_func,
+              ^
+src/ASS1.h:78:28: error: 'open_func' undeclared here (not in a function)
+ *scan_func, *unlock_func, *open_func, *weight_func,
+                            ^
+src/ASS1.h:78:40: error: 'weight_func' undeclared here (not in a function)
+ *scan_func, *unlock_func, *open_func, *weight_func,
+                                        ^
+src/ASS1.h:79:2: error: 'close_func' undeclared here (not in a function)
+ *close_func, *guard_exit_unl_func, *guard_exit_open_func,
+  ^
+src/ASS1.h:79:15: error: 'guard_exit_unl_func' undeclared here (not in a function)
+ *close_func, *guard_exit_unl_func, *guard_exit_open_func,
+               ^
+src/ASS1.h:79:37: error: 'guard_exit_open_func' undeclared here (not in a function)
+ *close_func, *guard_exit_unl_func, *guard_exit_open_func,
+                                     ^
+src/ASS1.h:80:2: error: 'exit_close_func' undeclared here (not in a function)
+ *exit_close_func, *guard_exit_lock_func, *exit_func
+  ^
+src/ASS1.h:80:20: error: 'guard_exit_lock_func' undeclared here (not in a function)
+ *exit_close_func, *guard_exit_lock_func, *exit_func
+                    ^
+src/ASS1.h:80:43: error: 'exit_func' undeclared here (not in a function)
+ *exit_close_func, *guard_exit_lock_func, *exit_func
+                                           ^
+src/des_display.c: In function 'main':
+src/des_display.c:17:5: error: 'chid' undeclared (first use in this function)
+     chid = ChannelCreate (0);
+     ^
+src/des_display.c:17:5: note: each undeclared identifier is reported only once for each function it appears in
+src/des_display.c:17:5: warning: statement with no effect [-Wunused-value]
+src/des_display.c:18:14: warning: comparison between pointer and integer
+     if (chid == -1)
+              ^
+src/des_display.c:28:9: error: 'rcvid' undeclared (first use in this function)
+         rcvid = MsgReceive (chid, &person, sizeof(person), NULL);
+         ^
+src/des_display.c:28:29: warning: passing argument 1 of 'MsgReceive' makes integer from pointer without a cast [-Wint-conversion]
+         rcvid = MsgReceive (chid, &person, sizeof(person), NULL);
+                             ^
+In file included from src/des_display.c:6:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/sys/neutrino.h:754:12: note: expected 'int' but argument is of type 'int *'
+ extern int MsgReceive(int __chid, void *__msg, _Sizet __bytes, struct _msg_info *__info);
+            ^
+src/des_display.c:28:9: warning: statement with no effect [-Wunused-value]
+         rcvid = MsgReceive (chid, &person, sizeof(person), NULL);
+         ^
+src/des_display.c:30:9: error: 'person_state' undeclared (first use in this function)
+         person_state = person.currentState;
+         ^
+src/des_display.c:30:9: warning: statement with no effect [-Wunused-value]
+src/des_display.c:32:19: warning: comparison between pointer and integer
+         if (rcvid == -1){
+                   ^
+src/des_display.c:35:28: error: 'LEFT_SCAN' undeclared (first use in this function)
+         if(person_state == LEFT_SCAN){
+                            ^
+src/des_display.c:36:23: error: assignment to expression with array type
+          response.msg = "Enter the Person's ID:\n";
+                       ^
+src/des_display.c:36:10: warning: statement with no effect [-Wunused-value]
+          response.msg = "Enter the Person's ID:\n";
+          ^
+src/des_display.c:38:33: error: 'RIGHT_SCAN' undeclared (first use in this function)
+         else if(person_state == RIGHT_SCAN){
+                                 ^
+src/des_display.c:39:23: error: assignment to expression with array type
+          response.msg = "Enter the Person's ID:\n";
+                       ^
+src/des_display.c:39:10: warning: statement with no effect [-Wunused-value]
+          response.msg = "Enter the Person's ID:\n";
+          ^
+src/des_display.c:41:33: error: 'GLU_STATE' undeclared (first use in this function)
+         else if(person_state == GLU_STATE){
+                                 ^
+src/des_display.c:42:23: error: assignment to expression with array type
+          response.msg = "Left door unlocked\n";
+                       ^
+src/des_display.c:42:10: warning: statement with no effect [-Wunused-value]
+          response.msg = "Left door unlocked\n";
+          ^
+src/des_display.c:44:33: error: 'GRU_STATE' undeclared (first use in this function)
+         else if(person_state == GRU_STATE){
+                                 ^
+src/des_display.c:45:23: error: assignment to expression with array type
+          response.msg = "Right door unlocked\n";
+                       ^
+src/des_display.c:45:10: warning: statement with no effect [-Wunused-value]
+          response.msg = "Right door unlocked\n";
+          ^
+src/des_display.c:47:33: error: 'LO_STATE' undeclared (first use in this function)
+         else if(person_state == LO_STATE){
+                                 ^
+src/des_display.c:48:23: error: assignment to expression with array type
+          response.msg = "Left door open\n";
+                       ^
+src/des_display.c:48:10: warning: statement with no effect [-Wunused-value]
+          response.msg = "Left door open\n";
+          ^
+src/des_display.c:50:33: error: 'RO_STATE' undeclared (first use in this function)
+         else if(person_state == RO_STATE){
+                                 ^
+src/des_display.c:51:23: error: assignment to expression with array type
+          response.msg ="Right door open\n";
+                       ^
+src/des_display.c:51:10: warning: statement with no effect [-Wunused-value]
+          response.msg ="Right door open\n";
+          ^
+src/des_display.c:53:33: error: 'WEIGHT_STATE' undeclared (first use in this function)
+         else if(person_state == WEIGHT_STATE){
+                                 ^
+src/des_display.c:54:23: error: assignment to expression with array type
+          response.msg ="Enter your weight:\n";
+                       ^
+src/des_display.c:54:10: warning: statement with no effect [-Wunused-value]
+          response.msg ="Enter your weight:\n";
+          ^
+src/des_display.c:56:33: error: 'LEFT_CLOSE_STATE' undeclared (first use in this function)
+         else if(person_state == LEFT_CLOSE_STATE){
+                                 ^
+src/des_display.c:57:23: error: assignment to expression with array type
+          response.msg ="Left door close\n";
+                       ^
+src/des_display.c:57:10: warning: statement with no effect [-Wunused-value]
+          response.msg ="Left door close\n";
+          ^
+src/des_display.c:59:33: error: 'RIGHT_CLOSE_STATE' undeclared (first use in this function)
+         else if(person_state == RIGHT_CLOSE_STATE){
+                                 ^
+src/des_display.c:60:23: error: assignment to expression with array type
+          response.msg ="Right door close\n";
+                       ^
+src/des_display.c:60:10: warning: statement with no effect [-Wunused-value]
+          response.msg ="Right door close\n";
+          ^
+src/des_display.c:62:33: error: 'GL_LOCK_STATE' undeclared (first use in this function)
+         else if(person_state == GL_LOCK_STATE){
+                                 ^
+src/des_display.c:63:23: error: assignment to expression with array type
+          response.msg ="Guard left locked\n";
+                       ^
+src/des_display.c:63:10: warning: statement with no effect [-Wunused-value]
+          response.msg ="Guard left locked\n";
+          ^
+src/des_display.c:66:23: error: assignment to expression with array type
+          response.msg ="Guard right locked\n";
+                       ^
+src/des_display.c:66:10: warning: statement with no effect [-Wunused-value]
+          response.msg ="Guard right locked\n";
+          ^
+src/des_display.c:68:33: error: 'EXIT' undeclared (first use in this function)
+         else if(person_state == EXIT){
+                                 ^
+src/des_display.c:69:23: error: assignment to expression with array type
+          response.msg = "Exiting.";
+                       ^
+src/des_display.c:69:10: warning: statement with no effect [-Wunused-value]
+          response.msg = "Exiting.";
+          ^
+src/des_display.c:72:28: error: assignment to expression with array type
+          response.errorMsg ="Invalid input.\n";
+                            ^
+src/des_display.c:72:10: warning: statement with no effect [-Wunused-value]
+          response.errorMsg ="Invalid input.\n";
+          ^
+src/des_display.c:74:19: warning: passing argument 1 of 'MsgReply' makes integer from pointer without a cast [-Wint-conversion]
+         MsgReply (rcvid, 1, &response, sizeof (response));
+                   ^
+In file included from src/des_display.c:6:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/sys/neutrino.h:762:12: note: expected 'int' but argument is of type 'int *'
+ extern int MsgReply(int __rcvid, long __status, const void *__msg, _Sizet __bytes);
+            ^
+src/des_display.c:77:19: warning: passing argument 1 of 'ChannelDestroy' makes integer from pointer without a cast [-Wint-conversion]
+    ChannelDestroy(chid);
+                   ^
+In file included from src/des_display.c:6:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/sys/neutrino.h:719:12: note: expected 'int' but argument is of type 'int *'
+ extern int ChannelDestroy(int __chid);
+            ^
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_display.o' failed
+make: *** [build/x86_64-debug/src/des_display.o] Error 1
+17:37:54 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_display.d,-MT,build/x86_64-debug/src/des_display.o -o build/x86_64-debug/src/des_display.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_display.c
+src/des_display.c:8:40: fatal error: ../../des_display/src/ASS1.h: No such file or directory
+compilation terminated.
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_display.o' failed
+make: *** [build/x86_64-debug/src/des_display.o] Error 1
+17:38:10 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_display.d,-MT,build/x86_64-debug/src/des_display.o -o build/x86_64-debug/src/des_display.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_display.c
+src/des_display.c: In function 'main':
+src/des_display.c:28:9: error: 'rcvid' undeclared (first use in this function)
+         rcvid = MsgReceive (chid, &person, sizeof(person), NULL);
+         ^
+src/des_display.c:28:9: note: each undeclared identifier is reported only once for each function it appears in
+src/des_display.c:30:9: error: 'person_state' undeclared (first use in this function)
+         person_state = person.currentState;
+         ^
+src/des_display.c:35:28: error: 'LEFT_SCAN' undeclared (first use in this function)
+         if(person_state == LEFT_SCAN){
+                            ^
+src/des_display.c:36:23: error: assignment to expression with array type
+          response.msg = "Enter the Person's ID:\n";
+                       ^
+src/des_display.c:38:33: error: 'RIGHT_SCAN' undeclared (first use in this function)
+         else if(person_state == RIGHT_SCAN){
+                                 ^
+src/des_display.c:39:23: error: assignment to expression with array type
+          response.msg = "Enter the Person's ID:\n";
+                       ^
+src/des_display.c:41:33: error: 'GLU_STATE' undeclared (first use in this function)
+         else if(person_state == GLU_STATE){
+                                 ^
+src/des_display.c:42:23: error: assignment to expression with array type
+          response.msg = "Left door unlocked\n";
+                       ^
+src/des_display.c:44:33: error: 'GRU_STATE' undeclared (first use in this function)
+         else if(person_state == GRU_STATE){
+                                 ^
+src/des_display.c:45:23: error: assignment to expression with array type
+          response.msg = "Right door unlocked\n";
+                       ^
+src/des_display.c:47:33: error: 'LO_STATE' undeclared (first use in this function)
+         else if(person_state == LO_STATE){
+                                 ^
+src/des_display.c:48:23: error: assignment to expression with array type
+          response.msg = "Left door open\n";
+                       ^
+src/des_display.c:50:33: error: 'RO_STATE' undeclared (first use in this function)
+         else if(person_state == RO_STATE){
+                                 ^
+src/des_display.c:51:23: error: assignment to expression with array type
+          response.msg ="Right door open\n";
+                       ^
+src/des_display.c:53:33: error: 'WEIGHT_STATE' undeclared (first use in this function)
+         else if(person_state == WEIGHT_STATE){
+                                 ^
+src/des_display.c:54:23: error: assignment to expression with array type
+          response.msg ="Enter your weight:\n";
+                       ^
+src/des_display.c:56:33: error: 'LEFT_CLOSE_STATE' undeclared (first use in this function)
+         else if(person_state == LEFT_CLOSE_STATE){
+                                 ^
+src/des_display.c:57:23: error: assignment to expression with array type
+          response.msg ="Left door close\n";
+                       ^
+src/des_display.c:59:33: error: 'RIGHT_CLOSE_STATE' undeclared (first use in this function)
+         else if(person_state == RIGHT_CLOSE_STATE){
+                                 ^
+src/des_display.c:60:23: error: assignment to expression with array type
+          response.msg ="Right door close\n";
+                       ^
+src/des_display.c:62:33: error: 'GL_LOCK_STATE' undeclared (first use in this function)
+         else if(person_state == GL_LOCK_STATE){
+                                 ^
+src/des_display.c:63:23: error: assignment to expression with array type
+          response.msg ="Guard left locked\n";
+                       ^
+src/des_display.c:66:23: error: assignment to expression with array type
+          response.msg ="Guard right locked\n";
+                       ^
+src/des_display.c:68:33: error: 'EXIT' undeclared (first use in this function)
+         else if(person_state == EXIT){
+                                 ^
+src/des_display.c:69:23: error: assignment to expression with array type
+          response.msg = "Exiting.";
+                       ^
+src/des_display.c:72:28: error: assignment to expression with array type
+          response.errorMsg ="Invalid input.\n";
+                            ^
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+make: *** [build/x86_64-debug/src/des_display.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_display.o' failed
+17:38:36 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_display.d,-MT,build/x86_64-debug/src/des_display.o -o build/x86_64-debug/src/des_display.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_display.c
+src/des_display.c: In function 'main':
+src/des_display.c:30:9: error: 'person_state' undeclared (first use in this function)
+         person_state = person.currentState;
+         ^
+src/des_display.c:30:9: note: each undeclared identifier is reported only once for each function it appears in
+src/des_display.c:35:28: error: 'LEFT_SCAN' undeclared (first use in this function)
+         if(person_state == LEFT_SCAN){
+                            ^
+src/des_display.c:36:23: error: assignment to expression with array type
+          response.msg = "Enter the Person's ID:\n";
+                       ^
+src/des_display.c:38:33: error: 'RIGHT_SCAN' undeclared (first use in this function)
+         else if(person_state == RIGHT_SCAN){
+                                 ^
+src/des_display.c:39:23: error: assignment to expression with array type
+          response.msg = "Enter the Person's ID:\n";
+                       ^
+src/des_display.c:41:33: error: 'GLU_STATE' undeclared (first use in this function)
+         else if(person_state == GLU_STATE){
+                                 ^
+src/des_display.c:42:23: error: assignment to expression with array type
+          response.msg = "Left door unlocked\n";
+                       ^
+src/des_display.c:44:33: error: 'GRU_STATE' undeclared (first use in this function)
+         else if(person_state == GRU_STATE){
+                                 ^
+src/des_display.c:45:23: error: assignment to expression with array type
+          response.msg = "Right door unlocked\n";
+                       ^
+src/des_display.c:47:33: error: 'LO_STATE' undeclared (first use in this function)
+         else if(person_state == LO_STATE){
+                                 ^
+src/des_display.c:48:23: error: assignment to expression with array type
+          response.msg = "Left door open\n";
+                       ^
+src/des_display.c:50:33: error: 'RO_STATE' undeclared (first use in this function)
+         else if(person_state == RO_STATE){
+                                 ^
+src/des_display.c:51:23: error: assignment to expression with array type
+          response.msg ="Right door open\n";
+                       ^
+src/des_display.c:53:33: error: 'WEIGHT_STATE' undeclared (first use in this function)
+         else if(person_state == WEIGHT_STATE){
+                                 ^
+src/des_display.c:54:23: error: assignment to expression with array type
+          response.msg ="Enter your weight:\n";
+                       ^
+src/des_display.c:56:33: error: 'LEFT_CLOSE_STATE' undeclared (first use in this function)
+         else if(person_state == LEFT_CLOSE_STATE){
+                                 ^
+src/des_display.c:57:23: error: assignment to expression with array type
+          response.msg ="Left door close\n";
+                       ^
+src/des_display.c:59:33: error: 'RIGHT_CLOSE_STATE' undeclared (first use in this function)
+         else if(person_state == RIGHT_CLOSE_STATE){
+                                 ^
+src/des_display.c:60:23: error: assignment to expression with array type
+          response.msg ="Right door close\n";
+                       ^
+src/des_display.c:62:33: error: 'GL_LOCK_STATE' undeclared (first use in this function)
+         else if(person_state == GL_LOCK_STATE){
+                                 ^
+src/des_display.c:63:23: error: assignment to expression with array type
+          response.msg ="Guard left locked\n";
+                       ^
+src/des_display.c:66:23: error: assignment to expression with array type
+          response.msg ="Guard right locked\n";
+                       ^
+src/des_display.c:68:33: error: 'EXIT' undeclared (first use in this function)
+         else if(person_state == EXIT){
+                                 ^
+src/des_display.c:69:23: error: assignment to expression with array type
+          response.msg = "Exiting.";
+                       ^
+src/des_display.c:72:28: error: assignment to expression with array type
+          response.errorMsg ="Invalid input.\n";
+                            ^
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_display.o' failed
+make: *** [build/x86_64-debug/src/des_display.o] Error 1
+17:38:43 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_display.d,-MT,build/x86_64-debug/src/des_display.o -o build/x86_64-debug/src/des_display.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_display.c
+src/des_display.c: In function 'main':
+src/des_display.c:31:9: error: 'person_state' undeclared (first use in this function)
+         person_state = person.currentState;
+         ^
+src/des_display.c:31:9: note: each undeclared identifier is reported only once for each function it appears in
+src/des_display.c:36:28: error: 'LEFT_SCAN' undeclared (first use in this function)
+         if(person_state == LEFT_SCAN){
+                            ^
+src/des_display.c:37:23: error: assignment to expression with array type
+          response.msg = "Enter the Person's ID:\n";
+                       ^
+src/des_display.c:39:33: error: 'RIGHT_SCAN' undeclared (first use in this function)
+         else if(person_state == RIGHT_SCAN){
+                                 ^
+src/des_display.c:40:23: error: assignment to expression with array type
+          response.msg = "Enter the Person's ID:\n";
+                       ^
+src/des_display.c:42:33: error: 'GLU_STATE' undeclared (first use in this function)
+         else if(person_state == GLU_STATE){
+                                 ^
+src/des_display.c:43:23: error: assignment to expression with array type
+          response.msg = "Left door unlocked\n";
+                       ^
+src/des_display.c:45:33: error: 'GRU_STATE' undeclared (first use in this function)
+         else if(person_state == GRU_STATE){
+                                 ^
+src/des_display.c:46:23: error: assignment to expression with array type
+          response.msg = "Right door unlocked\n";
+                       ^
+src/des_display.c:48:33: error: 'LO_STATE' undeclared (first use in this function)
+         else if(person_state == LO_STATE){
+                                 ^
+src/des_display.c:49:23: error: assignment to expression with array type
+          response.msg = "Left door open\n";
+                       ^
+src/des_display.c:51:33: error: 'RO_STATE' undeclared (first use in this function)
+         else if(person_state == RO_STATE){
+                                 ^
+src/des_display.c:52:23: error: assignment to expression with array type
+          response.msg ="Right door open\n";
+                       ^
+src/des_display.c:54:33: error: 'WEIGHT_STATE' undeclared (first use in this function)
+         else if(person_state == WEIGHT_STATE){
+                                 ^
+src/des_display.c:55:23: error: assignment to expression with array type
+          response.msg ="Enter your weight:\n";
+                       ^
+src/des_display.c:57:33: error: 'LEFT_CLOSE_STATE' undeclared (first use in this function)
+         else if(person_state == LEFT_CLOSE_STATE){
+                                 ^
+src/des_display.c:58:23: error: assignment to expression with array type
+          response.msg ="Left door close\n";
+                       ^
+src/des_display.c:60:33: error: 'RIGHT_CLOSE_STATE' undeclared (first use in this function)
+         else if(person_state == RIGHT_CLOSE_STATE){
+                                 ^
+src/des_display.c:61:23: error: assignment to expression with array type
+          response.msg ="Right door close\n";
+                       ^
+src/des_display.c:63:33: error: 'GL_LOCK_STATE' undeclared (first use in this function)
+         else if(person_state == GL_LOCK_STATE){
+                                 ^
+src/des_display.c:64:23: error: assignment to expression with array type
+          response.msg ="Guard left locked\n";
+                       ^
+src/des_display.c:67:23: error: assignment to expression with array type
+          response.msg ="Guard right locked\n";
+                       ^
+src/des_display.c:69:33: error: 'EXIT' undeclared (first use in this function)
+         else if(person_state == EXIT){
+                                 ^
+src/des_display.c:70:23: error: assignment to expression with array type
+          response.msg = "Exiting.";
+                       ^
+src/des_display.c:73:28: error: assignment to expression with array type
+          response.errorMsg ="Invalid input.\n";
+                            ^
+src/des_display.c:15:6: warning: unused variable 'current_state' [-Wunused-variable]
+  int current_state;
+      ^
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_display.o' failed
+make: *** [build/x86_64-debug/src/des_display.o] Error 1
+17:38:54 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_display.d,-MT,build/x86_64-debug/src/des_display.o -o build/x86_64-debug/src/des_display.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_display.c
+src/des_display.c: In function 'main':
+src/des_display.c:36:28: error: 'LEFT_SCAN' undeclared (first use in this function)
+         if(person_state == LEFT_SCAN){
+                            ^
+src/des_display.c:36:28: note: each undeclared identifier is reported only once for each function it appears in
+src/des_display.c:37:23: error: assignment to expression with array type
+          response.msg = "Enter the Person's ID:\n";
+                       ^
+src/des_display.c:39:33: error: 'RIGHT_SCAN' undeclared (first use in this function)
+         else if(person_state == RIGHT_SCAN){
+                                 ^
+src/des_display.c:40:23: error: assignment to expression with array type
+          response.msg = "Enter the Person's ID:\n";
+                       ^
+src/des_display.c:42:33: error: 'GLU_STATE' undeclared (first use in this function)
+         else if(person_state == GLU_STATE){
+                                 ^
+src/des_display.c:43:23: error: assignment to expression with array type
+          response.msg = "Left door unlocked\n";
+                       ^
+src/des_display.c:45:33: error: 'GRU_STATE' undeclared (first use in this function)
+         else if(person_state == GRU_STATE){
+                                 ^
+src/des_display.c:46:23: error: assignment to expression with array type
+          response.msg = "Right door unlocked\n";
+                       ^
+src/des_display.c:48:33: error: 'LO_STATE' undeclared (first use in this function)
+         else if(person_state == LO_STATE){
+                                 ^
+src/des_display.c:49:23: error: assignment to expression with array type
+          response.msg = "Left door open\n";
+                       ^
+src/des_display.c:51:33: error: 'RO_STATE' undeclared (first use in this function)
+         else if(person_state == RO_STATE){
+                                 ^
+src/des_display.c:52:23: error: assignment to expression with array type
+          response.msg ="Right door open\n";
+                       ^
+src/des_display.c:54:33: error: 'WEIGHT_STATE' undeclared (first use in this function)
+         else if(person_state == WEIGHT_STATE){
+                                 ^
+src/des_display.c:55:23: error: assignment to expression with array type
+          response.msg ="Enter your weight:\n";
+                       ^
+src/des_display.c:57:33: error: 'LEFT_CLOSE_STATE' undeclared (first use in this function)
+         else if(person_state == LEFT_CLOSE_STATE){
+                                 ^
+src/des_display.c:58:23: error: assignment to expression with array type
+          response.msg ="Left door close\n";
+                       ^
+src/des_display.c:60:33: error: 'RIGHT_CLOSE_STATE' undeclared (first use in this function)
+         else if(person_state == RIGHT_CLOSE_STATE){
+                                 ^
+src/des_display.c:61:23: error: assignment to expression with array type
+          response.msg ="Right door close\n";
+                       ^
+src/des_display.c:63:33: error: 'GL_LOCK_STATE' undeclared (first use in this function)
+         else if(person_state == GL_LOCK_STATE){
+                                 ^
+src/des_display.c:64:23: error: assignment to expression with array type
+          response.msg ="Guard left locked\n";
+                       ^
+src/des_display.c:67:23: error: assignment to expression with array type
+          response.msg ="Guard right locked\n";
+                       ^
+src/des_display.c:69:33: error: 'EXIT' undeclared (first use in this function)
+         else if(person_state == EXIT){
+                                 ^
+src/des_display.c:70:23: error: assignment to expression with array type
+          response.msg = "Exiting.";
+                       ^
+src/des_display.c:73:28: error: assignment to expression with array type
+          response.errorMsg ="Invalid input.\n";
+                            ^
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_display.o' failed
+make: *** [build/x86_64-debug/src/des_display.o] Error 1
+17:44:38 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_display.d,-MT,build/x86_64-debug/src/des_display.o -o build/x86_64-debug/src/des_display.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_display.c
+src/des_display.c: In function 'main':
+src/des_display.c:36:28: error: 'SCAN' undeclared (first use in this function)
+         if(person_state == SCAN){
+                            ^
+src/des_display.c:36:28: note: each undeclared identifier is reported only once for each function it appears in
+src/des_display.c:37:23: error: assignment to expression with array type
+          response.msg = "Enter the Person's ID:\n";
+                       ^
+src/des_display.c:40:23: error: assignment to expression with array type
+          response.msg = "Left door unlocked\n";
+                       ^
+src/des_display.c:42:33: error: 'GRU_STATE' undeclared (first use in this function)
+         else if(person_state == GRU_STATE){
+                                 ^
+src/des_display.c:43:23: error: assignment to expression with array type
+          response.msg = "Right door unlocked\n";
+                       ^
+src/des_display.c:45:33: error: 'LO_STATE' undeclared (first use in this function)
+         else if(person_state == LO_STATE){
+                                 ^
+src/des_display.c:46:23: error: assignment to expression with array type
+          response.msg = "Left door open\n";
+                       ^
+src/des_display.c:48:33: error: 'RO_STATE' undeclared (first use in this function)
+         else if(person_state == RO_STATE){
+                                 ^
+src/des_display.c:49:23: error: assignment to expression with array type
+          response.msg ="Right door open\n";
+                       ^
+src/des_display.c:51:33: error: 'WEIGHT_STATE' undeclared (first use in this function)
+         else if(person_state == WEIGHT_STATE){
+                                 ^
+src/des_display.c:52:23: error: assignment to expression with array type
+          response.msg ="Enter your weight:\n";
+                       ^
+src/des_display.c:54:33: error: 'LEFT_CLOSE_STATE' undeclared (first use in this function)
+         else if(person_state == LEFT_CLOSE_STATE){
+                                 ^
+src/des_display.c:55:23: error: assignment to expression with array type
+          response.msg ="Left door close\n";
+                       ^
+src/des_display.c:57:33: error: 'RIGHT_CLOSE_STATE' undeclared (first use in this function)
+         else if(person_state == RIGHT_CLOSE_STATE){
+                                 ^
+src/des_display.c:58:23: error: assignment to expression with array type
+          response.msg ="Right door close\n";
+                       ^
+src/des_display.c:60:33: error: 'GL_LOCK_STATE' undeclared (first use in this function)
+         else if(person_state == GL_LOCK_STATE){
+                                 ^
+src/des_display.c:61:23: error: assignment to expression with array type
+          response.msg ="Guard left locked\n";
+                       ^
+src/des_display.c:64:23: error: assignment to expression with array type
+          response.msg ="Guard right locked\n";
+                       ^
+src/des_display.c:66:33: error: 'EXIT' undeclared (first use in this function)
+         else if(person_state == EXIT){
+                                 ^
+src/des_display.c:67:23: error: assignment to expression with array type
+          response.msg = "Exiting.";
+                       ^
+src/des_display.c:70:28: error: assignment to expression with array type
+          response.errorMsg ="Invalid input.\n";
+                            ^
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_display.o' failed
+make: *** [build/x86_64-debug/src/des_display.o] Error 1

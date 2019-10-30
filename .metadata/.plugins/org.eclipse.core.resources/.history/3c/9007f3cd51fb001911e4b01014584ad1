@@ -1,0 +1,30 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <process.h>
+#include <string.h>
+#include <errno.h>
+#include <sys/neutrino.h>
+
+#include "ASS1.h"
+int main(int argc, char* argv) {
+	
+	if (argc != 2){
+		fprintf(stderr,"Invalid number of arguments.");
+		exit(EXIT_FAILURE);
+	}
+	pid_t display_pid = atoi(argv[1]);
+	int chid;
+	char* input_msg;
+	char* display_msg;
+	int coid;
+	chid = ChannelCreate(0);
+	if(chid == -1){
+		fprintf(stderr, "Failed to create a channel :(");
+	}
+	coid = ConnectAttach(ND_LOCAL_NODE, input_pid, 1, _NTO_SIDE_CHANNEL, 0);
+	if (coid == -1) {
+		perror("Channel could not be attached\n");
+		exit(EXIT_FAILURE);
+	}
+	return EXIT_SUCCESS;
+}

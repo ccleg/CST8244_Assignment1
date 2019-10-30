@@ -5,15 +5,16 @@
 #include <errno.h>
 #include <sys/neutrino.h>
 
-#include "ASS1.h"
+#include "../../des_controller/src/ASS1.h"
 
 int main (int argc, char* argv[])
 {
 
 	Person_T person;
-
+	int rcvid;
+	int person_state;
 	display_response_t response;
-
+	int chid;
     chid = ChannelCreate (0);
     if (chid == -1)
     {
@@ -32,15 +33,18 @@ int main (int argc, char* argv[])
         if (rcvid == -1){
         	break;
         }
-        if(person_state == LEFT_SCAN){
+        if(person_state == SCAN){
         	response.msg = "Enter the Person's ID:\n";
         }
-        else if(person_state == RIGHT_SCAN){
-        	response.msg = "Enter the Person's ID:\n";
-       	}
-        else if(person_state == GLU_STATE){
+        else if(person_state == UNLOCK){
+        	if(person.side == LEFT){
         	response.msg = "Left door unlocked\n";
-        }
+        	}
+        	else if(person.side == RIGHT){
+        		response.msg = "Left door unlocked\n";
+
+        	}
+        	}
         else if(person_state == GRU_STATE){
         	response.msg = "Right door unlocked\n";
         }
