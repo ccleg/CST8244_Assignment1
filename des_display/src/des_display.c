@@ -15,6 +15,7 @@ int main (int argc, char* argv[])
 	int person_state;
 	display_response_t response;
 	int chid;
+	char response_msg[128];
     chid = ChannelCreate (0);
     if (chid == -1)
     {
@@ -34,48 +35,79 @@ int main (int argc, char* argv[])
         	break;
         }
         if(person_state == SCAN){
-        	response.msg = "Enter the Person's ID:\n";
+        	response_msg = "Enter the Person's ID:\n";
         }
         else if(person_state == UNLOCK){
         	if(person.side == LEFT){
-        	response.msg = "Left door unlocked\n";
+				response_msg = "Left door unlocked\n";
         	}
         	else if(person.side == RIGHT){
-        		response.msg = "Left door unlocked\n";
-
+        		response_msg = "Right door unlocked\n";
         	}
+        }
+        else if(person_state == OPEN){
+        	if(person.side == LEFT){
+				response_msg = "Left door opened\n";
         	}
-        else if(person_state == GRU_STATE){
-        	response.msg = "Right door unlocked\n";
+        	else if(person.side == RIGHT){
+        		response_msg = "Right door opened\n";
+        	}
         }
-        else if(person_state == LO_STATE){
-        	response.msg = "Left door open\n";
+        else if(person_state == WEIGHT){
+			response_msg = "Enter the person' weight\n";
         }
-        else if(person_state == RO_STATE){
-        	response.msg ="Right door open\n";
+        else if(person_state == ENTER_CLOSE){
+        	if(person.side == LEFT){
+				response_msg = "Left door closed.\n";
+        	}
+        	else if(person.side == RIGHT){
+        		response_msg = "Right door closed.\n";
+        	}
         }
-        else if(person_state == WEIGHT_STATE){
-        	response.msg ="Enter your weight:\n";
+        else if(person_state == ENTER_LOCK){
+        	if(person.side == LEFT){
+				response_msg = "Left door locked.\n";
+        	}
+        	else if(person.side == RIGHT){
+        		response_msg = "Right door locked.\n";
+        	}
         }
-        else if(person_state == LEFT_CLOSE_STATE){
-        	response.msg ="Left door close\n";
+        else if(person_state == EXIT_UNLOCK){
+        	if(person.side == LEFT){
+				response_msg = "Right door unlocked.\n";
+        	}
+        	else if(person.side == RIGHT){
+        		response_msg = "Left door unlocked.\n";
+        	}
         }
-        else if(person_state == RIGHT_CLOSE_STATE){
-        	response.msg ="Right door close\n";
+        else if(person_state == EXIT_OPEN){
+        	if(person.side == LEFT){
+				response_msg = "Right door opened.\n";
+        	}
+        	else if(person.side == RIGHT){
+        		response_msg = "Left door opened.\n";
+        	}
         }
-        else if(person_state == GL_LOCK_STATE){
-        	response.msg ="Guard left locked\n";
+        else if(person_state == EXIT_CLOSE){
+        	if(person.side == LEFT){
+				response_msg = "Right door closed.\n";
+        	}
+        	else if(person.side == RIGHT){
+        		response_msg = "Left door closed.\n";
+        	}
         }
-        else if(person_state == GL_LOCK_STATE){
-        	response.msg ="Guard right locked\n";
-        }
-        else if(person_state == EXIT){
-        	response.msg = "Exiting.";
+        else if(person_state == EXIT_LOCK){
+        	if(person.side == LEFT){
+				response_msg = "Left door locked.\n";
+        	}
+        	else if(person.side == RIGHT){
+        		response_msg = "Right door locked.\n";
+        	}
         }
         else{
-        	response.errorMsg ="Invalid input.\n";
+        	response_msg ="Invalid input.\n";
         }
-        MsgReply (rcvid, 1, &response, sizeof (response));
+        MsgReply (rcvid, 1, &response_msg, sizeof (response_msg));
     }
 
    ChannelDestroy(chid);
