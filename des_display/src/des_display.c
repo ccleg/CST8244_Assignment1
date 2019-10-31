@@ -13,9 +13,9 @@ int main (int argc, char* argv[])
 	Person_T person;
 	int rcvid;
 	int person_state;
-	display_response_t response;
+
 	int chid;
-	char response_msg[128];
+	char* response_msg;
     chid = ChannelCreate (0);
     if (chid == -1)
     {
@@ -34,7 +34,7 @@ int main (int argc, char* argv[])
         if (rcvid == -1){
         	break;
         }
-        if(person_state == SCAN){
+        if(person_state == START){
         	response_msg = "Enter the Person's ID:\n";
         }
         else if(person_state == UNLOCK){

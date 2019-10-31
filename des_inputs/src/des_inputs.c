@@ -6,9 +6,9 @@
 #include <string.h>
 #include <errno.h>
 
-int main(int argc, char* argv) {
-	char* input = NULL;
-	char rplyMsg[200];
+int main(int argc, char *argv[]) {
+	char* input_msg;
+	char* rplyMsg;
 	if (argc != 2){
 	fprintf(stderr, "Invalid number of arguments, please enter the des_controller pid\n");
 	exit(EXIT_FAILURE);
@@ -26,9 +26,12 @@ int main(int argc, char* argv) {
 		perror("Channel could not be attached\n");
 		exit(EXIT_FAILURE);
 	}
-	while(strcmp(input,"exit") != 0){
-		scanf("%s",input);
-		if(MsgSend(coid, input, strlen(input) + 1, rplyMsg, sizeof (rplyMsg)) == -1){
+	while(strcmp(input_msg,"exit") != 0){
+		//scanf("%s\n",input);
+		//printf("%s\n", input);
+		input_msg = "ls";
+		printf("%d\n",strlen(input_msg));
+		if(MsgSend(coid, input_msg, strlen(input_msg), rplyMsg, sizeof (rplyMsg)) == -1){
 			fprintf(stderr, "Unable to send message\n");
 			perror(NULL);
 			exit(EXIT_FAILURE);

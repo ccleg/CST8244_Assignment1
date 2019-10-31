@@ -23,7 +23,7 @@ typedef enum {
 	ENTER_CLOSE = 4,
 	ENTER_LOCK = 5,
 	EXIT_UNLOCK = 6,
-	EXIT_OPEM = 7,
+	EXIT_OPEN = 7,
 	EXIT_CLOSE = 8,
 	EXIT_LOCK = 9
 } States;
@@ -76,4 +76,6 @@ void EXIT_CLOSE_FUNC(char* input);
 void GUARD_EXIT_LOCK_FUNC(char* input);
 void EXIT_FUNC(char* input);
 
-void(*STATE_HANDLER[10])(char* input);
+void(*STATE_HANDLER[10])(char* input)= {SCAN_FUNC, UNLOCK_FUNC, OPEN_FUNC,WEIGHT_FUNC,CLOSE_FUNC, GUARD_EXIT_UNL_FUNC,EXIT_CLOSE_FUNC,GUARD_EXIT_LOCK_FUNC,EXIT_FUNC} ;
+
+

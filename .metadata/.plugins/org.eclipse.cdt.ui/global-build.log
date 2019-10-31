@@ -1569,3 +1569,1487 @@ src/des_display.c:70:28: error: assignment to expression with array type
 cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
 Makefile:55: recipe for target 'build/x86_64-debug/src/des_display.o' failed
 make: *** [build/x86_64-debug/src/des_display.o] Error 1
+17:58:35 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_display.d,-MT,build/x86_64-debug/src/des_display.o -o build/x86_64-debug/src/des_display.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_display.c
+src/des_display.c: In function 'main':
+src/des_display.c:16:2: error: unknown type name 'display_response_t'
+  display_response_t response;
+  ^
+src/des_display.c:37:28: error: 'SCAN' undeclared (first use in this function)
+         if(person_state == SCAN){
+                            ^
+src/des_display.c:37:28: note: each undeclared identifier is reported only once for each function it appears in
+src/des_display.c:38:23: error: assignment to expression with array type
+          response_msg = "Enter the Person's ID:\n";
+                       ^
+src/des_display.c:42:18: error: assignment to expression with array type
+     response_msg = "Left door unlocked\n";
+                  ^
+src/des_display.c:45:24: error: assignment to expression with array type
+           response_msg = "Right door unlocked\n";
+                        ^
+src/des_display.c:50:18: error: assignment to expression with array type
+     response_msg = "Left door opened\n";
+                  ^
+src/des_display.c:53:24: error: assignment to expression with array type
+           response_msg = "Right door opened\n";
+                        ^
+src/des_display.c:57:17: error: assignment to expression with array type
+    response_msg = "Enter the person' weight\n";
+                 ^
+src/des_display.c:61:18: error: assignment to expression with array type
+     response_msg = "Left door closed.\n";
+                  ^
+src/des_display.c:64:24: error: assignment to expression with array type
+           response_msg = "Right door closed.\n";
+                        ^
+src/des_display.c:69:18: error: assignment to expression with array type
+     response_msg = "Left door locked.\n";
+                  ^
+src/des_display.c:72:24: error: assignment to expression with array type
+           response_msg = "Right door locked.\n";
+                        ^
+src/des_display.c:77:18: error: assignment to expression with array type
+     response_msg = "Right door unlocked.\n";
+                  ^
+src/des_display.c:80:24: error: assignment to expression with array type
+           response_msg = "Left door unlocked.\n";
+                        ^
+src/des_display.c:83:33: error: 'EXIT_OPEN' undeclared (first use in this function)
+         else if(person_state == EXIT_OPEN){
+                                 ^
+src/des_display.c:85:18: error: assignment to expression with array type
+     response_msg = "Right door opened.\n";
+                  ^
+src/des_display.c:88:24: error: assignment to expression with array type
+           response_msg = "Left door opened.\n";
+                        ^
+src/des_display.c:93:18: error: assignment to expression with array type
+     response_msg = "Right door closed.\n";
+                  ^
+src/des_display.c:96:24: error: assignment to expression with array type
+           response_msg = "Left door closed.\n";
+                        ^
+src/des_display.c:101:18: error: assignment to expression with array type
+     response_msg = "Left door locked.\n";
+                  ^
+src/des_display.c:104:24: error: assignment to expression with array type
+           response_msg = "Right door locked.\n";
+                        ^
+src/des_display.c:108:23: error: assignment to expression with array type
+          response_msg ="Invalid input.\n";
+                       ^
+src/des_display.c:16:21: warning: unused variable 'response' [-Wunused-variable]
+  display_response_t response;
+                     ^
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_display.o' failed
+make: *** [build/x86_64-debug/src/des_display.o] Error 1
+17:58:59 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_display.d,-MT,build/x86_64-debug/src/des_display.o -o build/x86_64-debug/src/des_display.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_display.c
+src/des_display.c: In function 'main':
+src/des_display.c:18:7: error: conflicting types for 'response_msg'
+  char response_msg[128];
+       ^
+src/des_display.c:16:8: note: previous declaration of 'response_msg' was here
+  char* response_msg;
+        ^
+src/des_display.c:37:28: error: 'SCAN' undeclared (first use in this function)
+         if(person_state == SCAN){
+                            ^
+src/des_display.c:37:28: note: each undeclared identifier is reported only once for each function it appears in
+src/des_display.c:38:23: error: assignment to expression with array type
+          response_msg = "Enter the Person's ID:\n";
+                       ^
+src/des_display.c:42:18: error: assignment to expression with array type
+     response_msg = "Left door unlocked\n";
+                  ^
+src/des_display.c:45:24: error: assignment to expression with array type
+           response_msg = "Right door unlocked\n";
+                        ^
+src/des_display.c:50:18: error: assignment to expression with array type
+     response_msg = "Left door opened\n";
+                  ^
+src/des_display.c:53:24: error: assignment to expression with array type
+           response_msg = "Right door opened\n";
+                        ^
+src/des_display.c:57:17: error: assignment to expression with array type
+    response_msg = "Enter the person' weight\n";
+                 ^
+src/des_display.c:61:18: error: assignment to expression with array type
+     response_msg = "Left door closed.\n";
+                  ^
+src/des_display.c:64:24: error: assignment to expression with array type
+           response_msg = "Right door closed.\n";
+                        ^
+src/des_display.c:69:18: error: assignment to expression with array type
+     response_msg = "Left door locked.\n";
+                  ^
+src/des_display.c:72:24: error: assignment to expression with array type
+           response_msg = "Right door locked.\n";
+                        ^
+src/des_display.c:77:18: error: assignment to expression with array type
+     response_msg = "Right door unlocked.\n";
+                  ^
+src/des_display.c:80:24: error: assignment to expression with array type
+           response_msg = "Left door unlocked.\n";
+                        ^
+src/des_display.c:83:33: error: 'EXIT_OPEN' undeclared (first use in this function)
+         else if(person_state == EXIT_OPEN){
+                                 ^
+src/des_display.c:85:18: error: assignment to expression with array type
+     response_msg = "Right door opened.\n";
+                  ^
+src/des_display.c:88:24: error: assignment to expression with array type
+           response_msg = "Left door opened.\n";
+                        ^
+src/des_display.c:93:18: error: assignment to expression with array type
+     response_msg = "Right door closed.\n";
+                  ^
+src/des_display.c:96:24: error: assignment to expression with array type
+           response_msg = "Left door closed.\n";
+                        ^
+src/des_display.c:101:18: error: assignment to expression with array type
+     response_msg = "Left door locked.\n";
+                  ^
+src/des_display.c:104:24: error: assignment to expression with array type
+           response_msg = "Right door locked.\n";
+                        ^
+src/des_display.c:108:23: error: assignment to expression with array type
+          response_msg ="Invalid input.\n";
+                       ^
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_display.o' failed
+make: *** [build/x86_64-debug/src/des_display.o] Error 1
+17:59:15 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_display.d,-MT,build/x86_64-debug/src/des_display.o -o build/x86_64-debug/src/des_display.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_display.c
+src/des_display.c: In function 'main':
+src/des_display.c:37:28: error: 'SCAN' undeclared (first use in this function)
+         if(person_state == SCAN){
+                            ^
+src/des_display.c:37:28: note: each undeclared identifier is reported only once for each function it appears in
+src/des_display.c:83:33: error: 'EXIT_OPEN' undeclared (first use in this function)
+         else if(person_state == EXIT_OPEN){
+                                 ^
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_display.o' failed
+make: *** [build/x86_64-debug/src/des_display.o] Error 1
+17:59:45 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_display.d,-MT,build/x86_64-debug/src/des_display.o -o build/x86_64-debug/src/des_display.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_display.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_display   build/x86_64-debug/src/des_display.o  
+18:02:35 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_display.d,-MT,build/x86_64-debug/src/des_display.o -o build/x86_64-debug/src/des_display.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_display.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_display   build/x86_64-debug/src/des_display.o  
+18:02:50 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_display.d,-MT,build/x86_64-debug/src/des_display.o -o build/x86_64-debug/src/des_display.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_display.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_display   build/x86_64-debug/src/des_display.o  
+18:03:55 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+src/des_controller.c:18:5: warning: second argument of 'main' should be 'char **' [-Wmain]
+ int main(int argc, char* argv) {
+     ^
+src/des_controller.c: In function 'main':
+src/des_controller.c:25:27: warning: passing argument 1 of 'atoi' makes pointer from integer without a cast [-Wint-conversion]
+  pid_t display_pid = atoi(argv[1]);
+                           ^
+In file included from src/des_controller.c:2:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/stdlib.h:111:12: note: expected 'const char *' but argument is of type 'char'
+ extern int atoi(const char *__nptr);
+            ^
+src/des_controller.c:29:8: warning: unused variable 'display_msg' [-Wunused-variable]
+  char* display_msg;
+        ^
+src/des_controller.c: In function 'SCAN_FUNC':
+src/des_controller.c:78:13: error: 'coid' undeclared (first use in this function)
+  if(MsgSend(coid, &person, sizeof(person), display_msg, sizeof (display_msg)) == -1){
+             ^
+src/des_controller.c:78:13: note: each undeclared identifier is reported only once for each function it appears in
+src/des_controller.c:78:44: error: 'display_msg' undeclared (first use in this function)
+  if(MsgSend(coid, &person, sizeof(person), display_msg, sizeof (display_msg)) == -1){
+                                            ^
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_controller.o' failed
+make: *** [build/x86_64-debug/src/des_controller.o] Error 1
+18:04:44 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+src/des_controller.c:19:5: warning: second argument of 'main' should be 'char **' [-Wmain]
+ int main(int argc, char* argv) {
+     ^
+src/des_controller.c: In function 'main':
+src/des_controller.c:26:27: warning: passing argument 1 of 'atoi' makes pointer from integer without a cast [-Wint-conversion]
+  pid_t display_pid = atoi(argv[1]);
+                           ^
+In file included from src/des_controller.c:2:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/stdlib.h:111:12: note: expected 'const char *' but argument is of type 'char'
+ extern int atoi(const char *__nptr);
+            ^
+src/des_controller.c: In function 'SCAN_FUNC':
+src/des_controller.c:79:13: error: 'coid' undeclared (first use in this function)
+  if(MsgSend(coid, &person, sizeof(person), display_msg, sizeof (display_msg)) == -1){
+             ^
+src/des_controller.c:79:13: note: each undeclared identifier is reported only once for each function it appears in
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_controller.o' failed
+make: *** [build/x86_64-debug/src/des_controller.o] Error 1
+18:04:46 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+src/des_controller.c:19:5: warning: second argument of 'main' should be 'char **' [-Wmain]
+ int main(int argc, char* argv) {
+     ^
+src/des_controller.c: In function 'main':
+src/des_controller.c:26:27: warning: passing argument 1 of 'atoi' makes pointer from integer without a cast [-Wint-conversion]
+  pid_t display_pid = atoi(argv[1]);
+                           ^
+In file included from src/des_controller.c:2:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/stdlib.h:111:12: note: expected 'const char *' but argument is of type 'char'
+ extern int atoi(const char *__nptr);
+            ^
+src/des_controller.c: In function 'SCAN_FUNC':
+src/des_controller.c:79:13: error: 'coid' undeclared (first use in this function)
+  if(MsgSend(coid, &person, sizeof(person), display_msg, sizeof (display_msg)) == -1){
+             ^
+src/des_controller.c:79:13: note: each undeclared identifier is reported only once for each function it appears in
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+make: *** [build/x86_64-debug/src/des_controller.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_controller.o' failed
+18:05:16 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+src/des_controller.c:20:5: warning: second argument of 'main' should be 'char **' [-Wmain]
+ int main(int argc, char* argv) {
+     ^
+src/des_controller.c: In function 'main':
+src/des_controller.c:27:27: warning: passing argument 1 of 'atoi' makes pointer from integer without a cast [-Wint-conversion]
+  pid_t display_pid = atoi(argv[1]);
+                           ^
+In file included from src/des_controller.c:2:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/stdlib.h:111:12: note: expected 'const char *' but argument is of type 'char'
+ extern int atoi(const char *__nptr);
+            ^
+src/des_controller.c:47:11: warning: 'input_msg' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   rcvid = MsgReceive(chid, input_msg, sizeof(input_msg), NULL);
+           ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_controller   build/x86_64-debug/src/des_controller.o  
+18:05:21 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:05:30 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:05:47 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:06:20 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:06:58 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:08:14 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+src/des_controller.c:20:5: warning: second argument of 'main' should be 'char **' [-Wmain]
+ int main(int argc, char* argv) {
+     ^
+src/des_controller.c: In function 'main':
+src/des_controller.c:27:27: warning: passing argument 1 of 'atoi' makes pointer from integer without a cast [-Wint-conversion]
+  pid_t display_pid = atoi(argv[1]);
+                           ^
+In file included from src/des_controller.c:2:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/stdlib.h:111:12: note: expected 'const char *' but argument is of type 'char'
+ extern int atoi(const char *__nptr);
+            ^
+src/des_controller.c:47:11: warning: 'input_msg' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   rcvid = MsgReceive(chid, input_msg, sizeof(input_msg), NULL);
+           ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_controller   build/x86_64-debug/src/des_controller.o  
+18:08:33 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+src/des_controller.c:20:5: warning: second argument of 'main' should be 'char **' [-Wmain]
+ int main(int argc, char* argv) {
+     ^
+src/des_controller.c: In function 'main':
+src/des_controller.c:27:25: warning: passing argument 1 of 'atoi' makes pointer from integer without a cast [-Wint-conversion]
+  int display_pid = atoi(argv[1]);
+                         ^
+In file included from src/des_controller.c:2:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/stdlib.h:111:12: note: expected 'const char *' but argument is of type 'char'
+ extern int atoi(const char *__nptr);
+            ^
+src/des_controller.c:47:11: warning: 'input_msg' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   rcvid = MsgReceive(chid, input_msg, sizeof(input_msg), NULL);
+           ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_controller   build/x86_64-debug/src/des_controller.o  
+18:09:31 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:09:43 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:10:40 **** Clean-only build of configuration x86_64-debug for project des_controller ****
+make -j4 clean 
+rm -fr build/x86_64-debug
+18:10:40 **** Clean-only build of configuration x86_64-debug for project des_display ****
+make -j4 clean 
+rm -fr build/x86_64-debug
+18:10:40 **** Clean-only build of configuration x86_64-debug for project des_inputs ****
+make -j4 clean 
+rm -fr build/x86_64-debug
+18:10:42 **** Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+src/des_controller.c:20:5: warning: second argument of 'main' should be 'char **' [-Wmain]
+ int main(int argc, char* argv) {
+     ^
+src/des_controller.c: In function 'main':
+src/des_controller.c:27:25: warning: passing argument 1 of 'atoi' makes pointer from integer without a cast [-Wint-conversion]
+  int display_pid = atoi(argv[1]);
+                         ^
+In file included from src/des_controller.c:2:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/stdlib.h:111:12: note: expected 'const char *' but argument is of type 'char'
+ extern int atoi(const char *__nptr);
+            ^
+src/des_controller.c:47:11: warning: 'input_msg' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   rcvid = MsgReceive(chid, input_msg, sizeof(input_msg), NULL);
+           ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_controller   build/x86_64-debug/src/des_controller.o  
+18:12:19 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-release/src/des_controller.d,-MT,build/x86_64-release/src/des_controller.o -o build/x86_64-release/src/des_controller.o  -Wall -fmessage-length=0 -O2  src/des_controller.c
+src/des_controller.c:20:5: warning: second argument of 'main' should be 'char **' [-Wmain]
+ int main(int argc, char* argv) {
+     ^
+src/des_controller.c: In function 'main':
+src/des_controller.c:27:25: warning: passing argument 1 of 'atoi' makes pointer from integer without a cast [-Wint-conversion]
+  pid_t serverPid = atoi(argv[1]);
+                         ^
+In file included from src/des_controller.c:2:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/stdlib.h:111:12: note: expected 'const char *' but argument is of type 'char'
+ extern int atoi(const char *__nptr);
+            ^
+src/des_controller.c:41:38: error: 'display_pid' undeclared (first use in this function)
+  coid = ConnectAttach(ND_LOCAL_NODE, display_pid, 1, _NTO_SIDE_CHANNEL, 0);
+                                      ^
+src/des_controller.c:41:38: note: each undeclared identifier is reported only once for each function it appears in
+src/des_controller.c:27:8: warning: unused variable 'serverPid' [-Wunused-variable]
+  pid_t serverPid = atoi(argv[1]);
+        ^
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-release/src/des_controller.o' failed
+make: *** [build/x86_64-release/src/des_controller.o] Error 1
+18:12:47 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-release/src/des_controller.d,-MT,build/x86_64-release/src/des_controller.o -o build/x86_64-release/src/des_controller.o  -Wall -fmessage-length=0 -O2  src/des_controller.c
+src/des_controller.c:20:5: warning: second argument of 'main' should be 'char **' [-Wmain]
+ int main(int argc, char* argv) {
+     ^
+src/des_controller.c: In function 'main':
+src/des_controller.c:41:9: warning: 'display_pid' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  coid = ConnectAttach(ND_LOCAL_NODE, display_pid, 1, _NTO_SIDE_CHANNEL, 0);
+         ^
+src/des_controller.c:47:11: warning: 'input_msg' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   rcvid = MsgReceive(chid, input_msg, sizeof(input_msg), NULL);
+           ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-release/des_controller   build/x86_64-release/src/des_controller.o  
+18:12:56 **** Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_display.d,-MT,build/x86_64-debug/src/des_display.o -o build/x86_64-debug/src/des_display.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_display.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_display   build/x86_64-debug/src/des_display.o  
+18:13:10 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:13:36 **** Clean-only build of configuration x86_64-release for project des_controller ****
+make -j4 clean 
+rm -fr build/x86_64-release
+18:13:36 **** Clean-only build of configuration x86_64-debug for project des_display ****
+make -j4 clean 
+rm -fr build/x86_64-debug
+18:13:36 **** Clean-only build of configuration x86_64-debug for project des_inputs ****
+make -j4 clean 
+rm -fr build/x86_64-debug
+18:13:41 **** Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_display.d,-MT,build/x86_64-debug/src/des_display.o -o build/x86_64-debug/src/des_display.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_display.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_display   build/x86_64-debug/src/des_display.o  
+18:13:51 **** Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-release/src/des_controller.d,-MT,build/x86_64-release/src/des_controller.o -o build/x86_64-release/src/des_controller.o  -Wall -fmessage-length=0 -O2  src/des_controller.c
+src/des_controller.c:20:5: warning: second argument of 'main' should be 'char **' [-Wmain]
+ int main(int argc, char* argv) {
+     ^
+src/des_controller.c: In function 'main':
+src/des_controller.c:41:9: warning: 'display_pid' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  coid = ConnectAttach(ND_LOCAL_NODE, display_pid, 1, _NTO_SIDE_CHANNEL, 0);
+         ^
+src/des_controller.c:47:11: warning: 'input_msg' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   rcvid = MsgReceive(chid, input_msg, sizeof(input_msg), NULL);
+           ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-release/des_controller   build/x86_64-release/src/des_controller.o  
+18:14:23 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-release/src/des_controller.d,-MT,build/x86_64-release/src/des_controller.o -o build/x86_64-release/src/des_controller.o  -Wall -fmessage-length=0 -O2  src/des_controller.c
+src/des_controller.c:20:5: warning: second argument of 'main' should be 'char **' [-Wmain]
+ int main(int argc, char* argv) {
+     ^
+src/des_controller.c: In function 'main':
+src/des_controller.c:27:27: warning: passing argument 1 of 'atoi' makes pointer from integer without a cast [-Wint-conversion]
+  pid_t display_pid = atoi(argv[1]);
+                           ^
+In file included from src/des_controller.c:2:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/stdlib.h:111:12: note: expected 'const char *' but argument is of type 'char'
+ extern int atoi(const char *__nptr);
+            ^
+src/des_controller.c:47:11: warning: 'input_msg' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   rcvid = MsgReceive(chid, input_msg, sizeof(input_msg), NULL);
+           ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-release/des_controller   build/x86_64-release/src/des_controller.o  
+18:14:47 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-release/src/des_controller.d,-MT,build/x86_64-release/src/des_controller.o -o build/x86_64-release/src/des_controller.o  -Wall -fmessage-length=0 -O2  src/des_controller.c
+src/des_controller.c:20:5: warning: second argument of 'main' should be 'char **' [-Wmain]
+ int main(int argc, char* argv) {
+     ^
+src/des_controller.c: In function 'main':
+src/des_controller.c:41:9: warning: 'display_pid' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  coid = ConnectAttach(ND_LOCAL_NODE, display_pid, 1, _NTO_SIDE_CHANNEL, 0);
+         ^
+src/des_controller.c:47:11: warning: 'input_msg' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   rcvid = MsgReceive(chid, input_msg, sizeof(input_msg), NULL);
+           ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-release/des_controller   build/x86_64-release/src/des_controller.o  
+18:15:03 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-release/src/des_controller.d,-MT,build/x86_64-release/src/des_controller.o -o build/x86_64-release/src/des_controller.o  -Wall -fmessage-length=0 -O2  src/des_controller.c
+src/des_controller.c:20:5: warning: second argument of 'main' should be 'char **' [-Wmain]
+ int main(int argc, char* argv) {
+     ^
+src/des_controller.c: In function 'main':
+src/des_controller.c:28:21: warning: passing argument 1 of 'atoi' makes pointer from integer without a cast [-Wint-conversion]
+  display_pid = atoi(argv[2]);
+                     ^
+In file included from src/des_controller.c:2:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/stdlib.h:111:12: note: expected 'const char *' but argument is of type 'char'
+ extern int atoi(const char *__nptr);
+            ^
+src/des_controller.c:48:11: warning: 'input_msg' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   rcvid = MsgReceive(chid, input_msg, sizeof(input_msg), NULL);
+           ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-release/des_controller   build/x86_64-release/src/des_controller.o  
+18:15:07 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:15:44 **** Clean-only build of configuration x86_64-release for project des_controller ****
+make -j4 clean 
+rm -fr build/x86_64-release
+18:15:44 **** Clean-only build of configuration x86_64-debug for project des_display ****
+make -j4 clean 
+rm -fr build/x86_64-debug
+18:15:44 **** Clean-only build of configuration x86_64-debug for project des_inputs ****
+make -j4 clean 
+rm -fr build/x86_64-debug
+18:15:54 **** Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_display.d,-MT,build/x86_64-debug/src/des_display.o -o build/x86_64-debug/src/des_display.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_display.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_display   build/x86_64-debug/src/des_display.o  
+18:16:08 **** Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-release/src/des_controller.d,-MT,build/x86_64-release/src/des_controller.o -o build/x86_64-release/src/des_controller.o  -Wall -fmessage-length=0 -O2  src/des_controller.c
+src/des_controller.c:20:5: warning: second argument of 'main' should be 'char **' [-Wmain]
+ int main(int argc, char* argv) {
+     ^
+src/des_controller.c: In function 'main':
+src/des_controller.c:28:21: warning: passing argument 1 of 'atoi' makes pointer from integer without a cast [-Wint-conversion]
+  display_pid = atoi(argv[2]);
+                     ^
+In file included from src/des_controller.c:2:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/stdlib.h:111:12: note: expected 'const char *' but argument is of type 'char'
+ extern int atoi(const char *__nptr);
+            ^
+src/des_controller.c:48:11: warning: 'input_msg' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   rcvid = MsgReceive(chid, input_msg, sizeof(input_msg), NULL);
+           ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-release/des_controller   build/x86_64-release/src/des_controller.o  
+18:16:33 **** Build of configuration x86_64-debug for project wtfff ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/wtfff.d,-MT,build/x86_64-debug/src/wtfff.o -o build/x86_64-debug/src/wtfff.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/wtfff.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/wtfff   build/x86_64-debug/src/wtfff.o  
+18:17:54 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:18:12 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-release/src/des_controller.d,-MT,build/x86_64-release/src/des_controller.o -o build/x86_64-release/src/des_controller.o  -Wall -fmessage-length=0 -O2  src/des_controller.c
+src/des_controller.c: In function 'main':
+src/des_controller.c:47:11: warning: 'input_msg' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   rcvid = MsgReceive(chid, input_msg, sizeof(input_msg), NULL);
+           ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-release/des_controller   build/x86_64-release/src/des_controller.o  
+18:18:32 **** Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_inputs.d,-MT,build/x86_64-debug/src/des_inputs.o -o build/x86_64-debug/src/des_inputs.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_inputs.c
+src/des_inputs.c:9:5: warning: second argument of 'main' should be 'char **' [-Wmain]
+ int main(int argc, char* argv) {
+     ^
+src/des_inputs.c: In function 'main':
+src/des_inputs.c:16:34: warning: passing argument 1 of 'atoi' makes pointer from integer without a cast [-Wint-conversion]
+  pid_t des_controller_pid = atoi(argv[1]);
+                                  ^
+In file included from src/des_inputs.c:2:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/stdlib.h:111:12: note: expected 'const char *' but argument is of type 'char'
+ extern int atoi(const char *__nptr);
+            ^
+src/des_inputs.c:37:14: warning: passing argument 1 of 'strlen' makes pointer from integer without a cast [-Wint-conversion]
+   if(strlen (rplyMsg > 0)) {
+              ^
+In file included from src/des_inputs.c:6:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/string.h:80:15: note: expected 'const char *' but argument is of type 'int'
+ extern size_t strlen(const char *__s);
+               ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_inputs   build/x86_64-debug/src/des_inputs.o  
+18:18:44 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_inputs.d,-MT,build/x86_64-debug/src/des_inputs.o -o build/x86_64-debug/src/des_inputs.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_inputs.c
+src/des_inputs.c: In function 'main':
+src/des_inputs.c:37:14: warning: passing argument 1 of 'strlen' makes pointer from integer without a cast [-Wint-conversion]
+   if(strlen (rplyMsg > 0)) {
+              ^
+In file included from src/des_inputs.c:6:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/string.h:80:15: note: expected 'const char *' but argument is of type 'int'
+ extern size_t strlen(const char *__s);
+               ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_inputs   build/x86_64-debug/src/des_inputs.o  
+18:18:54 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_inputs.d,-MT,build/x86_64-debug/src/des_inputs.o -o build/x86_64-debug/src/des_inputs.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_inputs.c
+src/des_inputs.c: In function 'main':
+src/des_inputs.c:37:14: warning: passing argument 1 of 'strlen' makes pointer from integer without a cast [-Wint-conversion]
+   if(strlen (rplyMsg > 0)) {
+              ^
+In file included from src/des_inputs.c:6:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/string.h:80:15: note: expected 'const char *' but argument is of type 'int'
+ extern size_t strlen(const char *__s);
+               ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_inputs   build/x86_64-debug/src/des_inputs.o  
+18:19:12 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:20:13 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_inputs.d,-MT,build/x86_64-debug/src/des_inputs.o -o build/x86_64-debug/src/des_inputs.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_inputs.c
+src/des_inputs.c: In function 'main':
+src/des_inputs.c:29:14: warning: comparison with string literal results in unspecified behavior [-Waddress]
+  while(input != "exit"){
+              ^
+src/des_inputs.c:37:14: warning: passing argument 1 of 'strlen' makes pointer from integer without a cast [-Wint-conversion]
+   if(strlen (rplyMsg > 0)) {
+              ^
+In file included from src/des_inputs.c:6:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/string.h:80:15: note: expected 'const char *' but argument is of type 'int'
+ extern size_t strlen(const char *__s);
+               ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_inputs   build/x86_64-debug/src/des_inputs.o  
+18:20:44 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:22:04 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_inputs.d,-MT,build/x86_64-debug/src/des_inputs.o -o build/x86_64-debug/src/des_inputs.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_inputs.c
+src/des_inputs.c: In function 'main':
+src/des_inputs.c:29:14: warning: comparison with string literal results in unspecified behavior [-Waddress]
+  while(input != "exit"){
+              ^
+src/des_inputs.c:38:14: warning: passing argument 1 of 'strlen' makes pointer from integer without a cast [-Wint-conversion]
+   if(strlen (rplyMsg > 0)) {
+              ^
+In file included from src/des_inputs.c:6:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/string.h:80:15: note: expected 'const char *' but argument is of type 'int'
+ extern size_t strlen(const char *__s);
+               ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_inputs   build/x86_64-debug/src/des_inputs.o  
+18:22:49 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_inputs.d,-MT,build/x86_64-debug/src/des_inputs.o -o build/x86_64-debug/src/des_inputs.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_inputs.c
+src/des_inputs.c: In function 'main':
+src/des_inputs.c:29:14: warning: comparison with string literal results in unspecified behavior [-Waddress]
+  while(input != "exit"){
+              ^
+src/des_inputs.c:38:14: warning: passing argument 1 of 'strlen' makes pointer from integer without a cast [-Wint-conversion]
+   if(strlen (rplyMsg > 0)) {
+              ^
+In file included from src/des_inputs.c:6:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/string.h:80:15: note: expected 'const char *' but argument is of type 'int'
+ extern size_t strlen(const char *__s);
+               ^
+src/des_inputs.c:30:3: warning: 'input' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   scanf("%s",input);
+   ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_inputs   build/x86_64-debug/src/des_inputs.o  
+18:23:45 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_inputs.d,-MT,build/x86_64-debug/src/des_inputs.o -o build/x86_64-debug/src/des_inputs.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_inputs.c
+src/des_inputs.c: In function 'main':
+src/des_inputs.c:10:16: error: 'null' undeclared (first use in this function)
+  char* input = null;
+                ^
+src/des_inputs.c:10:16: note: each undeclared identifier is reported only once for each function it appears in
+src/des_inputs.c:29:14: warning: comparison with string literal results in unspecified behavior [-Waddress]
+  while(input != "exit"){
+              ^
+src/des_inputs.c:38:14: warning: passing argument 1 of 'strlen' makes pointer from integer without a cast [-Wint-conversion]
+   if(strlen (rplyMsg > 0)) {
+              ^
+In file included from src/des_inputs.c:6:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/string.h:80:15: note: expected 'const char *' but argument is of type 'int'
+ extern size_t strlen(const char *__s);
+               ^
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_inputs.o' failed
+make: *** [build/x86_64-debug/src/des_inputs.o] Error 1
+18:23:50 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_inputs.d,-MT,build/x86_64-debug/src/des_inputs.o -o build/x86_64-debug/src/des_inputs.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_inputs.c
+src/des_inputs.c: In function 'main':
+src/des_inputs.c:10:16: error: 'null' undeclared (first use in this function)
+  char* input = null;
+                ^
+src/des_inputs.c:10:16: note: each undeclared identifier is reported only once for each function it appears in
+src/des_inputs.c:29:14: warning: comparison with string literal results in unspecified behavior [-Waddress]
+  while(input != "exit"){
+              ^
+src/des_inputs.c:38:14: warning: passing argument 1 of 'strlen' makes pointer from integer without a cast [-Wint-conversion]
+   if(strlen (rplyMsg > 0)) {
+              ^
+In file included from src/des_inputs.c:6:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/string.h:80:15: note: expected 'const char *' but argument is of type 'int'
+ extern size_t strlen(const char *__s);
+               ^
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+make: *** [build/x86_64-debug/src/des_inputs.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_inputs.o' failed
+18:24:19 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_inputs.d,-MT,build/x86_64-debug/src/des_inputs.o -o build/x86_64-debug/src/des_inputs.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_inputs.c
+src/des_inputs.c: In function 'main':
+src/des_inputs.c:29:14: warning: comparison with string literal results in unspecified behavior [-Waddress]
+  while(input != "exit"){
+              ^
+src/des_inputs.c:38:14: warning: passing argument 1 of 'strlen' makes pointer from integer without a cast [-Wint-conversion]
+   if(strlen (rplyMsg > 0)) {
+              ^
+In file included from src/des_inputs.c:6:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/string.h:80:15: note: expected 'const char *' but argument is of type 'int'
+ extern size_t strlen(const char *__s);
+               ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_inputs   build/x86_64-debug/src/des_inputs.o  
+18:24:25 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:24:31 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:25:45 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:26:07 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-release/src/des_controller.d,-MT,build/x86_64-release/src/des_controller.o -o build/x86_64-release/src/des_controller.o  -Wall -fmessage-length=0 -O2  src/des_controller.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-release/des_controller   build/x86_64-release/src/des_controller.o  
+18:26:23 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:27:01 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:27:11 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_inputs.d,-MT,build/x86_64-debug/src/des_inputs.o -o build/x86_64-debug/src/des_inputs.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_inputs.c
+src/des_inputs.c: In function 'main':
+src/des_inputs.c:29:14: warning: comparison with string literal results in unspecified behavior [-Waddress]
+  while(input != "exit"){
+              ^
+src/des_inputs.c:38:14: warning: passing argument 1 of 'strlen' makes pointer from integer without a cast [-Wint-conversion]
+   if(strlen (rplyMsg > 0)) {
+              ^
+In file included from src/des_inputs.c:6:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/string.h:80:15: note: expected 'const char *' but argument is of type 'int'
+ extern size_t strlen(const char *__s);
+               ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_inputs   build/x86_64-debug/src/des_inputs.o  
+18:28:29 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:28:42 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:29:34 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:29:46 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:30:19 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:31:37 **** Clean-only build of configuration x86_64-release for project des_controller ****
+make -j4 clean 
+rm -fr build/x86_64-release
+18:31:37 **** Clean-only build of configuration x86_64-debug for project des_display ****
+make -j4 clean 
+rm -fr build/x86_64-debug
+18:31:37 **** Clean-only build of configuration x86_64-debug for project des_inputs ****
+make -j4 clean 
+rm -fr build/x86_64-debug
+rm: cannot remove 'build/x86_64-debug/des_inputs': Device or resource busy
+Makefile:66: recipe for target 'clean' failed
+make: *** [clean] Error 1
+18:31:37 **** Clean-only build of configuration x86_64-debug for project wtfff ****
+make -j4 clean 
+rm -fr build/x86_64-debug
+18:32:09 **** Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_display.d,-MT,build/x86_64-debug/src/des_display.o -o build/x86_64-debug/src/des_display.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_display.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_display   build/x86_64-debug/src/des_display.o  
+18:32:28 **** Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-release/src/des_controller.d,-MT,build/x86_64-release/src/des_controller.o -o build/x86_64-release/src/des_controller.o  -Wall -fmessage-length=0 -O2  src/des_controller.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-release/des_controller   build/x86_64-release/src/des_controller.o  
+18:33:16 **** Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_inputs.d,-MT,build/x86_64-debug/src/des_inputs.o -o build/x86_64-debug/src/des_inputs.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_inputs.c
+src/des_inputs.c: In function 'main':
+src/des_inputs.c:29:14: warning: comparison with string literal results in unspecified behavior [-Waddress]
+  while(input != "exit"){
+              ^
+src/des_inputs.c:38:14: warning: passing argument 1 of 'strlen' makes pointer from integer without a cast [-Wint-conversion]
+   if(strlen (rplyMsg > 0)) {
+              ^
+In file included from src/des_inputs.c:6:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/string.h:80:15: note: expected 'const char *' but argument is of type 'int'
+ extern size_t strlen(const char *__s);
+               ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_inputs   build/x86_64-debug/src/des_inputs.o  
+18:37:03 **** Clean-only build of configuration x86_64-release for project des_controller ****
+make -j4 clean 
+rm -fr build/x86_64-release
+rm: cannot remove 'build/x86_64-release/des_controller': Device or resource busy
+make: *** [clean] Error 1
+Makefile:66: recipe for target 'clean' failed
+18:37:04 **** Clean-only build of configuration x86_64-debug for project des_display ****
+make -j4 clean 
+rm -fr build/x86_64-debug
+18:37:04 **** Clean-only build of configuration x86_64-debug for project des_inputs ****
+make -j4 clean 
+rm -fr build/x86_64-debug
+18:37:30 **** Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_display.d,-MT,build/x86_64-debug/src/des_display.o -o build/x86_64-debug/src/des_display.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_display.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_display   build/x86_64-debug/src/des_display.o  
+18:38:17 **** Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-release/src/des_controller.d,-MT,build/x86_64-release/src/des_controller.o -o build/x86_64-release/src/des_controller.o  -Wall -fmessage-length=0 -O2  src/des_controller.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-release/des_controller   build/x86_64-release/src/des_controller.o  
+18:38:32 **** Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_inputs.d,-MT,build/x86_64-debug/src/des_inputs.o -o build/x86_64-debug/src/des_inputs.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_inputs.c
+src/des_inputs.c: In function 'main':
+src/des_inputs.c:29:14: warning: comparison with string literal results in unspecified behavior [-Waddress]
+  while(input != "exit"){
+              ^
+src/des_inputs.c:38:14: warning: passing argument 1 of 'strlen' makes pointer from integer without a cast [-Wint-conversion]
+   if(strlen (rplyMsg > 0)) {
+              ^
+In file included from src/des_inputs.c:6:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/string.h:80:15: note: expected 'const char *' but argument is of type 'int'
+ extern size_t strlen(const char *__s);
+               ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_inputs   build/x86_64-debug/src/des_inputs.o  
+18:39:50 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:40:34 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:41:42 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:42:13 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:43:15 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_inputs.d,-MT,build/x86_64-debug/src/des_inputs.o -o build/x86_64-debug/src/des_inputs.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_inputs.c
+src/des_inputs.c: In function 'main':
+src/des_inputs.c:29:14: warning: comparison with string literal results in unspecified behavior [-Waddress]
+  while(input != "exit"){
+              ^
+src/des_inputs.c:39:14: warning: passing argument 1 of 'strlen' makes pointer from integer without a cast [-Wint-conversion]
+   if(strlen (rplyMsg > 0)) {
+              ^
+In file included from src/des_inputs.c:6:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/string.h:80:15: note: expected 'const char *' but argument is of type 'int'
+ extern size_t strlen(const char *__s);
+               ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_inputs   build/x86_64-debug/src/des_inputs.o  
+18:43:20 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:45:00 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:21:26 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-release/src/des_controller.d,-MT,build/x86_64-release/src/des_controller.o -o build/x86_64-release/src/des_controller.o  -Wall -fmessage-length=0 -O2  src/des_controller.c
+src/des_controller.c: In function 'main':
+src/des_controller.c:27:8: warning: unused variable 'display_pid' [-Wunused-variable]
+  pid_t display_pid = atoi(argv[1]);
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-release/des_controller   build/x86_64-release/src/des_controller.o  
+08:21:51 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:22:15 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:22:27 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:22:40 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:22:59 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:23:28 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:26:30 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-release/src/des_controller.d,-MT,build/x86_64-release/src/des_controller.o -o build/x86_64-release/src/des_controller.o  -Wall -fmessage-length=0 -O2  src/des_controller.c
+src/des_controller.c: In function 'main':
+src/des_controller.c:27:8: warning: unused variable 'display_pid' [-Wunused-variable]
+  pid_t display_pid = atoi(argv[1]);
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-release/des_controller   build/x86_64-release/src/des_controller.o  
+08:26:44 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:27:22 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-release/src/des_controller.d,-MT,build/x86_64-release/src/des_controller.o -o build/x86_64-release/src/des_controller.o  -Wall -fmessage-length=0 -O2  src/des_controller.c
+src/des_controller.c: In function 'main':
+src/des_controller.c:166:1: error: expected declaration or statement at end of input
+ }
+ ^
+src/des_controller.c:27:8: warning: unused variable 'display_pid' [-Wunused-variable]
+  pid_t display_pid = atoi(argv[1]);
+        ^
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-release/src/des_controller.o' failed
+make: *** [build/x86_64-release/src/des_controller.o] Error 1
+08:27:50 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-release/src/des_controller.d,-MT,build/x86_64-release/src/des_controller.o -o build/x86_64-release/src/des_controller.o  -Wall -fmessage-length=0 -O2  src/des_controller.c
+src/des_controller.c: In function 'main':
+src/des_controller.c:27:8: warning: unused variable 'display_pid' [-Wunused-variable]
+  pid_t display_pid = atoi(argv[1]);
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-release/des_controller   build/x86_64-release/src/des_controller.o  
+08:28:03 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:28:29 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_inputs.d,-MT,build/x86_64-debug/src/des_inputs.o -o build/x86_64-debug/src/des_inputs.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_inputs.c
+src/des_inputs.c: In function 'main':
+src/des_inputs.c:29:14: warning: comparison with string literal results in unspecified behavior [-Waddress]
+  while(input != "exit"){
+              ^
+src/des_inputs.c:32:9: error: assignment to expression with array type
+   input = "ls";
+         ^
+src/des_inputs.c:39:14: warning: passing argument 1 of 'strlen' makes pointer from integer without a cast [-Wint-conversion]
+   if(strlen (rplyMsg > 0)) {
+              ^
+In file included from src/des_inputs.c:6:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/string.h:80:15: note: expected 'const char *' but argument is of type 'int'
+ extern size_t strlen(const char *__s);
+               ^
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_inputs.o' failed
+make: *** [build/x86_64-debug/src/des_inputs.o] Error 1
+08:29:07 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_inputs.d,-MT,build/x86_64-debug/src/des_inputs.o -o build/x86_64-debug/src/des_inputs.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_inputs.c
+src/des_inputs.c: In function 'main':
+src/des_inputs.c:29:14: warning: comparison with string literal results in unspecified behavior [-Waddress]
+  while(input != "exit"){
+              ^
+src/des_inputs.c:39:14: warning: passing argument 1 of 'strlen' makes pointer from integer without a cast [-Wint-conversion]
+   if(strlen (rplyMsg > 0)) {
+              ^
+In file included from src/des_inputs.c:6:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/string.h:80:15: note: expected 'const char *' but argument is of type 'int'
+ extern size_t strlen(const char *__s);
+               ^
+src/des_inputs.c:33:27: warning: 'input' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   if(MsgSend(coid, input, strlen(input) + 1, rplyMsg, sizeof (rplyMsg)) == -1){
+                           ^
+src/des_inputs.c:33:6: warning: 'rplyMsg' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   if(MsgSend(coid, input, strlen(input) + 1, rplyMsg, sizeof (rplyMsg)) == -1){
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_inputs   build/x86_64-debug/src/des_inputs.o  
+08:29:21 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_inputs.d,-MT,build/x86_64-debug/src/des_inputs.o -o build/x86_64-debug/src/des_inputs.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_inputs.c
+src/des_inputs.c: In function 'main':
+src/des_inputs.c:29:14: warning: comparison with string literal results in unspecified behavior [-Waddress]
+  while(input != "exit"){
+              ^
+src/des_inputs.c:39:14: warning: passing argument 1 of 'strlen' makes pointer from integer without a cast [-Wint-conversion]
+   if(strlen (rplyMsg > 0)) {
+              ^
+In file included from src/des_inputs.c:6:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/string.h:80:15: note: expected 'const char *' but argument is of type 'int'
+ extern size_t strlen(const char *__s);
+               ^
+src/des_inputs.c:33:6: warning: 'rplyMsg' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   if(MsgSend(coid, input, strlen(input) + 1, rplyMsg, sizeof (rplyMsg)) == -1){
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_inputs   build/x86_64-debug/src/des_inputs.o  
+08:30:16 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_inputs.d,-MT,build/x86_64-debug/src/des_inputs.o -o build/x86_64-debug/src/des_inputs.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_inputs.c
+src/des_inputs.c: In function 'main':
+src/des_inputs.c:29:18: warning: comparison with string literal results in unspecified behavior [-Waddress]
+  while(input_msg != "exit"){
+                  ^
+src/des_inputs.c:39:14: warning: passing argument 1 of 'strlen' makes pointer from integer without a cast [-Wint-conversion]
+   if(strlen (rplyMsg > 0)) {
+              ^
+In file included from src/des_inputs.c:6:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/string.h:80:15: note: expected 'const char *' but argument is of type 'int'
+ extern size_t strlen(const char *__s);
+               ^
+src/des_inputs.c:33:6: warning: 'rplyMsg' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   if(MsgSend(coid, input_msg, strlen(input_msg) + 1, rplyMsg, sizeof (rplyMsg)) == -1){
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_inputs   build/x86_64-debug/src/des_inputs.o  
+08:30:21 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-release/src/des_controller.d,-MT,build/x86_64-release/src/des_controller.o -o build/x86_64-release/src/des_controller.o  -Wall -fmessage-length=0 -O2  src/des_controller.c
+src/des_controller.c: In function 'main':
+src/des_controller.c:27:8: warning: unused variable 'display_pid' [-Wunused-variable]
+  pid_t display_pid = atoi(argv[1]);
+        ^
+src/des_controller.c:47:9: warning: 'input_msg' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   rcvid = MsgReceive(chid, input_msg, sizeof(input_msg), NULL);
+         ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-release/des_controller   build/x86_64-release/src/des_controller.o  
+08:30:36 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:35:14 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:35:29 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:38:27 **** Clean-only build of configuration x86_64-release for project des_controller ****
+make -j4 clean 
+rm -fr build/x86_64-release
+08:38:28 **** Clean-only build of configuration x86_64-debug for project des_display ****
+make -j4 clean 
+rm -fr build/x86_64-debug
+08:38:28 **** Clean-only build of configuration x86_64-debug for project des_inputs ****
+make -j4 clean 
+rm -fr build/x86_64-debug
+08:39:49 **** Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-release/src/des_controller.d,-MT,build/x86_64-release/src/des_controller.o -o build/x86_64-release/src/des_controller.o  -Wall -fmessage-length=0 -O2  src/des_controller.c
+src/des_controller.c: In function 'main':
+src/des_controller.c:27:8: warning: unused variable 'display_pid' [-Wunused-variable]
+  pid_t display_pid = atoi(argv[1]);
+        ^
+src/des_controller.c:47:9: warning: 'input_msg' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   rcvid = MsgReceive(chid, input_msg, sizeof(input_msg), NULL);
+         ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-release/des_controller   build/x86_64-release/src/des_controller.o  
+08:39:49 **** Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_display.d,-MT,build/x86_64-debug/src/des_display.o -o build/x86_64-debug/src/des_display.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_display.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_display   build/x86_64-debug/src/des_display.o  
+08:39:50 **** Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_inputs.d,-MT,build/x86_64-debug/src/des_inputs.o -o build/x86_64-debug/src/des_inputs.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_inputs.c
+src/des_inputs.c: In function 'main':
+src/des_inputs.c:29:18: warning: comparison with string literal results in unspecified behavior [-Waddress]
+  while(input_msg != "exit"){
+                  ^
+src/des_inputs.c:39:14: warning: passing argument 1 of 'strlen' makes pointer from integer without a cast [-Wint-conversion]
+   if(strlen (rplyMsg > 0)) {
+              ^
+In file included from src/des_inputs.c:6:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/string.h:80:15: note: expected 'const char *' but argument is of type 'int'
+ extern size_t strlen(const char *__s);
+               ^
+src/des_inputs.c:33:6: warning: 'rplyMsg' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   if(MsgSend(coid, input_msg, strlen(input_msg), rplyMsg, sizeof (rplyMsg)) == -1){
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_inputs   build/x86_64-debug/src/des_inputs.o  
+08:41:00 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:41:49 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:43:47 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:44:11 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:45:11 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:45:50 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:46:45 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:46:57 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_inputs.d,-MT,build/x86_64-debug/src/des_inputs.o -o build/x86_64-debug/src/des_inputs.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_inputs.c
+src/des_inputs.c: In function 'main':
+src/des_inputs.c:29:18: warning: comparison with string literal results in unspecified behavior [-Waddress]
+  while(input_msg != "exit"){
+                  ^
+src/des_inputs.c:39:14: warning: passing argument 1 of 'strlen' makes pointer from integer without a cast [-Wint-conversion]
+   if(strlen (rplyMsg > 0)) {
+              ^
+In file included from src/des_inputs.c:6:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/string.h:80:15: note: expected 'const char *' but argument is of type 'int'
+ extern size_t strlen(const char *__s);
+               ^
+src/des_inputs.c:33:6: warning: 'rplyMsg' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   if(MsgSend(coid, input_msg, 10, rplyMsg, sizeof (rplyMsg)) == -1){
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_inputs   build/x86_64-debug/src/des_inputs.o  
+08:48:22 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_inputs.d,-MT,build/x86_64-debug/src/des_inputs.o -o build/x86_64-debug/src/des_inputs.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_inputs.c
+src/des_inputs.c: In function 'main':
+src/des_inputs.c:39:14: warning: passing argument 1 of 'strlen' makes pointer from integer without a cast [-Wint-conversion]
+   if(strlen (rplyMsg > 0)) {
+              ^
+In file included from src/des_inputs.c:6:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/string.h:80:15: note: expected 'const char *' but argument is of type 'int'
+ extern size_t strlen(const char *__s);
+               ^
+src/des_inputs.c:33:6: warning: 'rplyMsg' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   if(MsgSend(coid, input_msg, strlen(input_msg), rplyMsg, sizeof (rplyMsg)) == -1){
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_inputs   build/x86_64-debug/src/des_inputs.o  
+08:55:01 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:56:24 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-release/src/des_controller.d,-MT,build/x86_64-release/src/des_controller.o -o build/x86_64-release/src/des_controller.o  -Wall -fmessage-length=0 -O2  src/des_controller.c
+In file included from src/des_controller.c:14:0:
+src/ASS1.h:80:1: warning: data definition has no type or storage class
+ STATE_HANDLER[0] = SCAN_FUN;
+ ^
+src/ASS1.h:80:1: warning: type defaults to 'int' in declaration of 'STATE_HANDLER' [-Wimplicit-int]
+src/ASS1.h:80:1: error: conflicting types for 'STATE_HANDLER'
+src/ASS1.h:79:7: note: previous declaration of 'STATE_HANDLER' was here
+ void(*STATE_HANDLER[10])(char* input);
+       ^
+src/ASS1.h:80:20: error: 'SCAN_FUN' undeclared here (not in a function)
+ STATE_HANDLER[0] = SCAN_FUN;
+                    ^
+src/ASS1.h:81:1: warning: data definition has no type or storage class
+ STATE_HANDLER[1] = UNLOCK_FUNC;
+ ^
+src/ASS1.h:81:1: warning: type defaults to 'int' in declaration of 'STATE_HANDLER' [-Wimplicit-int]
+src/ASS1.h:81:1: error: conflicting types for 'STATE_HANDLER'
+src/ASS1.h:79:7: note: previous declaration of 'STATE_HANDLER' was here
+ void(*STATE_HANDLER[10])(char* input);
+       ^
+src/ASS1.h:81:20: error: invalid initializer
+ STATE_HANDLER[1] = UNLOCK_FUNC;
+                    ^
+src/ASS1.h:82:1: warning: data definition has no type or storage class
+ STATE_HANDLER[2] = OPEN_FUNC;
+ ^
+src/ASS1.h:82:1: warning: type defaults to 'int' in declaration of 'STATE_HANDLER' [-Wimplicit-int]
+src/ASS1.h:82:1: error: conflicting types for 'STATE_HANDLER'
+src/ASS1.h:79:7: note: previous declaration of 'STATE_HANDLER' was here
+ void(*STATE_HANDLER[10])(char* input);
+       ^
+src/ASS1.h:82:20: error: invalid initializer
+ STATE_HANDLER[2] = OPEN_FUNC;
+                    ^
+src/ASS1.h:83:1: warning: data definition has no type or storage class
+ STATE_HANDLER[3] = WEIGHT_FUNC;
+ ^
+src/ASS1.h:83:1: warning: type defaults to 'int' in declaration of 'STATE_HANDLER' [-Wimplicit-int]
+src/ASS1.h:83:1: error: conflicting types for 'STATE_HANDLER'
+src/ASS1.h:79:7: note: previous declaration of 'STATE_HANDLER' was here
+ void(*STATE_HANDLER[10])(char* input);
+       ^
+src/ASS1.h:83:20: error: invalid initializer
+ STATE_HANDLER[3] = WEIGHT_FUNC;
+                    ^
+src/ASS1.h:84:1: warning: data definition has no type or storage class
+ STATE_HANDLER[4] = CLOSE_FUNC;
+ ^
+src/ASS1.h:84:1: warning: type defaults to 'int' in declaration of 'STATE_HANDLER' [-Wimplicit-int]
+src/ASS1.h:84:1: error: conflicting types for 'STATE_HANDLER'
+src/ASS1.h:79:7: note: previous declaration of 'STATE_HANDLER' was here
+ void(*STATE_HANDLER[10])(char* input);
+       ^
+src/ASS1.h:84:20: error: invalid initializer
+ STATE_HANDLER[4] = CLOSE_FUNC;
+                    ^
+src/ASS1.h:85:1: warning: data definition has no type or storage class
+ STATE_HANDLER[5] = GUARD_EXIT_UNL_FUNC;
+ ^
+src/ASS1.h:85:1: warning: type defaults to 'int' in declaration of 'STATE_HANDLER' [-Wimplicit-int]
+src/ASS1.h:85:1: error: conflicting types for 'STATE_HANDLER'
+src/ASS1.h:79:7: note: previous declaration of 'STATE_HANDLER' was here
+ void(*STATE_HANDLER[10])(char* input);
+       ^
+src/ASS1.h:85:20: error: invalid initializer
+ STATE_HANDLER[5] = GUARD_EXIT_UNL_FUNC;
+                    ^
+src/ASS1.h:86:1: warning: data definition has no type or storage class
+ STATE_HANDLER[6] = GUARD_EXIT_OPEN_FUNC;
+ ^
+src/ASS1.h:86:1: warning: type defaults to 'int' in declaration of 'STATE_HANDLER' [-Wimplicit-int]
+src/ASS1.h:86:1: error: conflicting types for 'STATE_HANDLER'
+src/ASS1.h:79:7: note: previous declaration of 'STATE_HANDLER' was here
+ void(*STATE_HANDLER[10])(char* input);
+       ^
+src/ASS1.h:86:20: error: invalid initializer
+ STATE_HANDLER[6] = GUARD_EXIT_OPEN_FUNC;
+                    ^
+src/ASS1.h:87:1: warning: data definition has no type or storage class
+ STATE_HANDLER[7] = EXIT_CLOSE_FUNC;
+ ^
+src/ASS1.h:87:1: warning: type defaults to 'int' in declaration of 'STATE_HANDLER' [-Wimplicit-int]
+src/ASS1.h:87:1: error: conflicting types for 'STATE_HANDLER'
+src/ASS1.h:79:7: note: previous declaration of 'STATE_HANDLER' was here
+ void(*STATE_HANDLER[10])(char* input);
+       ^
+src/ASS1.h:87:20: error: invalid initializer
+ STATE_HANDLER[7] = EXIT_CLOSE_FUNC;
+                    ^
+src/ASS1.h:88:1: warning: data definition has no type or storage class
+ STATE_HANDLER[8] = GUARD_EXIT_LOCK_FUNC;
+ ^
+src/ASS1.h:88:1: warning: type defaults to 'int' in declaration of 'STATE_HANDLER' [-Wimplicit-int]
+src/ASS1.h:88:1: error: conflicting types for 'STATE_HANDLER'
+src/ASS1.h:79:7: note: previous declaration of 'STATE_HANDLER' was here
+ void(*STATE_HANDLER[10])(char* input);
+       ^
+src/ASS1.h:88:20: error: invalid initializer
+ STATE_HANDLER[8] = GUARD_EXIT_LOCK_FUNC;
+                    ^
+src/ASS1.h:89:1: warning: data definition has no type or storage class
+ STATE_HANDLER[9] = EXIT_FUNC;
+ ^
+src/ASS1.h:89:1: warning: type defaults to 'int' in declaration of 'STATE_HANDLER' [-Wimplicit-int]
+src/ASS1.h:89:1: error: conflicting types for 'STATE_HANDLER'
+src/ASS1.h:79:7: note: previous declaration of 'STATE_HANDLER' was here
+ void(*STATE_HANDLER[10])(char* input);
+       ^
+src/ASS1.h:89:20: error: invalid initializer
+ STATE_HANDLER[9] = EXIT_FUNC;
+                    ^
+src/des_controller.c: In function 'main':
+src/des_controller.c:57:5: error: invalid type argument of unary '*' (have 'int')
+    (*STATE_HANDLER[person.currentState])(input_msg);
+     ^
+src/des_controller.c:27:8: warning: unused variable 'display_pid' [-Wunused-variable]
+  pid_t display_pid = atoi(argv[1]);
+        ^
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-release/src/des_controller.o' failed
+make: *** [build/x86_64-release/src/des_controller.o] Error 1
+08:56:43 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-release/src/des_controller.d,-MT,build/x86_64-release/src/des_controller.o -o build/x86_64-release/src/des_controller.o  -Wall -fmessage-length=0 -O2  src/des_controller.c
+In file included from src/des_controller.c:14:0:
+src/ASS1.h:80:1: warning: data definition has no type or storage class
+ STATE_HANDLER[0] = SCAN_FUN();
+ ^
+src/ASS1.h:80:1: warning: type defaults to 'int' in declaration of 'STATE_HANDLER' [-Wimplicit-int]
+src/ASS1.h:80:1: error: conflicting types for 'STATE_HANDLER'
+src/ASS1.h:79:7: note: previous declaration of 'STATE_HANDLER' was here
+ void(*STATE_HANDLER[10])(char* input);
+       ^
+src/ASS1.h:80:20: warning: implicit declaration of function 'SCAN_FUN' [-Wimplicit-function-declaration]
+ STATE_HANDLER[0] = SCAN_FUN();
+                    ^
+src/ASS1.h:80:20: error: invalid initializer
+src/ASS1.h:81:1: warning: data definition has no type or storage class
+ STATE_HANDLER[1] = UNLOCK_FUNC;
+ ^
+src/ASS1.h:81:1: warning: type defaults to 'int' in declaration of 'STATE_HANDLER' [-Wimplicit-int]
+src/ASS1.h:81:1: error: conflicting types for 'STATE_HANDLER'
+src/ASS1.h:79:7: note: previous declaration of 'STATE_HANDLER' was here
+ void(*STATE_HANDLER[10])(char* input);
+       ^
+src/ASS1.h:81:20: error: invalid initializer
+ STATE_HANDLER[1] = UNLOCK_FUNC;
+                    ^
+src/ASS1.h:82:1: warning: data definition has no type or storage class
+ STATE_HANDLER[2] = OPEN_FUNC;
+ ^
+src/ASS1.h:82:1: warning: type defaults to 'int' in declaration of 'STATE_HANDLER' [-Wimplicit-int]
+src/ASS1.h:82:1: error: conflicting types for 'STATE_HANDLER'
+src/ASS1.h:79:7: note: previous declaration of 'STATE_HANDLER' was here
+ void(*STATE_HANDLER[10])(char* input);
+       ^
+src/ASS1.h:82:20: error: invalid initializer
+ STATE_HANDLER[2] = OPEN_FUNC;
+                    ^
+src/ASS1.h:83:1: warning: data definition has no type or storage class
+ STATE_HANDLER[3] = WEIGHT_FUNC;
+ ^
+src/ASS1.h:83:1: warning: type defaults to 'int' in declaration of 'STATE_HANDLER' [-Wimplicit-int]
+src/ASS1.h:83:1: error: conflicting types for 'STATE_HANDLER'
+src/ASS1.h:79:7: note: previous declaration of 'STATE_HANDLER' was here
+ void(*STATE_HANDLER[10])(char* input);
+       ^
+src/ASS1.h:83:20: error: invalid initializer
+ STATE_HANDLER[3] = WEIGHT_FUNC;
+                    ^
+src/ASS1.h:84:1: warning: data definition has no type or storage class
+ STATE_HANDLER[4] = CLOSE_FUNC;
+ ^
+src/ASS1.h:84:1: warning: type defaults to 'int' in declaration of 'STATE_HANDLER' [-Wimplicit-int]
+src/ASS1.h:84:1: error: conflicting types for 'STATE_HANDLER'
+src/ASS1.h:79:7: note: previous declaration of 'STATE_HANDLER' was here
+ void(*STATE_HANDLER[10])(char* input);
+       ^
+src/ASS1.h:84:20: error: invalid initializer
+ STATE_HANDLER[4] = CLOSE_FUNC;
+                    ^
+src/ASS1.h:85:1: warning: data definition has no type or storage class
+ STATE_HANDLER[5] = GUARD_EXIT_UNL_FUNC;
+ ^
+src/ASS1.h:85:1: warning: type defaults to 'int' in declaration of 'STATE_HANDLER' [-Wimplicit-int]
+src/ASS1.h:85:1: error: conflicting types for 'STATE_HANDLER'
+src/ASS1.h:79:7: note: previous declaration of 'STATE_HANDLER' was here
+ void(*STATE_HANDLER[10])(char* input);
+       ^
+src/ASS1.h:85:20: error: invalid initializer
+ STATE_HANDLER[5] = GUARD_EXIT_UNL_FUNC;
+                    ^
+src/ASS1.h:86:1: warning: data definition has no type or storage class
+ STATE_HANDLER[6] = GUARD_EXIT_OPEN_FUNC;
+ ^
+src/ASS1.h:86:1: warning: type defaults to 'int' in declaration of 'STATE_HANDLER' [-Wimplicit-int]
+src/ASS1.h:86:1: error: conflicting types for 'STATE_HANDLER'
+src/ASS1.h:79:7: note: previous declaration of 'STATE_HANDLER' was here
+ void(*STATE_HANDLER[10])(char* input);
+       ^
+src/ASS1.h:86:20: error: invalid initializer
+ STATE_HANDLER[6] = GUARD_EXIT_OPEN_FUNC;
+                    ^
+src/ASS1.h:87:1: warning: data definition has no type or storage class
+ STATE_HANDLER[7] = EXIT_CLOSE_FUNC;
+ ^
+src/ASS1.h:87:1: warning: type defaults to 'int' in declaration of 'STATE_HANDLER' [-Wimplicit-int]
+src/ASS1.h:87:1: error: conflicting types for 'STATE_HANDLER'
+src/ASS1.h:79:7: note: previous declaration of 'STATE_HANDLER' was here
+ void(*STATE_HANDLER[10])(char* input);
+       ^
+src/ASS1.h:87:20: error: invalid initializer
+ STATE_HANDLER[7] = EXIT_CLOSE_FUNC;
+                    ^
+src/ASS1.h:88:1: warning: data definition has no type or storage class
+ STATE_HANDLER[8] = GUARD_EXIT_LOCK_FUNC;
+ ^
+src/ASS1.h:88:1: warning: type defaults to 'int' in declaration of 'STATE_HANDLER' [-Wimplicit-int]
+src/ASS1.h:88:1: error: conflicting types for 'STATE_HANDLER'
+src/ASS1.h:79:7: note: previous declaration of 'STATE_HANDLER' was here
+ void(*STATE_HANDLER[10])(char* input);
+       ^
+src/ASS1.h:88:20: error: invalid initializer
+ STATE_HANDLER[8] = GUARD_EXIT_LOCK_FUNC;
+                    ^
+src/ASS1.h:89:1: warning: data definition has no type or storage class
+ STATE_HANDLER[9] = EXIT_FUNC;
+ ^
+src/ASS1.h:89:1: warning: type defaults to 'int' in declaration of 'STATE_HANDLER' [-Wimplicit-int]
+src/ASS1.h:89:1: error: conflicting types for 'STATE_HANDLER'
+src/ASS1.h:79:7: note: previous declaration of 'STATE_HANDLER' was here
+ void(*STATE_HANDLER[10])(char* input);
+       ^
+src/ASS1.h:89:20: error: invalid initializer
+ STATE_HANDLER[9] = EXIT_FUNC;
+                    ^
+src/des_controller.c: In function 'main':
+src/des_controller.c:57:5: error: invalid type argument of unary '*' (have 'int')
+    (*STATE_HANDLER[person.currentState])(input_msg);
+     ^
+src/des_controller.c:27:8: warning: unused variable 'display_pid' [-Wunused-variable]
+  pid_t display_pid = atoi(argv[1]);
+        ^
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-release/src/des_controller.o' failed
+make: *** [build/x86_64-release/src/des_controller.o] Error 1
+08:59:15 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-release/src/des_controller.d,-MT,build/x86_64-release/src/des_controller.o -o build/x86_64-release/src/des_controller.o  -Wall -fmessage-length=0 -O2  src/des_controller.c
+src/des_controller.c: In function 'main':
+src/des_controller.c:27:8: warning: unused variable 'display_pid' [-Wunused-variable]
+  pid_t display_pid = atoi(argv[1]);
+        ^
+src/des_controller.c:47:9: warning: 'input_msg' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   rcvid = MsgReceive(chid, input_msg, sizeof(input_msg), NULL);
+         ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-release/des_controller   build/x86_64-release/src/des_controller.o  
+08:59:20 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+08:59:49 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:00:44 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:01:33 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:02:49 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:03:08 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_inputs.d,-MT,build/x86_64-debug/src/des_inputs.o -o build/x86_64-debug/src/des_inputs.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_inputs.c
+src/des_inputs.c: In function 'main':
+src/des_inputs.c:39:14: warning: passing argument 1 of 'strlen' makes pointer from integer without a cast [-Wint-conversion]
+   if(strlen (rplyMsg > 0)) {
+              ^
+In file included from src/des_inputs.c:6:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/string.h:80:15: note: expected 'const char *' but argument is of type 'int'
+ extern size_t strlen(const char *__s);
+               ^
+src/des_inputs.c:32:3: warning: 'input_msg' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   strcpy(input_msg,"ls");
+   ^
+src/des_inputs.c:33:6: warning: 'rplyMsg' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   if(MsgSend(coid, input_msg, strlen(input_msg), rplyMsg, sizeof (rplyMsg)) == -1){
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_inputs   build/x86_64-debug/src/des_inputs.o  
+09:04:23 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_inputs.d,-MT,build/x86_64-debug/src/des_inputs.o -o build/x86_64-debug/src/des_inputs.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_inputs.c
+src/des_inputs.c: In function 'main':
+src/des_inputs.c:40:14: warning: passing argument 1 of 'strlen' makes pointer from integer without a cast [-Wint-conversion]
+   if(strlen (rplyMsg > 0)) {
+              ^
+In file included from src/des_inputs.c:6:0:
+C:/Users/Cory/qnx700/target/qnx7/usr/include/string.h:80:15: note: expected 'const char *' but argument is of type 'int'
+ extern size_t strlen(const char *__s);
+               ^
+src/des_inputs.c:34:6: warning: 'rplyMsg' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   if(MsgSend(coid, input_msg, strlen(input_msg), rplyMsg, sizeof (rplyMsg)) == -1){
+      ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_inputs   build/x86_64-debug/src/des_inputs.o  
+09:04:31 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:09:40 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:09:56 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-release/src/des_controller.d,-MT,build/x86_64-release/src/des_controller.o -o build/x86_64-release/src/des_controller.o  -Wall -fmessage-length=0 -O2  src/des_controller.c
+src/des_controller.c: In function 'main':
+src/des_controller.c:27:8: warning: unused variable 'display_pid' [-Wunused-variable]
+  pid_t display_pid = atoi(argv[1]);
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-release/des_controller   build/x86_64-release/src/des_controller.o  
+09:10:19 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:11:45 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-release/src/des_controller.d,-MT,build/x86_64-release/src/des_controller.o -o build/x86_64-release/src/des_controller.o  -Wall -fmessage-length=0 -O2  src/des_controller.c
+src/des_controller.c: In function 'main':
+src/des_controller.c:27:8: warning: unused variable 'display_pid' [-Wunused-variable]
+  pid_t display_pid = atoi(argv[1]);
+        ^
+src/des_controller.c:46:11: warning: 'input_msg' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   rcvid = MsgReceive(chid, input_msg, strlen(input_msg), NULL);
+           ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-release/des_controller   build/x86_64-release/src/des_controller.o  
+09:12:32 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-release/src/des_controller.d,-MT,build/x86_64-release/src/des_controller.o -o build/x86_64-release/src/des_controller.o  -Wall -fmessage-length=0 -O2  src/des_controller.c
+src/des_controller.c: In function 'main':
+src/des_controller.c:27:8: warning: unused variable 'display_pid' [-Wunused-variable]
+  pid_t display_pid = atoi(argv[1]);
+        ^
+src/des_controller.c:46:11: warning: 'input_msg' may be used uninitialized in this function [-Wmaybe-uninitialized]
+   rcvid = MsgReceive(chid, input_msg, strlen(input_msg), NULL);
+           ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-release/des_controller   build/x86_64-release/src/des_controller.o  
+09:12:36 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:12:57 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:13:43 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:14:36 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-release/src/des_controller.d,-MT,build/x86_64-release/src/des_controller.o -o build/x86_64-release/src/des_controller.o  -Wall -fmessage-length=0 -O2  src/des_controller.c
+src/des_controller.c: In function 'main':
+src/des_controller.c:27:8: warning: unused variable 'display_pid' [-Wunused-variable]
+  pid_t display_pid = atoi(argv[1]);
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-release/des_controller   build/x86_64-release/src/des_controller.o  
+09:14:49 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:15:07 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:15:29 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:15:47 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:16:24 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:17:34 **** Incremental Build of configuration x86_64-release for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-release/src/des_controller.d,-MT,build/x86_64-release/src/des_controller.o -o build/x86_64-release/src/des_controller.o  -Wall -fmessage-length=0 -O2  src/des_controller.c
+src/des_controller.c: In function 'main':
+src/des_controller.c:27:8: warning: unused variable 'display_pid' [-Wunused-variable]
+  pid_t display_pid = atoi(argv[1]);
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-release/des_controller   build/x86_64-release/src/des_controller.o  
+09:17:54 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
