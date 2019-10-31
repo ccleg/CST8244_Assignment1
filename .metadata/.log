@@ -1070,3 +1070,27 @@ org.eclipse.core.runtime.CoreException: Target not available.
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:55)
 !SUBENTRY 1 org.eclipse.cdt.dsf 4 10001 2019-10-31 08:41:50.976
 !MESSAGE Target not available.
+
+!ENTRY org.eclipse.cdt.core 1 0 2019-10-31 09:27:23.975
+!MESSAGE Indexed 'des_display' (1 sources, 16 headers) in 0.178 sec: 1,161 declarations; 1,067 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0%)
+
+!ENTRY org.eclipse.debug.core 4 125 2019-10-31 09:28:24.479
+!MESSAGE Error logged from Debug Core: 
+!STACK 0
+java.net.SocketException: Socket closed
+	at java.net.SocketInputStream.socketRead0(Native Method)
+	at java.net.SocketInputStream.socketRead(SocketInputStream.java:116)
+	at java.net.SocketInputStream.read(SocketInputStream.java:171)
+	at java.net.SocketInputStream.read(SocketInputStream.java:141)
+	at java.io.DataInputStream.read(DataInputStream.java:149)
+	at com.qnx.tools.ide.utils.target.TargetProcess$InputStreamWrapper.read(TargetProcess.java:227)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:284)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:345)
+	at java.io.FilterInputStream.read(FilterInputStream.java:107)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.read(OutputStreamMonitor.java:147)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor.access$1(OutputStreamMonitor.java:137)
+	at org.eclipse.debug.internal.core.OutputStreamMonitor$1.run(OutputStreamMonitor.java:212)
+	at java.lang.Thread.run(Thread.java:748)
+
+!ENTRY org.eclipse.core.jobs 2 2 2019-10-31 09:28:26.531
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: org.eclipse.cdt.dsf.gdb.internal.ui.console.GdbBasicCliConsole$InputReadJob
