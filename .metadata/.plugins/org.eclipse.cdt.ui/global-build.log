@@ -3261,3 +3261,123 @@ make: *** [build/x86_64-debug/des_display] Error 1
 09:27:38 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
 make -j4 all 
 make: Nothing to be done for 'all'.
+09:30:59 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_controller   build/x86_64-debug/src/des_controller.o  
+09:30:59 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_display   build/x86_64-debug/src/des_display.o  
+build/x86_64-debug/src/des_display.o:(.data.rel+0x0): undefined reference to `SCAN_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x8): undefined reference to `UNLOCK_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x10): undefined reference to `OPEN_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x18): undefined reference to `WEIGHT_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x20): undefined reference to `CLOSE_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x28): undefined reference to `GUARD_EXIT_UNL_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x30): undefined reference to `EXIT_CLOSE_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x38): undefined reference to `GUARD_EXIT_LOCK_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x40): undefined reference to `EXIT_FUNC'
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld caught signal 1
+Makefile:60: recipe for target 'build/x86_64-debug/des_display' failed
+make: *** [build/x86_64-debug/des_display] Error 1
+09:31:00 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:33:59 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:34:00 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+make: *** No rule to make target 'all'.  Stop.
+09:34:00 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:34:37 **** Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_display.d,-MT,build/x86_64-debug/src/des_display.o -o build/x86_64-debug/src/des_display.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_display.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_display   build/x86_64-debug/src/des_display.o  
+09:34:53 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:34:53 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_display.d,-MT,build/x86_64-debug/src/des_display.o -o build/x86_64-debug/src/des_display.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_display.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_display   build/x86_64-debug/src/des_display.o  
+build/x86_64-debug/src/des_display.o:(.data.rel+0x0): undefined reference to `SCAN_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x8): undefined reference to `UNLOCK_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x10): undefined reference to `OPEN_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x18): undefined reference to `WEIGHT_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x20): undefined reference to `CLOSE_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x28): undefined reference to `GUARD_EXIT_UNL_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x30): undefined reference to `EXIT_CLOSE_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x38): undefined reference to `GUARD_EXIT_LOCK_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x40): undefined reference to `EXIT_FUNC'
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld caught signal 1
+Makefile:60: recipe for target 'build/x86_64-debug/des_display' failed
+make: *** [build/x86_64-debug/des_display] Error 1
+09:34:54 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:35:51 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:35:52 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_display   build/x86_64-debug/src/des_display.o  
+build/x86_64-debug/src/des_display.o:(.data.rel+0x0): undefined reference to `SCAN_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x8): undefined reference to `UNLOCK_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x10): undefined reference to `OPEN_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x18): undefined reference to `WEIGHT_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x20): undefined reference to `CLOSE_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x28): undefined reference to `GUARD_EXIT_UNL_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x30): undefined reference to `EXIT_CLOSE_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x38): undefined reference to `GUARD_EXIT_LOCK_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x40): undefined reference to `EXIT_FUNC'
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld caught signal 1
+Makefile:60: recipe for target 'build/x86_64-debug/des_display' failed
+make: *** [build/x86_64-debug/des_display] Error 1
+09:35:52 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:36:26 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:36:27 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_display   build/x86_64-debug/src/des_display.o  
+build/x86_64-debug/src/des_display.o:(.data.rel+0x0): undefined reference to `SCAN_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x8): undefined reference to `UNLOCK_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x10): undefined reference to `OPEN_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x18): undefined reference to `WEIGHT_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x20): undefined reference to `CLOSE_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x28): undefined reference to `GUARD_EXIT_UNL_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x30): undefined reference to `EXIT_CLOSE_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x38): undefined reference to `GUARD_EXIT_LOCK_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x40): undefined reference to `EXIT_FUNC'
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld caught signal 1
+Makefile:60: recipe for target 'build/x86_64-debug/des_display' failed
+make: *** [build/x86_64-debug/des_display] Error 1
+09:36:27 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:41:39 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+09:41:41 **** Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_display   build/x86_64-debug/src/des_display.o  
+build/x86_64-debug/src/des_display.o:(.data.rel+0x0): undefined reference to `SCAN_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x8): undefined reference to `UNLOCK_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x10): undefined reference to `OPEN_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x18): undefined reference to `WEIGHT_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x20): undefined reference to `CLOSE_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x28): undefined reference to `GUARD_EXIT_UNL_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x30): undefined reference to `EXIT_CLOSE_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x38): undefined reference to `GUARD_EXIT_LOCK_FUNC'
+build/x86_64-debug/src/des_display.o:(.data.rel+0x40): undefined reference to `EXIT_FUNC'
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/bin/x86_64-pc-nto-qnx7.0.0-ld caught signal 1
+Makefile:60: recipe for target 'build/x86_64-debug/des_display' failed
+make: *** [build/x86_64-debug/des_display] Error 1
+09:41:41 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.

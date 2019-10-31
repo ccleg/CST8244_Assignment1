@@ -1,6 +1,6 @@
-09:27:37 **** Incremental Build of configuration x86_64-release for project des_controller ****
+09:41:39 **** Incremental Build of configuration x86_64-debug for project des_controller ****
 make -j4 all 
 make: Nothing to be done for 'all'.
 
-09:27:37 Build Finished (took 125ms)
+09:41:40 Build Finished (took 772ms)
 
