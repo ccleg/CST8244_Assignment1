@@ -8,29 +8,7 @@
 #include <limits.h>
 #include <float.h>
 
-#define LEFT 1
-#define RIGHT 2
-struct Person {
-	int ID;
-	int Weight;
-	int currentState;
-	int side;
-}typedef Person_T;
-
-#define STATES 13;
-typedef enum {
-	START = 0,
-	UNLOCK = 1,
-	OPEN = 2,
-	WEIGHT = 3,
-	ENTER_CLOSE = 4,
-	ENTER_LOCK = 5,
-	EXIT_UNLOCK = 6,
-	EXIT_OPEN = 7,
-	EXIT_CLOSE = 8,
-	EXIT_LOCK = 9
-} States;
-
+#include "../../des_controller/src/ASS1.h"
 
 int main (int argc, char* argv[])
 {
