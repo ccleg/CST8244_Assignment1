@@ -96,67 +96,143 @@ void SCAN_FUNC(char* input) {
 	person.ID = id;
 	person.currentState++;
 }
-void UNLOCK_FUNC(char* input) {
+void UNLOCK_FUNC(char* input){
+	if(person.side == LEFT){
+			if (MsgSend (coid, &request, sizeof(request), &response, sizeof(response)) == -1) {
+			fprintf (stderr, "Error during MsgSend\n");
+			perror (NULL);
+			exit (EXIT_FAILURE);
+		}return OPEN_FUNC
 
-	if (person.side == LEFT) {
-		if(input != left_side[person.currentState]){
-			fprintf(stderr,"Invalid input for the person, you killed them\n");
-			exit(1);
 		}
-			person.currentState++;
-	} else if (person.side == RIGHT) {
-
-	}
+	else if(person.side == RIGHT){
+			if (MsgSend (coid, &request, sizeof(request), &response, sizeof(response)) == -1) {
+			fprintf (stderr, "Error during MsgSend\n");
+			perror (NULL);
+			exit (EXIT_FAILURE);
+		}
+		}
 }
-void OPEN_FUNC(char* input) {
-	if (person.side == LEFT) {
+void OPEN_FUNC(char* input){
+	if(person.side == LEFT){
+			if (MsgSend (coid, &request, sizeof(request), &response, sizeof(response)) == -1) {
+			fprintf (stderr, "Error during MsgSend\n");
+			perror (NULL);
+			exit (EXIT_FAILURE);
+		}
 
-	} else if (person.side == RIGHT) {
+		}
+		else if(person.side == RIGHT){
+			if (MsgSend (coid, &request, sizeof(request), &response, sizeof(response)) == -1) {
+			fprintf (stderr, "Error during MsgSend\n");
+			perror (NULL);
+			exit (EXIT_FAILURE);
+		}
 
-	}
+		}
 }
-void WEIGHT_FUNC(char* input) {
-	if (person.side == LEFT) {
+void WEIGHT_FUNC(char* input){
+	if(person.side == LEFT){
+			if (MsgSend (coid, &request, sizeof(request), &response, sizeof(response)) == -1) {
+			fprintf (stderr, "Error during MsgSend\n");
+			perror (NULL);
+			exit (EXIT_FAILURE);
+		}
 
-	} else if (person.side == RIGHT) {
-
-	}
+		}
+		else if(person.side == RIGHT){
+			if (MsgSend (coid, &request, sizeof(request), &response, sizeof(response)) == -1) {
+			fprintf (stderr, "Error during MsgSend\n");
+			perror (NULL);
+			exit (EXIT_FAILURE);
+		}
+		}
 }
-void CLOSE_FUNC(char* input) {
-	if (person.side == LEFT) {
+void CLOSE_FUNC(char* input){
+	if(person.side == LEFT){
+			if (MsgSend (coid, &request, sizeof(request), &response, sizeof(response)) == -1) {
+			fprintf (stderr, "Error during MsgSend\n");
+			perror (NULL);
+			exit (EXIT_FAILURE);
+		}
 
-	} else if (person.side == RIGHT) {
-
-	}
+		}
+		else if(person.side == RIGHT){
+			if (MsgSend (coid, &request, sizeof(request), &response, sizeof(response)) == -1) {
+			fprintf (stderr, "Error during MsgSend\n");
+			perror (NULL);
+			exit (EXIT_FAILURE);
+		}
+		}
 }
-void GUARD_EXIT_UNL_FUNC(char* input) {
-	if (person.side == LEFT) {
+void GUARD_EXIT_UNL_FUNC(char* input){
+	if(person.side == LEFT){
+			if (MsgSend (coid, &request, sizeof(request), &response, sizeof(response)) == -1) {
+			fprintf (stderr, "Error during MsgSend\n");
+			perror (NULL);
+			exit (EXIT_FAILURE);
+		}
 
-	} else if (person.side == RIGHT) {
-
-	}
+		}
+		else if(person.side == RIGHT){
+			if (MsgSend (coid, &request, sizeof(request), &response, sizeof(response)) == -1) {
+			fprintf (stderr, "Error during MsgSend\n");
+			perror (NULL);
+			exit (EXIT_FAILURE);
+		}
+		}
 }
-void GUARD_EXIT_OPEN_FUNC(char* input) {
-	if (person.side == LEFT) {
+void GUARD_EXIT_OPEN_FUNC(char* input){
+	if(person.side == LEFT){
+			if (MsgSend (coid, &request, sizeof(request), &response, sizeof(response)) == -1) {
+			fprintf (stderr, "Error during MsgSend\n");
+			perror (NULL);
+			exit (EXIT_FAILURE);
+		}
 
-	} else if (person.side == RIGHT) {
-
-	}
+		}
+		else if(person.side == RIGHT){
+			if (MsgSend (coid, &request, sizeof(request), &response, sizeof(response)) == -1) {
+			fprintf (stderr, "Error during MsgSend\n");
+			perror (NULL);
+			exit (EXIT_FAILURE);
+		}
+		}
 }
-void EXIT_CLOSE_FUNC(char* input) {
-	if (person.side == LEFT) {
+void EXIT_CLOSE_FUNC(char* input){
+	if(person.side == LEFT){
+			if (MsgSend (coid, &request, sizeof(request), &response, sizeof(response)) == -1) {
+			fprintf (stderr, "Error during MsgSend\n");
+			perror (NULL);
+			exit (EXIT_FAILURE);
+		}
 
-	} else if (person.side == RIGHT) {
-
-	}
+		}
+		else if(person.side == RIGHT){
+			if (MsgSend (coid, &request, sizeof(request), &response, sizeof(response)) == -1) {
+			fprintf (stderr, "Error during MsgSend\n");
+			perror (NULL);
+			exit (EXIT_FAILURE);
+		}
+		}
 }
-void GUARD_EXIT_LOCK_FUNC(char* input) {
-	if (person.side == LEFT) {
+void GUARD_EXIT_LOCK_FUNC(char* input){
+	if(person.side == LEFT){
+			if (MsgSend (coid, &request, sizeof(request), &response, sizeof(response)) == -1) {
+			fprintf (stderr, "Error during MsgSend\n");
+			perror (NULL);
+			exit (EXIT_FAILURE);
+		}
 
-	} else if (person.side == RIGHT) {
-
-	}
+		}
+		else if(person.side == RIGHT){
+			if (MsgSend (coid, &request, sizeof(request), &response, sizeof(response)) == -1) {
+			fprintf (stderr, "Error during MsgSend\n");
+			perror (NULL);
+			exit (EXIT_FAILURE);
+		}
+		}
 }
-void EXIT_FUNC(char* input) {
+void EXIT_FUNC(char* input){
 	person.currentState = START;
 }
