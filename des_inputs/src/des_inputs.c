@@ -5,7 +5,34 @@
 #include <sys/netmgr.h>
 #include <string.h>
 #include <errno.h>
-#include "../../des_controller/src/ASS1.h"
+
+#define LEFT 1
+#define RIGHT 2
+struct Person {
+	int ID;
+	int Weight;
+	int currentState;
+	int side;
+}typedef Person_T;
+
+#define STATES 13;
+typedef enum {
+	START = 0,
+	UNLOCK = 1,
+	OPEN = 2,
+	WEIGHT = 3,
+	ENTER_CLOSE = 4,
+	ENTER_LOCK = 5,
+	EXIT_UNLOCK = 6,
+	EXIT_OPEN = 7,
+	EXIT_CLOSE = 8,
+	EXIT_LOCK = 9
+} States;
+
+struct server_response {
+	int    error;
+	char   errorMsg[128];
+} typedef server_response_t;
 
 int main(int argc, char *argv[]) {
 
@@ -40,12 +67,12 @@ int main(int argc, char *argv[]) {
 
 		if(person.currentState == 0){
 			printf("Enter your ID:\n");
-			scanf("%d", person.ID);
+			scanf("%d", &person.ID);
 		}
 
 		else if(person.currentState == 3){
 			printf("Enter your weight:\n");
-			scanf("%d", person.Weight);
+			scanf("%d", &person.Weight);
 		}
 
 		if(MsgSend(coid, &person, sizeof(person), &response, sizeof(response)) == -1){
