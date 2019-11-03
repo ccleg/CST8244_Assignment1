@@ -25,7 +25,8 @@ typedef enum {
 	EXIT_UNLOCK = 6,
 	EXIT_OPEN = 7,
 	EXIT_CLOSE = 8,
-	EXIT_LOCK = 9
+	EXIT_LOCK = 9,
+	EXIT = 10
 } States;
 
 #define NUM_INPUTS 10
