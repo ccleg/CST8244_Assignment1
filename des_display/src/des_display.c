@@ -32,15 +32,17 @@ int main (int argc, char* argv[])
         if(person.currentState == previous_state){
         	printf("Invalid state\n");
         }
-        switch(person.side){
-        case LEFT:
-        	printf("%s", left_msg[person.currentState]);
-        	break;
-        case RIGHT:
-        	printf("%s", right_msg[person.currentState]);
-        }
-        previous_state = person.currentState;
+        else{
+			switch(person.side){
+				case LEFT:
+					printf("%s", left_msg[person.currentState]);
+					break;
+				case RIGHT:
+					printf("%s", right_msg[person.currentState]);
+			}
 
+		previous_state = person.currentState;
+        }
         if (rcvid == -1){
         	break;
         }
