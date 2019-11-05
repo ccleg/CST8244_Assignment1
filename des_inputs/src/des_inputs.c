@@ -37,7 +37,7 @@ int main(int argc, char *argv[]) {
 				"glu = guard left unlock, grl = guard right lock, gll = guard left lock\n");
 		printf("Enter 'exit' to quit the program.\n");
 
-		scanf("&s", person.currentState);
+		scanf("&s", person.msg);
 
 		if(person.currentState == 0){
 			printf("Enter your ID:\n");
