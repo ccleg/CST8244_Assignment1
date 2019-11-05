@@ -12,6 +12,7 @@ struct Person {
 	int Weight;
 	int currentState;
 	int side;
+	char msg[5];
 }typedef Person_T;
 
 #define STATES 13;
