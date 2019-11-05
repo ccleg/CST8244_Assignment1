@@ -14,7 +14,9 @@ struct Person {
 	int side;
 	char msg[5];
 }typedef Person_T;
-
+struct Response {
+	char msg[50];
+}typedef Response_T;
 #define STATES 13;
 typedef enum {
 	START = 0,
@@ -29,7 +31,6 @@ typedef enum {
 	EXIT_LOCK = 9,
 	EXIT = 10
 } States;
-
 #define NUM_INPUTS 10
 const char *left_side[NUM_INPUTS] = {
 	"ls",
@@ -67,15 +68,16 @@ const char *error_msg[NUM_ERRORS] = {
 
 
 };
-void SCAN_FUNC(char* input);
-void UNLOCK_FUNC(char* input);
-void OPEN_FUNC(char* input);
-void WEIGHT_FUNC(char* input);
-void CLOSE_FUNC(char* input);
-void GUARD_EXIT_UNL_FUNC(char* input);
-void GUARD_EXIT_OPEN_FUNC(char* input);
-void EXIT_CLOSE_FUNC(char* input);
-void GUARD_EXIT_LOCK_FUNC(char* input);
-void EXIT_FUNC(char* input);
+
+void *SCAN_FUNC(char* input);
+void *UNLOCK_FUNC(char* input);
+void *OPEN_FUNC(char* input);
+void *WEIGHT_FUNC(char* input);
+void *CLOSE_FUNC(char* input);
+void *GUARD_EXIT_UNL_FUNC(char* input);
+void *GUARD_EXIT_OPEN_FUNC(char* input);
+void *EXIT_CLOSE_FUNC(char* input);
+void *GUARD_EXIT_LOCK_FUNC(char* input);
+void *EXIT_FUNC(char* input);
 
 

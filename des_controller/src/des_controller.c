@@ -12,12 +12,13 @@
  * MsgSend will send to display
  */
 #include "ASS1.h"
-int setStartSide(char* side);
 Person_T person;
+Response_T response;
 
 char* display_msg;
 int coid = 0;
 int rcvid;
+int chid;
 
 int main(int argc, char *argv[]) {
 
@@ -26,14 +27,13 @@ int main(int argc, char *argv[]) {
 		exit(EXIT_FAILURE);
 	}
 
-	pid_t display_pid = atoi(argv[1]);
-	int chid;
-	int error;
-	char input_msg[4];
-	size_t len;
-	printf("Controller pid: %d\n", getpid());
 
 	chid = ChannelCreate(0);
+	pid_t display_pid = atoi(argv[1]);
+
+	printf("Controller pid: %d\n", getpid());
+
+
 
 	if (chid == -1) {
 		fprintf(stderr, "Failed to create a channel");
@@ -45,44 +45,16 @@ int main(int argc, char *argv[]) {
 		exit(EXIT_FAILURE);
 	}
 	while (1) {
-		rcvid = MsgReceive(chid, input_msg, strlen(input_msg), NULL);
-		len = strlen(input_msg);
-		printf("%d\n", len);
-		char *newInput = (char *)malloc(len);
-		memcpy(newInput,input_msg,len);
-		printf("%s\n", newInput);
-		if (strcmp(input_msg, "exit") == 0) {
+		rcvid = MsgReceive(chid, &person, sizeof(person), NULL);
+
+		if (strcmp(person.msg, "exit") == 0) {
 			break;
-		} else {
-			int side = setStartSide(newInput);
-			if (side == -1) {
-				error = 0;
-				/*MsgReply(rcvid, EOK, error_msg[error],
-						sizeof(error_msg[error]));*/
-			}
-
 		}
-		(*STATE_HANDLER[person.currentState])(newInput);
+		SCAN_FUNC(person.msg);
 	}
 }
-int setStartSide(char* side) {
-	if(person.currentState == 0){
-	if (strcmp(side, "ls") == 0) {
-		person.side = LEFT;
-		person.currentState = START;
-		return 0;
 
-	} else if (strcmp(side, "rs") == 0) {
-		person.side = RIGHT;
-		person.currentState = START;
-		return 0;
-	}
-	return -1;
-	}else{
-
-	}
-}
-void SCAN_FUNC(char* input) {
+void *SCAN_FUNC(char* input) {
 	int id;
 	/**if (MsgSend(coid, &person, sizeof(person), display_msg, sizeof(display_msg))
 			== -1) {
@@ -90,60 +62,70 @@ void SCAN_FUNC(char* input) {
 		perror(NULL);
 		exit(EXIT_FAILURE);
 	}*/
-	scanf("%d", id);
-	printf("u wot\n");
-	MsgReply(rcvid,EOK,input,sizeof(input));
-	person.ID = id;
-	person.currentState++;
-}
-void UNLOCK_FUNC(char* input){
 	if(person.side == LEFT){
+		if(strcmp(input, left_side[person.currentState])==0){
+			person.currentState++;
+			return UNLOCK_FUNC;
 		}
+	}else if(person.side == RIGHT){
+		if(strcmp(input, right_side[person.currentState])==0){
+			person.currentState++;
+			return UNLOCK_FUNC;
+		}
+	}
+
+
+
+}
+void *UNLOCK_FUNC(char* input){
+	if(person.side == LEFT){
+
+	}
 	else if(person.side == RIGHT){
-		}
+	}
 }
-void OPEN_FUNC(char* input){
+void *OPEN_FUNC(char* input){
 	if(person.side == LEFT){
-		}
-		else if(person.side == RIGHT){
-		}
+	}
+	else if(person.side == RIGHT){
+	}
 }
-void WEIGHT_FUNC(char* input){
+void *WEIGHT_FUNC(char* input){
 	if(person.side == LEFT){
-		}
-		else if(person.side == RIGHT){
-		}
+	}
+	else if(person.side == RIGHT){
+	}
 }
-void CLOSE_FUNC(char* input){
+void *CLOSE_FUNC(char* input){
 	if(person.side == LEFT){
-		}
-		else if(person.side == RIGHT){
-		}
+	}
+	else if(person.side == RIGHT){
+	}
 }
-void GUARD_EXIT_UNL_FUNC(char* input){
+void *GUARD_EXIT_UNL_FUNC(char* input){
 	if(person.side == LEFT){
-		}
-		else if(person.side == RIGHT){
-		}
+	}
+	else if(person.side == RIGHT){
+	}
 }
-void GUARD_EXIT_OPEN_FUNC(char* input){
+void *GUARD_EXIT_OPEN_FUNC(char* input){
 	if(person.side == LEFT){
-		}
-		else if(person.side == RIGHT){
-		}
+	}
+	else if(person.side == RIGHT){
+	}
 }
-void EXIT_CLOSE_FUNC(char* input){
+void *EXIT_CLOSE_FUNC(char* input){
 	if(person.side == LEFT){
-		}
-		else if(person.side == RIGHT){
-		}
+	}
+	else if(person.side == RIGHT){
+	}
 }
-void GUARD_EXIT_LOCK_FUNC(char* input){
+void *GUARD_EXIT_LOCK_FUNC(char* input){
 	if(person.side == LEFT){
-		}
-		else if(person.side == RIGHT){
-		}
+	}
+	else if(person.side == RIGHT){
+	}
 }
-void EXIT_FUNC(char* input){
+void *EXIT_FUNC(char* input){
 	person.currentState = START;
 }

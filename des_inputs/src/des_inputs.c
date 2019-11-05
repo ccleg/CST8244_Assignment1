@@ -11,9 +11,9 @@
 int main(int argc, char *argv[]) {
 
 	Person_T person;
-	server_response_t response;
-
-	char* rplyMsg;
+	Response_T response;
+	person.currentState = START;
+	char *input;
 	if (argc != 2){
 		fprintf(stderr, "Invalid number of arguments, please enter the des_controller pid\n");
 		exit(EXIT_FAILURE);
@@ -37,7 +37,12 @@ int main(int argc, char *argv[]) {
 				"glu = guard left unlock, grl = guard right lock, gll = guard left lock\n");
 		printf("Enter 'exit' to quit the program.\n");
 
-		scanf("&s", person.msg);
+		scanf("%s", person.msg);
+		if(strcmp(person.msg,"ls") == 0){
+			person.side = LEFT;
+		} else if(strcmp(person.msg,"rs") == 0){
+			person.side = RIGHT;
+		}
 
 		if(person.currentState == 0){
 			printf("Enter your ID:\n");
@@ -55,9 +60,9 @@ int main(int argc, char *argv[]) {
 			exit(EXIT_FAILURE);
 		}
 
-		if(strlen (rplyMsg > 0)) {
-			printf("%s\n", rplyMsg);
-		}
+
+			printf("%s\n", response.msg);
+
 	}
 	ConnectDetach(coid);
 	return EXIT_SUCCESS;
