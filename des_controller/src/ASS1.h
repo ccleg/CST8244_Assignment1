@@ -57,12 +57,12 @@ const char *right_side[NUM_INPUTS] = {
 	"lc",
 	"gll"
 };
-#define NUM_REPLY 8
+#define NUM_REPLY 10
 const char *left_msg[NUM_REPLY] = {
-		"Person has scanned their Id, Id = %d.\n",person.ID,
+		"Person has scanned their Id, Id =",
 		"Left door unlocked.\n",
 		"Left door opened.\n",
-		"Person Weighed. Weight = %d\n",person.Weight,
+		"Person Weighed. Weight =",
 		"Left door closed.\n",
 		"Left door locked Guard.\n",
 		"Right door unlocked.\n",
@@ -71,10 +71,10 @@ const char *left_msg[NUM_REPLY] = {
 		"Right door locked by GUard.\n"
 };
 const char *right_msg[NUM_REPLY] = {
-		"Person has scanned their Id, Id = %d.\n",person.ID,
+		"Person has scanned their Id, Id = %d.\n",
 		"Right door unlocked.\n",
 		"Right door opened.\n",
-		"Person Weighed. Weight = %d.\n",person.Weight,
+		"Person Weighed. Weight = %d.\n",
 		"Right door closed.\n",
 		"Right door locked by Guard.\n",
 		"Left door unlocked.\n",

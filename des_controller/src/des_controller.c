@@ -37,7 +37,7 @@ int main(int argc, char *argv[]) {
 		fprintf(stderr, "Failed to create a channel");
 		exit(EXIT_FAILURE);
 	}
-	//coid = ConnectAttach(ND_LOCAL_NODE, display_pid, 1, _NTO_SIDE_CHANNEL, 0);
+	coid = ConnectAttach(ND_LOCAL_NODE, display_pid, 1, _NTO_SIDE_CHANNEL, 0);
 	if (coid == -1) {
 		perror("Channel could not be attached\n");
 		exit(EXIT_FAILURE);
@@ -74,10 +74,12 @@ void *SCAN_FUNC(Person_T person) {
 void *UNLOCK_FUNC(Person_T person) {
 	if (person.side == LEFT) {
 		if (strcmp(person.msg, left_side[UNLOCK]) == 0) {
+			display(person);
 			return OPEN_FUNC;
 		}
 	} else if (person.side == RIGHT) {
 		if (strcmp(person.msg, right_side[UNLOCK]) == 0) {
+			display(person);
 			return OPEN_FUNC;
 		}
 	}
@@ -141,7 +143,7 @@ void *GUARD_OPEN_LOC_FUNC(Person_T person){
 		}
 		return GUARD_OPEN_LOC_FUNC;
 	}
-}
+
 
 void *GUARD_EXIT_UNL_FUNC(Person_T person) {
 	if (person.side == LEFT) {
@@ -209,4 +211,5 @@ void *EXIT_FUNC(Person_T person) {
 }
 void display(Person_T person){
 	//send the struct to display, use Null as a return message
+	MsgSend(coid,&person, sizeof(person),NULL,0);
 }
