@@ -59,14 +59,28 @@ const char *right_side[NUM_INPUTS] = {
 };
 #define NUM_REPLY 8
 const char *left_msg[NUM_REPLY] = {
+		"Person has scanned their Id, Id = %d.\n",person.ID,
 		"Left door unlocked.\n",
 		"Left door opened.\n",
+		"Person Weighed. Weight = %d\n",person.Weight,
 		"Left door closed.\n",
-		"Left door locked.\n",
+		"Left door locked Guard.\n",
 		"Right door unlocked.\n",
 		"Right door opened.\n",
 		"Right door closed.\n",
-		"Right door locked.\n"
+		"Right door locked by GUard.\n"
+};
+const char *right_msg[NUM_REPLY] = {
+		"Person has scanned their Id, Id = %d.\n",person.ID,
+		"Right door unlocked.\n",
+		"Right door opened.\n",
+		"Person Weighed. Weight = %d.\n",person.Weight,
+		"Right door closed.\n",
+		"Right door locked by Guard.\n",
+		"Left door unlocked.\n",
+		"Left door opened.\n",
+		"Left door closed.\n",
+		"Left door locked by Guard.\n"
 };
 typedef void *(*STATE)(Person_T);
 void *SCAN_FUNC(Person_T);
@@ -80,6 +94,7 @@ void *GUARD_EXIT_OPEN_FUNC(Person_T);
 void *EXIT_CLOSE_FUNC(Person_T);
 void *GUARD_EXIT_LOCK_FUNC(Person_T);
 void *EXIT_FUNC(Person_T);
+
 
 
 
