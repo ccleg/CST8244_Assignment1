@@ -56,6 +56,7 @@ int main(int argc, char *argv[]) {
 
 void *SCAN_FUNC(char* input) {
 	int id;
+	//Since we are checking if the message was unable to be sent in the input file, we don't need this here
 	/**if (MsgSend(coid, &person, sizeof(person), display_msg, sizeof(display_msg))
 			== -1) {
 		fprintf(stderr, "Unable to sendhhhh message\n");
@@ -73,59 +74,130 @@ void *SCAN_FUNC(char* input) {
 			return UNLOCK_FUNC;
 		}
 	}
-
-
-
 }
+
 void *UNLOCK_FUNC(char* input){
 	if(person.side == LEFT){
-
+		if(strcmp(input, left_side[person.currentState])==0){
+			person.currentState++;
+			return OPEN_FUNC;
+		}
+	}else if(person.side == RIGHT){
+		if(strcmp(input, right_side[person.currentState])==0){
+			person.currentState++;
+			return OPEN_FUNC;
+		}
 	}
-	else if(person.side == RIGHT){
-	}
+	return UNLOCK_FUNC;
 }
+
 void *OPEN_FUNC(char* input){
 	if(person.side == LEFT){
+		if(strcmp(input, left_side[person.currentState])==0){
+			person.currentState++;
+			return WEIGHT_FUNC;
+		}
+	}else if(person.side == RIGHT){
+		if(strcmp(input, right_side[person.currentState])==0){
+			person.currentState++;
+			return WEIGHT_FUNC;
+		}
 	}
-	else if(person.side == RIGHT){
-	}
+	return OPEN_FUNC;
 }
+
 void *WEIGHT_FUNC(char* input){
 	if(person.side == LEFT){
+		if(strcmp(input, left_side[person.currentState])==0){
+			person.currentState++;
+			return CLOSE_FUNC;
+		}
+	}else if(person.side == RIGHT){
+		if(strcmp(input, right_side[person.currentState])==0){
+			person.currentState++;
+			return CLOSE_FUNC;
+		}
 	}
-	else if(person.side == RIGHT){
-	}
+	return WEIGHT_FUNC;
 }
+
 void *CLOSE_FUNC(char* input){
 	if(person.side == LEFT){
+		if(strcmp(input, left_side[person.currentState])==0){
+			person.currentState++;
+			return GUARD_EXIT_UNL_FUNC;
+		}
+	}else if(person.side == RIGHT){
+		if(strcmp(input, right_side[person.currentState])==0){
+			person.currentState++;
+			return GUARD_EXIT_UNL_FUNC;
+		}
 	}
-	else if(person.side == RIGHT){
-	}
+	return CLOSE_FUNC;
 }
+
 void *GUARD_EXIT_UNL_FUNC(char* input){
 	if(person.side == LEFT){
+		if(strcmp(input, left_side[person.currentState])==0){
+			person.currentState++;
+			return GUARD_EXIT_OPEN_FUNC;
+		}
+	}else if(person.side == RIGHT){
+		if(strcmp(input, right_side[person.currentState])==0){
+			person.currentState++;
+			return GUARD_EXIT_OPEN_FUNC;
+		}
 	}
-	else if(person.side == RIGHT){
-	}
+	return GUARD_EXIT_UNL_FUNC;
 }
+
 void *GUARD_EXIT_OPEN_FUNC(char* input){
 	if(person.side == LEFT){
+		if(strcmp(input, left_side[person.currentState])==0){
+			person.currentState++;
+			return EXIT_CLOSE_FUNC;
+		}
+	}else if(person.side == RIGHT){
+		if(strcmp(input, right_side[person.currentState])==0){
+			person.currentState++;
+			return EXIT_CLOSE_FUNC;
+		}
 	}
-	else if(person.side == RIGHT){
-	}
+	return GUARD_EXIT_OPEN_FUNC;
 }
+
 void *EXIT_CLOSE_FUNC(char* input){
 	if(person.side == LEFT){
+		if(strcmp(input, left_side[person.currentState])==0){
+			person.currentState++;
+			return GUARD_EXIT_LOCK_FUNC;
+		}
+	}else if(person.side == RIGHT){
+		if(strcmp(input, right_side[person.currentState])==0){
+			person.currentState++;
+			return GUARD_EXIT_LOCK_FUNC;
+		}
 	}
-	else if(person.side == RIGHT){
-	}
+	return EXIT_CLOSE_FUNC;
 }
+
 void *GUARD_EXIT_LOCK_FUNC(char* input){
 	if(person.side == LEFT){
+		if(strcmp(input, left_side[person.currentState])==0){
+			person.currentState = START;
+			return OPEN_FUNC;
+		}
+	}else if(person.side == RIGHT){
+		if(strcmp(input, right_side[person.currentState])==0){
+			person.currentState = START;
+			return OPEN_FUNC;
+		}
 	}
-	else if(person.side == RIGHT){
-	}
+	return GUARD_EXIT_LOCK_FUNC;
 }
+//Do we have to have a function pointer for the exit state?
+//Can we exit the program, or just go back to the start state
 void *EXIT_FUNC(char* input){
-	person.currentState = START;
+	person.currentState++;
+	return EXIT_FUNC
 }
