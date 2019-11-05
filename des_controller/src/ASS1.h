@@ -15,7 +15,8 @@ struct Person {
 	char msg[5];
 }typedef Person_T;
 struct Response {
-	char msg[50];
+	int state;
+	Person_T person;
 }typedef Response_T;
 #define STATES 13;
 typedef enum {
@@ -56,28 +57,29 @@ const char *right_side[NUM_INPUTS] = {
 	"lc",
 	"gll"
 };
-#define NUM_REPLY 2
-const char *reply_msg[NUM_REPLY] = {
-		"Enter the person's id: \n",
-		"Enter the person's weight: \n"
+#define NUM_REPLY 8
+const char *left_msg[NUM_REPLY] = {
+		"Left door unlocked.\n",
+		"Left door opened.\n",
+		"Left door closed.\n",
+		"Left door locked.\n",
+		"Right door unlocked.\n",
+		"Right door opened.\n",
+		"Right door closed.\n",
+		"Right door locked.\n"
 };
+typedef void *(*STATE)(Person_T);
+void *SCAN_FUNC(Person_T);
+void *UNLOCK_FUNC(Person_T);
+void *OPEN_FUNC(Person_T);
+void *WEIGHT_FUNC(Person_T);
+void *CLOSE_FUNC(Person_T);
+void *GUARD_OPEN_LOC_FUNC(Person_T);
+void *GUARD_EXIT_UNL_FUNC(Person_T);
+void *GUARD_EXIT_OPEN_FUNC(Person_T);
+void *EXIT_CLOSE_FUNC(Person_T);
+void *GUARD_EXIT_LOCK_FUNC(Person_T);
+void *EXIT_FUNC(Person_T);
 
-#define NUM_ERRORS 1
-const char *error_msg[NUM_ERRORS] = {
-		"Invalid start state\n"
-
-
-};
-
-void *SCAN_FUNC(char* input);
-void *UNLOCK_FUNC(char* input);
-void *OPEN_FUNC(char* input);
-void *WEIGHT_FUNC(char* input);
-void *CLOSE_FUNC(char* input);
-void *GUARD_EXIT_UNL_FUNC(char* input);
-void *GUARD_EXIT_OPEN_FUNC(char* input);
-void *EXIT_CLOSE_FUNC(char* input);
-void *GUARD_EXIT_LOCK_FUNC(char* input);
-void *EXIT_FUNC(char* input);
 
 

@@ -12,7 +12,8 @@
  * MsgSend will send to display
  */
 #include "ASS1.h"
-Person_T person;
+void display(Person_T);
+
 Response_T response;
 
 char* display_msg;
@@ -27,13 +28,10 @@ int main(int argc, char *argv[]) {
 		exit(EXIT_FAILURE);
 	}
 
-
 	chid = ChannelCreate(0);
 	pid_t display_pid = atoi(argv[1]);
 
 	printf("Controller pid: %d\n", getpid());
-
-
 
 	if (chid == -1) {
 		fprintf(stderr, "Failed to create a channel");
@@ -44,160 +42,171 @@ int main(int argc, char *argv[]) {
 		perror("Channel could not be attached\n");
 		exit(EXIT_FAILURE);
 	}
+	Person_T person;
+	STATE stateFunc = &SCAN_FUNC;
 	while (1) {
 		rcvid = MsgReceive(chid, &person, sizeof(person), NULL);
-
+		stateFunc = (*stateFunc)(person);
+		MsgReply(rcvid, EOK, NULL,0);
 		if (strcmp(person.msg, "exit") == 0) {
 			break;
 		}
-		SCAN_FUNC(person.msg);
 	}
 }
 
-void *SCAN_FUNC(char* input) {
-	int id;
-	//Since we are checking if the message was unable to be sent in the input file, we don't need this here
-	/**if (MsgSend(coid, &person, sizeof(person), display_msg, sizeof(display_msg))
-			== -1) {
-		fprintf(stderr, "Unable to sendhhhh message\n");
-		perror(NULL);
-		exit(EXIT_FAILURE);
-	}*/
-	if(person.side == LEFT){
-		if(strcmp(input, left_side[person.currentState])==0){
-			person.currentState++;
+void *SCAN_FUNC(Person_T person) {
+	if (person.side == LEFT) {
+		if (strcmp(person.msg, left_side[START]) == 0) {
+			person.currentState = START;
+			display(person);
 			return UNLOCK_FUNC;
 		}
-	}else if(person.side == RIGHT){
-		if(strcmp(input, right_side[person.currentState])==0){
-			person.currentState++;
+	} else if (person.side == RIGHT) {
+		if (strcmp(person.msg, right_side[START]) == 0) {
+			person.currentState = START;
+			display(person);
 			return UNLOCK_FUNC;
 		}
 	}
+	return SCAN_FUNC;
 }
 
-void *UNLOCK_FUNC(char* input){
-	if(person.side == LEFT){
-		if(strcmp(input, left_side[person.currentState])==0){
-			person.currentState++;
+void *UNLOCK_FUNC(Person_T person) {
+	if (person.side == LEFT) {
+		if (strcmp(person.msg, left_side[UNLOCK]) == 0) {
 			return OPEN_FUNC;
 		}
-	}else if(person.side == RIGHT){
-		if(strcmp(input, right_side[person.currentState])==0){
-			person.currentState++;
+	} else if (person.side == RIGHT) {
+		if (strcmp(person.msg, right_side[UNLOCK]) == 0) {
 			return OPEN_FUNC;
 		}
 	}
 	return UNLOCK_FUNC;
 }
 
-void *OPEN_FUNC(char* input){
-	if(person.side == LEFT){
-		if(strcmp(input, left_side[person.currentState])==0){
-			person.currentState++;
+void *OPEN_FUNC(Person_T person) {
+	if (person.side == LEFT) {
+		if (strcmp(person.msg, left_side[OPEN]) == 0) {
+
 			return WEIGHT_FUNC;
 		}
-	}else if(person.side == RIGHT){
-		if(strcmp(input, right_side[person.currentState])==0){
-			person.currentState++;
+	} else if (person.side == RIGHT) {
+		if (strcmp(person.msg, right_side[OPEN]) == 0) {
 			return WEIGHT_FUNC;
 		}
 	}
 	return OPEN_FUNC;
 }
 
-void *WEIGHT_FUNC(char* input){
-	if(person.side == LEFT){
-		if(strcmp(input, left_side[person.currentState])==0){
-			person.currentState++;
+void *WEIGHT_FUNC(Person_T person) {
+	if (person.side == LEFT) {
+		if (strcmp(person.msg, left_side[WEIGHT]) == 0) {
+
 			return CLOSE_FUNC;
 		}
-	}else if(person.side == RIGHT){
-		if(strcmp(input, right_side[person.currentState])==0){
-			person.currentState++;
+	} else if (person.side == RIGHT) {
+		if (strcmp(person.msg, right_side[WEIGHT]) == 0) {
+
 			return CLOSE_FUNC;
 		}
 	}
 	return WEIGHT_FUNC;
 }
 
-void *CLOSE_FUNC(char* input){
-	if(person.side == LEFT){
-		if(strcmp(input, left_side[person.currentState])==0){
-			person.currentState++;
-			return GUARD_EXIT_UNL_FUNC;
+void *CLOSE_FUNC(Person_T person) {
+	if (person.side == LEFT) {
+		if (strcmp(person.msg, left_side[ENTER_CLOSE]) == 0) {
+
+			return GUARD_OPEN_LOC_FUNC;
 		}
-	}else if(person.side == RIGHT){
-		if(strcmp(input, right_side[person.currentState])==0){
-			person.currentState++;
-			return GUARD_EXIT_UNL_FUNC;
+	} else if (person.side == RIGHT) {
+		if (strcmp(person.msg, right_side[ENTER_CLOSE]) == 0) {
+
+			return GUARD_OPEN_LOC_FUNC;
 		}
 	}
 	return CLOSE_FUNC;
 }
+void *GUARD_OPEN_LOC_FUNC(Person_T person){
+	if (person.side == LEFT) {
+			if (strcmp(person.msg, left_side[ENTER_LOCK]) == 0) {
 
-void *GUARD_EXIT_UNL_FUNC(char* input){
-	if(person.side == LEFT){
-		if(strcmp(input, left_side[person.currentState])==0){
-			person.currentState++;
+				return GUARD_EXIT_UNL_FUNC;
+			}
+		} else if (person.side == RIGHT) {
+			if (strcmp(person.msg, right_side[ENTER_LOCK]) == 0) {
+
+				return GUARD_EXIT_UNL_FUNC;
+			}
+		}
+		return GUARD_OPEN_LOC_FUNC;
+	}
+}
+
+void *GUARD_EXIT_UNL_FUNC(Person_T person) {
+	if (person.side == LEFT) {
+		if (strcmp(person.msg, left_side[EXIT_UNLOCK]) == 0) {
+
 			return GUARD_EXIT_OPEN_FUNC;
 		}
-	}else if(person.side == RIGHT){
-		if(strcmp(input, right_side[person.currentState])==0){
-			person.currentState++;
+	} else if (person.side == RIGHT) {
+		if (strcmp(person.msg, right_side[EXIT_UNLOCK]) == 0) {
+
 			return GUARD_EXIT_OPEN_FUNC;
 		}
 	}
 	return GUARD_EXIT_UNL_FUNC;
 }
 
-void *GUARD_EXIT_OPEN_FUNC(char* input){
-	if(person.side == LEFT){
-		if(strcmp(input, left_side[person.currentState])==0){
-			person.currentState++;
+void *GUARD_EXIT_OPEN_FUNC(Person_T person) {
+	if (person.side == LEFT) {
+		if (strcmp(person.msg, left_side[EXIT_OPEN]) == 0) {
+
 			return EXIT_CLOSE_FUNC;
 		}
-	}else if(person.side == RIGHT){
-		if(strcmp(input, right_side[person.currentState])==0){
-			person.currentState++;
+	} else if (person.side == RIGHT) {
+		if (strcmp(person.msg, right_side[EXIT_OPEN]) == 0) {
+
 			return EXIT_CLOSE_FUNC;
 		}
 	}
 	return GUARD_EXIT_OPEN_FUNC;
 }
 
-void *EXIT_CLOSE_FUNC(char* input){
-	if(person.side == LEFT){
-		if(strcmp(input, left_side[person.currentState])==0){
-			person.currentState++;
+void *EXIT_CLOSE_FUNC(Person_T person) {
+	if (person.side == LEFT) {
+		if (strcmp(person.msg, left_side[EXIT_CLOSE]) == 0) {
+
 			return GUARD_EXIT_LOCK_FUNC;
 		}
-	}else if(person.side == RIGHT){
-		if(strcmp(input, right_side[person.currentState])==0){
-			person.currentState++;
+	} else if (person.side == RIGHT) {
+		if (strcmp(person.msg, right_side[EXIT_CLOSE]) == 0) {
+
 			return GUARD_EXIT_LOCK_FUNC;
 		}
 	}
 	return EXIT_CLOSE_FUNC;
 }
 
-void *GUARD_EXIT_LOCK_FUNC(char* input){
-	if(person.side == LEFT){
-		if(strcmp(input, left_side[person.currentState])==0){
-			person.currentState = START;
-			return OPEN_FUNC;
+void *GUARD_EXIT_LOCK_FUNC(Person_T person) {
+	if (person.side == LEFT) {
+		if (strcmp(person.msg, left_side[EXIT_LOCK]) == 0) {
+			return SCAN_FUNC;
 		}
-	}else if(person.side == RIGHT){
-		if(strcmp(input, right_side[person.currentState])==0){
-			person.currentState = START;
-			return OPEN_FUNC;
+	} else if (person.side == RIGHT) {
+		if (strcmp(person.msg, right_side[EXIT_LOCK]) == 0) {
+			return SCAN_FUNC;
 		}
 	}
 	return GUARD_EXIT_LOCK_FUNC;
 }
 //Do we have to have a function pointer for the exit state?
-//Can we exit the program, or just go back to the start state
-void *EXIT_FUNC(char* input){
-	person.currentState++;
-	return EXIT_FUNC
+		//Can we exit the program, or just go back to the start state
+void *EXIT_FUNC(Person_T person) {
+
+	return EXIT_FUNC;
+
+}
+void display(Person_T person){
+	//send the struct to display, use Null as a return message
 }
