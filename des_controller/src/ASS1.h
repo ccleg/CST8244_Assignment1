@@ -38,7 +38,7 @@ const char *left_side[NUM_INPUTS] = {
 	"glu",
 	"lo",
 	"ws",
-	"lc"
+	"lc",
 	"gll",
 	"gru",
 	"ro",

@@ -15,7 +15,7 @@ int main (int argc, char* argv[])
 
 	Person_T person;
 	int rcvid;
-	int previous_state;
+	int previous_state = -1;
 	int chid;
 	chid = ChannelCreate (0);
 	if (chid == -1)
