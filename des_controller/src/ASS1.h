@@ -60,27 +60,27 @@ const char *right_side[NUM_INPUTS] = {
 #define NUM_REPLY 10
 const char *left_msg[NUM_REPLY] = {
 		"Person has scanned their Id, Id = ",
-		"Left door unlocked.\n",
-		"Left door opened.\n",
+		"Left door unlocked\n",
+		"Left door opened\n",
 		"Person Weighed. Weight =",
-		"Left door closed.\n",
-		"Left door locked Guard.\n",
-		"Right door unlocked.\n",
-		"Right door opened.\n",
-		"Right door closed.\n",
-		"Right door locked by GUard.\n"
+		"Left door closed (automatically)\n",
+		"Left door locked by Guard\n",
+		"Right door unlocked\n",
+		"Right door opened\n",
+		"Right door closed (automatically)\n",
+		"Right door locked by Guard\n"
 };
 const char *right_msg[NUM_REPLY] = {
-		"Person has scanned their Id,Id = .\n",
-		"Right door unlocked.\n",
-		"Right door opened.\n",
+		"Person has scanned their Id,Id = \n",
+		"Right door unlocked\n",
+		"Right door opened\n",
 		"Person Weighed. Weight = \n",
-		"Right door closed.\n",
-		"Right door locked by Guard.\n",
-		"Left door unlocked.\n",
-		"Left door opened.\n",
-		"Left door closed.\n",
-		"Left door locked by Guard.\n"
+		"Right door closed (automatically)\n",
+		"Right door locked by Guard\n",
+		"Left door unlocked\n",
+		"Left door opened\n",
+		"Left door closed (automatically)\n",
+		"Left door locked by Guard\n"
 };
 typedef void *(*STATE)(Person_T);
 void *SCAN_FUNC(Person_T);
