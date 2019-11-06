@@ -1,3 +1,10 @@
+/*************************************
+Filename: des_controller.c
+Author : Cory Chenier & Vicknesh Babu
+Assignment : 1
+Date : November 6th 2019
+Professor : Gerry Hurdle
+**************************************/
 #include <stdio.h>
 #include <stdlib.h>
 #include <process.h>
