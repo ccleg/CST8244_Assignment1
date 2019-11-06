@@ -77,7 +77,7 @@ void *SCAN_FUNC(Person_T person) {
 			return UNLOCK_FUNC;
 		}
 	}else if(person.side == 0){
-		person.currentState == -1;
+		person.currentState = -1;
 		display(person);
 		return SCAN_FUNC;
 	}
@@ -233,12 +233,14 @@ void *GUARD_EXIT_LOCK_FUNC(Person_T person) {
 		if (strcmp(person.msg, left_side[EXIT_LOCK]) == 0) {
 			person.currentState = EXIT_LOCK;
 			display(person);
+			person.side = 0;
 			return SCAN_FUNC;
 		}
 	} else if (person.side == RIGHT) {
 		if (strcmp(person.msg, right_side[EXIT_LOCK]) == 0) {
 			person.currentState = EXIT_LOCK;
 			display(person);
+			person.side = 0;
 			return SCAN_FUNC;
 		}
 	}

@@ -10,5 +10,5 @@ com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/des_controller/active
 com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/des_controller/activeLaunchTarget=com.qnx.tools.ide.target.qconn\:192.168.11.128
 com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/des_display/activeLaunchMode=debug
 com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/des_inputs/activeLaunchTarget=com.qnx.tools.ide.target.qconn\:192.168.11.128
-configDescList=com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/des_display,com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/des_inputs,com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/des_controller
+configDescList=com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/des_controller,com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/des_display,com.qnx.tools.ide.qde.debug.core.descriptorType.project\:P/des_inputs
 eclipse.preferences.version=1

@@ -17,6 +17,7 @@ int main (int argc, char* argv[])
 	int rcvid;
 	int previous_state = -1;
 	int chid;
+	int side;
 	chid = ChannelCreate (0);
 	if (chid == -1)
 	{
@@ -32,11 +33,12 @@ int main (int argc, char* argv[])
 		if(person.currentState == EXIT){
 			break;
 		}
-		if(person.currentState == previous_state){
+		side = person.side;
+		if(person.currentState == previous_state || side == 0){
 			printf("Invalid state\n");
 		}
 		else{
-			switch(person.side){
+			switch(side){
 			case LEFT:
 				printf("%s", left_msg[person.currentState]);
 				if(person.currentState == START){

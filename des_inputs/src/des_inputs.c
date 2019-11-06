@@ -41,7 +41,6 @@ int main(int argc, char *argv[]) {
 	printf("Enter 'exit' to quit the program.\n");
 	while (person.currentState != 10) {
 
-
 		scanf("%s", &person.msg);
 		if (strcmp(person.msg, "ls") == 0) {
 			if (person.side == RIGHT) {
@@ -65,12 +64,23 @@ int main(int argc, char *argv[]) {
 			printf("Enter your weight:\n");
 			scanf("%d", &person.Weight);
 		}
+
+
 		if (MsgSend(coid, &person, sizeof(person), NULL, 0) == -1) {
 			fprintf(stderr, "Error during MsgSend\n");
 			perror(NULL);
 			exit(EXIT_FAILURE);
 		}
-		if(strcmp(person.msg, "exit")==0){
+		if (strcmp(person.msg, "grl") == 0 && person.side == LEFT) {
+
+				person.side = 0;
+
+		} else if (strcmp(person.msg, "gll") == 0 && person.side == RIGHT) {
+
+				person.side = 0;
+
+		}
+		if (strcmp(person.msg, "exit") == 0) {
 			break;
 		}
 
