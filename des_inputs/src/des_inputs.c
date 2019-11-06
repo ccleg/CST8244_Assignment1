@@ -12,6 +12,8 @@ int main(int argc, char *argv[]) {
 
 	Person_T person;
 	person.currentState = START;
+	
+	person.side = 0;
 
 	if (argc != 2) {
 		fprintf(stderr,
