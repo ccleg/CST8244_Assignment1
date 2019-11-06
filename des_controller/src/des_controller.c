@@ -68,6 +68,7 @@ void *SCAN_FUNC(Person_T person) {
 			return UNLOCK_FUNC;
 		}
 	}
+	display(person);
 	return SCAN_FUNC;
 }
 
@@ -85,6 +86,7 @@ void *UNLOCK_FUNC(Person_T person) {
 			return OPEN_FUNC;
 		}
 	}
+	display(person);
 	return UNLOCK_FUNC;
 }
 
@@ -102,6 +104,7 @@ void *OPEN_FUNC(Person_T person) {
 			return WEIGHT_FUNC;
 		}
 	}
+	display(person);
 	return OPEN_FUNC;
 }
 
@@ -119,6 +122,7 @@ void *WEIGHT_FUNC(Person_T person) {
 			return CLOSE_FUNC;
 		}
 	}
+	display(person);
 	return WEIGHT_FUNC;
 }
 
@@ -136,6 +140,7 @@ void *CLOSE_FUNC(Person_T person) {
 			return GUARD_OPEN_LOC_FUNC;
 		}
 	}
+	display(person);
 	return CLOSE_FUNC;
 }
 void *GUARD_OPEN_LOC_FUNC(Person_T person){
@@ -152,8 +157,9 @@ void *GUARD_OPEN_LOC_FUNC(Person_T person){
 				return GUARD_EXIT_UNL_FUNC;
 			}
 		}
-		return GUARD_OPEN_LOC_FUNC;
-	}
+	display(person);
+	return GUARD_OPEN_LOC_FUNC;
+}
 
 
 void *GUARD_EXIT_UNL_FUNC(Person_T person) {
@@ -170,6 +176,7 @@ void *GUARD_EXIT_UNL_FUNC(Person_T person) {
 			return GUARD_EXIT_OPEN_FUNC;
 		}
 	}
+	display(person);
 	return GUARD_EXIT_UNL_FUNC;
 }
 
@@ -187,6 +194,7 @@ void *GUARD_EXIT_OPEN_FUNC(Person_T person) {
 			return EXIT_CLOSE_FUNC;
 		}
 	}
+	display(person);
 	return GUARD_EXIT_OPEN_FUNC;
 }
 
@@ -204,6 +212,7 @@ void *EXIT_CLOSE_FUNC(Person_T person) {
 			return GUARD_EXIT_LOCK_FUNC;
 		}
 	}
+	display(person);
 	return EXIT_CLOSE_FUNC;
 }
 
@@ -221,6 +230,7 @@ void *GUARD_EXIT_LOCK_FUNC(Person_T person) {
 			return SCAN_FUNC;
 		}
 	}
+	display(person);
 	return GUARD_EXIT_LOCK_FUNC;
 }
 //Do we have to have a function pointer for the exit state?
