@@ -62,16 +62,6 @@ int main(int argc, char *argv[]) {
 			printf("Enter your weight:\n");
 			scanf("%d", &person.Weight);
 		}
-		if (strcmp(person.msg, "grl") == 0) {
-			if (person.side == LEFT) {
-				person.side = 0;
-			}
-
-		} else if (strcmp(person.msg, "gll") == 0) {
-			if (person.side == RIGHT) {
-				person.side = 0;
-			}
-		}
 		if (MsgSend(coid, &person, sizeof(person), NULL, 0) == -1) {
 			fprintf(stderr, "Error during MsgSend\n");
 			perror(NULL);
