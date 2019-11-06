@@ -46,12 +46,21 @@ int main(int argc, char *argv[]) {
 	STATE stateFunc = &SCAN_FUNC;
 	while (1) {
 		rcvid = MsgReceive(chid, &person, sizeof(person), NULL);
+		if (strcmp(person.msg, "exit") == 0) {
+			stateFunc = &EXIT_FUNC;
+		}
 		stateFunc = (*stateFunc)(person);
-		MsgReply(rcvid, EOK, NULL,0);
+
 		if (strcmp(person.msg, "exit") == 0) {
 			break;
 		}
+		MsgReply(rcvid, EOK, NULL, 0);
+
 	}
+	MsgReply(rcvid, EOK, NULL, 0);
+	ConnectDetach(coid);
+	ChannelDestroy(chid);
+	return EXIT_SUCCESS;
 }
 
 void *SCAN_FUNC(Person_T person) {
@@ -67,6 +76,10 @@ void *SCAN_FUNC(Person_T person) {
 			display(person);
 			return UNLOCK_FUNC;
 		}
+	}else if(person.side == 0){
+		person.currentState == -1;
+		display(person);
+		return SCAN_FUNC;
 	}
 	display(person);
 	return SCAN_FUNC;
@@ -143,24 +156,23 @@ void *CLOSE_FUNC(Person_T person) {
 	display(person);
 	return CLOSE_FUNC;
 }
-void *GUARD_OPEN_LOC_FUNC(Person_T person){
+void *GUARD_OPEN_LOC_FUNC(Person_T person) {
 	if (person.side == LEFT) {
-			if (strcmp(person.msg, left_side[ENTER_LOCK]) == 0) {
-				person.currentState = ENTER_LOCK;
-				display(person);
-				return GUARD_EXIT_UNL_FUNC;
-			}
-		} else if (person.side == RIGHT) {
-			if (strcmp(person.msg, right_side[ENTER_LOCK]) == 0) {
-				person.currentState = ENTER_LOCK;
-				display(person);
-				return GUARD_EXIT_UNL_FUNC;
-			}
+		if (strcmp(person.msg, left_side[ENTER_LOCK]) == 0) {
+			person.currentState = ENTER_LOCK;
+			display(person);
+			return GUARD_EXIT_UNL_FUNC;
 		}
+	} else if (person.side == RIGHT) {
+		if (strcmp(person.msg, right_side[ENTER_LOCK]) == 0) {
+			person.currentState = ENTER_LOCK;
+			display(person);
+			return GUARD_EXIT_UNL_FUNC;
+		}
+	}
 	display(person);
 	return GUARD_OPEN_LOC_FUNC;
 }
-
 
 void *GUARD_EXIT_UNL_FUNC(Person_T person) {
 	if (person.side == LEFT) {
@@ -237,10 +249,11 @@ void *GUARD_EXIT_LOCK_FUNC(Person_T person) {
 //Can we exit the program, or just go back to the start state
 void *EXIT_FUNC(Person_T person) {
 	person.currentState = EXIT;
+	display(person);
 	return EXIT_FUNC;
 
 }
-void display(Person_T person){
+void display(Person_T person) {
 	//send the struct to display, use Null as a return message
-	MsgSend(coid,&person,sizeof(person),NULL,0);
+	MsgSend(coid, &person, sizeof(person), NULL, 0);
 }

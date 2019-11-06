@@ -12,7 +12,7 @@ int main(int argc, char *argv[]) {
 
 	Person_T person;
 	person.currentState = START;
-	
+
 	person.side = 0;
 
 	if (argc != 2) {
@@ -34,12 +34,13 @@ int main(int argc, char *argv[]) {
 		perror("Channel could not be attached\n");
 		exit(EXIT_FAILURE);
 	}
+	printf(
+			"Enter the event type (ls = left scan, rs = right scan, ws = weight scan, lo = left open, \n"
+			"ro = right open, lc = left close, rc = rights closed, gru = guard right unlock \n"
+			"glu = guard left unlock, grl = guard right lock, gll = guard left lock\n");
+	printf("Enter 'exit' to quit the program.\n");
 	while (person.currentState != 10) {
-		printf(
-				"Enter the event type (ls = left scan, rs = right scan, ws = weight scan, lo = left open, \n"
-						"ro = right open, lc = left close, rc = rights closed, gru = guard right unlock \n"
-						"glu = guard left unlock, grl = guard right lock, gll = guard left lock\n");
-		printf("Enter 'exit' to quit the program.\n");
+
 
 		scanf("%s", &person.msg);
 		if (strcmp(person.msg, "ls") == 0) {
@@ -68,6 +69,9 @@ int main(int argc, char *argv[]) {
 			fprintf(stderr, "Error during MsgSend\n");
 			perror(NULL);
 			exit(EXIT_FAILURE);
+		}
+		if(strcmp(person.msg, "exit")==0){
+			break;
 		}
 
 	}

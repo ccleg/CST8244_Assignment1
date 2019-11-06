@@ -1,6 +1,0 @@
-18:31:37 **** Clean-only build of configuration x86_64-debug for project wtfff ****
-make -j4 clean 
-rm -fr build/x86_64-debug
-
-18:31:38 Build Finished (took 161ms)
-

@@ -1,7 +1,7 @@
-19:00:23 **** Build of configuration x86_64-debug for project des_inputs ****
+16:32:52 **** Build of configuration x86_64-debug for project des_inputs ****
 make -j4 all 
 qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_inputs.d,-MT,build/x86_64-debug/src/des_inputs.o -o build/x86_64-debug/src/des_inputs.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_inputs.c
 qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_inputs   build/x86_64-debug/src/des_inputs.o  
 
-19:00:24 Build Finished (took 371ms)
+16:32:52 Build Finished (took 336ms)
 

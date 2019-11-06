@@ -29,6 +29,9 @@ int main (int argc, char* argv[])
 
 	while (1) {
 		rcvid = MsgReceive (chid, &person, sizeof(person), NULL);
+		if(person.currentState == EXIT){
+			break;
+		}
 		if(person.currentState == previous_state){
 			printf("Invalid state\n");
 		}
