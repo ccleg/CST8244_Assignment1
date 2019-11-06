@@ -5537,3 +5537,439 @@ src/des_inputs.c:33:6: warning: 'rplyMsg' may be used uninitialized in this func
    if(MsgSend(coid, input_msg, strlen(input_msg) + 1, rplyMsg, sizeof (rplyMsg)) == -1){
       ^
 qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_inputs   build/x86_64-debug/src/des_inputs.o  
+18:15:17 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:15:18 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_display.d,-MT,build/x86_64-debug/src/des_display.o -o build/x86_64-debug/src/des_display.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_display.c
+src/des_display.c: In function 'main':
+src/des_display.c:40:23: error: 'right_msg' undeclared (first use in this function)
+          printf("%s", right_msg[person.currentState]);
+                       ^
+src/des_display.c:40:23: note: each undeclared identifier is reported only once for each function it appears in
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_display.o' failed
+make: *** [build/x86_64-debug/src/des_display.o] Error 1
+18:15:19 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_inputs   build/x86_64-debug/src/des_inputs.o  
+18:15:59 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_display.d,-MT,build/x86_64-debug/src/des_display.o -o build/x86_64-debug/src/des_display.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_display.c
+In file included from src/des_display.c:11:0:
+src/../../des_controller/src/ASS1.h:62:45: error: 'person' undeclared here (not in a function)
+   "Person has scanned their Id, Id = %d.\n",person.ID,
+                                             ^
+src/../../des_controller/src/ASS1.h:68:3: warning: excess elements in array initializer
+   "Right door unlocked.\n",
+   ^
+src/../../des_controller/src/ASS1.h:68:3: note: (near initialization for 'left_msg')
+src/../../des_controller/src/ASS1.h:69:3: warning: excess elements in array initializer
+   "Right door opened.\n",
+   ^
+src/../../des_controller/src/ASS1.h:69:3: note: (near initialization for 'left_msg')
+src/../../des_controller/src/ASS1.h:70:3: warning: excess elements in array initializer
+   "Right door closed.\n",
+   ^
+src/../../des_controller/src/ASS1.h:70:3: note: (near initialization for 'left_msg')
+src/../../des_controller/src/ASS1.h:71:3: warning: excess elements in array initializer
+   "Right door locked by GUard.\n"
+   ^
+src/../../des_controller/src/ASS1.h:71:3: note: (near initialization for 'left_msg')
+src/../../des_controller/src/ASS1.h:80:3: warning: excess elements in array initializer
+   "Left door unlocked.\n",
+   ^
+src/../../des_controller/src/ASS1.h:80:3: note: (near initialization for 'right_msg')
+src/../../des_controller/src/ASS1.h:81:3: warning: excess elements in array initializer
+   "Left door opened.\n",
+   ^
+src/../../des_controller/src/ASS1.h:81:3: note: (near initialization for 'right_msg')
+src/../../des_controller/src/ASS1.h:82:3: warning: excess elements in array initializer
+   "Left door closed.\n",
+   ^
+src/../../des_controller/src/ASS1.h:82:3: note: (near initialization for 'right_msg')
+src/../../des_controller/src/ASS1.h:83:3: warning: excess elements in array initializer
+   "Left door locked by Guard.\n"
+   ^
+src/../../des_controller/src/ASS1.h:83:3: note: (near initialization for 'right_msg')
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_display.o' failed
+make: *** [build/x86_64-debug/src/des_display.o] Error 1
+18:16:26 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+In file included from src/des_controller.c:14:0:
+src/ASS1.h:62:45: error: 'person' undeclared here (not in a function)
+   "Person has scanned their Id, Id = %d.\n",person.ID,
+                                             ^
+src/ASS1.h:70:3: warning: excess elements in array initializer
+   "Right door closed.\n",
+   ^
+src/ASS1.h:70:3: note: (near initialization for 'left_msg')
+src/ASS1.h:71:3: warning: excess elements in array initializer
+   "Right door locked by GUard.\n"
+   ^
+src/ASS1.h:71:3: note: (near initialization for 'left_msg')
+src/ASS1.h:82:3: warning: excess elements in array initializer
+   "Left door closed.\n",
+   ^
+src/ASS1.h:82:3: note: (near initialization for 'right_msg')
+src/ASS1.h:83:3: warning: excess elements in array initializer
+   "Left door locked by Guard.\n"
+   ^
+src/ASS1.h:83:3: note: (near initialization for 'right_msg')
+src/des_controller.c: In function 'main':
+src/des_controller.c:32:8: warning: unused variable 'display_pid' [-Wunused-variable]
+  pid_t display_pid = atoi(argv[1]);
+        ^
+src/des_controller.c: At top level:
+src/des_controller.c:144:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_controller.o' failed
+make: *** [build/x86_64-debug/src/des_controller.o] Error 1
+18:16:26 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_display.d,-MT,build/x86_64-debug/src/des_display.o -o build/x86_64-debug/src/des_display.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_display.c
+In file included from src/des_display.c:11:0:
+src/../../des_controller/src/ASS1.h:62:45: error: 'person' undeclared here (not in a function)
+   "Person has scanned their Id, Id = %d.\n",person.ID,
+                                             ^
+src/../../des_controller/src/ASS1.h:70:3: warning: excess elements in array initializer
+   "Right door closed.\n",
+   ^
+src/../../des_controller/src/ASS1.h:70:3: note: (near initialization for 'left_msg')
+src/../../des_controller/src/ASS1.h:71:3: warning: excess elements in array initializer
+   "Right door locked by GUard.\n"
+   ^
+src/../../des_controller/src/ASS1.h:71:3: note: (near initialization for 'left_msg')
+src/../../des_controller/src/ASS1.h:82:3: warning: excess elements in array initializer
+   "Left door closed.\n",
+   ^
+src/../../des_controller/src/ASS1.h:82:3: note: (near initialization for 'right_msg')
+src/../../des_controller/src/ASS1.h:83:3: warning: excess elements in array initializer
+   "Left door locked by Guard.\n"
+   ^
+src/../../des_controller/src/ASS1.h:83:3: note: (near initialization for 'right_msg')
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_display.o' failed
+make: *** [build/x86_64-debug/src/des_display.o] Error 1
+18:16:27 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:17:01 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+In file included from src/des_controller.c:14:0:
+src/ASS1.h:74:45: error: 'person' undeclared here (not in a function)
+   "Person has scanned their Id, Id = %d.\n",person.ID,
+                                             ^
+src/ASS1.h:82:3: warning: excess elements in array initializer
+   "Left door closed.\n",
+   ^
+src/ASS1.h:82:3: note: (near initialization for 'right_msg')
+src/ASS1.h:83:3: warning: excess elements in array initializer
+   "Left door locked by Guard.\n"
+   ^
+src/ASS1.h:83:3: note: (near initialization for 'right_msg')
+src/des_controller.c: In function 'main':
+src/des_controller.c:32:8: warning: unused variable 'display_pid' [-Wunused-variable]
+  pid_t display_pid = atoi(argv[1]);
+        ^
+src/des_controller.c: At top level:
+src/des_controller.c:144:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+make: *** [build/x86_64-debug/src/des_controller.o] Error 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_controller.o' failed
+18:17:01 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_display.d,-MT,build/x86_64-debug/src/des_display.o -o build/x86_64-debug/src/des_display.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_display.c
+In file included from src/des_display.c:11:0:
+src/../../des_controller/src/ASS1.h:74:45: error: 'person' undeclared here (not in a function)
+   "Person has scanned their Id, Id = %d.\n",person.ID,
+                                             ^
+src/../../des_controller/src/ASS1.h:82:3: warning: excess elements in array initializer
+   "Left door closed.\n",
+   ^
+src/../../des_controller/src/ASS1.h:82:3: note: (near initialization for 'right_msg')
+src/../../des_controller/src/ASS1.h:83:3: warning: excess elements in array initializer
+   "Left door locked by Guard.\n"
+   ^
+src/../../des_controller/src/ASS1.h:83:3: note: (near initialization for 'right_msg')
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_display.o' failed
+make: *** [build/x86_64-debug/src/des_display.o] Error 1
+18:17:02 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:17:19 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+src/des_controller.c: In function 'main':
+src/des_controller.c:32:8: warning: unused variable 'display_pid' [-Wunused-variable]
+  pid_t display_pid = atoi(argv[1]);
+        ^
+src/des_controller.c: At top level:
+src/des_controller.c:144:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_controller.o' failed
+make: *** [build/x86_64-debug/src/des_controller.o] Error 1
+18:17:19 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_display.d,-MT,build/x86_64-debug/src/des_display.o -o build/x86_64-debug/src/des_display.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_display.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_display   build/x86_64-debug/src/des_display.o  
+18:17:20 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:17:36 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+src/des_controller.c: In function 'main':
+src/des_controller.c:32:8: warning: unused variable 'display_pid' [-Wunused-variable]
+  pid_t display_pid = atoi(argv[1]);
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_controller   build/x86_64-debug/src/des_controller.o  
+18:17:37 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:17:37 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:20:28 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_display.d,-MT,build/x86_64-debug/src/des_display.o -o build/x86_64-debug/src/des_display.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_display.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_display   build/x86_64-debug/src/des_display.o  
+18:22:22 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_controller   build/x86_64-debug/src/des_controller.o  
+18:22:37 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:22:47 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:23:32 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:23:52 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:24:08 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:25:39 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+src/des_controller.c: In function 'main':
+src/des_controller.c:32:8: warning: unused variable 'display_pid' [-Wunused-variable]
+  pid_t display_pid = atoi(argv[1]);
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_controller   build/x86_64-debug/src/des_controller.o  
+18:26:02 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:27:24 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:27:46 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:28:09 **** Clean-only build of configuration x86_64-debug for project des_controller ****
+make -j4 clean 
+rm -fr build/x86_64-debug
+rm: cannot remove 'build/x86_64-debug/des_controller': Device or resource busy
+Makefile:66: recipe for target 'clean' failed
+make: *** [clean] Error 1
+18:28:09 **** Clean-only build of configuration x86_64-debug for project des_display ****
+make -j4 clean 
+rm -fr build/x86_64-debug
+18:28:09 **** Clean-only build of configuration x86_64-debug for project des_inputs ****
+make -j4 clean 
+rm -fr build/x86_64-debug
+rm: cannot remove 'build/x86_64-debug/des_inputs': Device or resource busy
+make: *** [clean] Error 1
+Makefile:66: recipe for target 'clean' failed
+18:28:11 **** Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+src/des_controller.c: In function 'main':
+src/des_controller.c:32:8: warning: unused variable 'display_pid' [-Wunused-variable]
+  pid_t display_pid = atoi(argv[1]);
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_controller   build/x86_64-debug/src/des_controller.o  
+18:28:12 **** Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_display.d,-MT,build/x86_64-debug/src/des_display.o -o build/x86_64-debug/src/des_display.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_display.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_display   build/x86_64-debug/src/des_display.o  
+18:28:12 **** Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_inputs.d,-MT,build/x86_64-debug/src/des_inputs.o -o build/x86_64-debug/src/des_inputs.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_inputs.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_inputs   build/x86_64-debug/src/des_inputs.o  
+18:28:17 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:28:39 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:34:38 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:34:51 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_controller   build/x86_64-debug/src/des_controller.o  
+18:35:04 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:44:09 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:44:45 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_display.d,-MT,build/x86_64-debug/src/des_display.o -o build/x86_64-debug/src/des_display.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_display.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_display   build/x86_64-debug/src/des_display.o  
+18:44:57 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+src/des_controller.c: In function 'main':
+src/des_controller.c:32:8: warning: unused variable 'display_pid' [-Wunused-variable]
+  pid_t display_pid = atoi(argv[1]);
+        ^
+src/des_controller.c: At top level:
+src/des_controller.c:157:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+cc: C:/Users/Cory/qnx700/host/win64/x86_64/usr/lib/gcc/x86_64-pc-nto-qnx7.0.0/5.4.0/cc1 caught signal 1
+Makefile:55: recipe for target 'build/x86_64-debug/src/des_controller.o' failed
+make: *** [build/x86_64-debug/src/des_controller.o] Error 1
+18:45:15 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+src/des_controller.c: In function 'main':
+src/des_controller.c:32:8: warning: unused variable 'display_pid' [-Wunused-variable]
+  pid_t display_pid = atoi(argv[1]);
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_controller   build/x86_64-debug/src/des_controller.o  
+18:45:29 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:47:10 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:47:20 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+src/des_controller.c: In function 'main':
+src/des_controller.c:32:8: warning: unused variable 'display_pid' [-Wunused-variable]
+  pid_t display_pid = atoi(argv[1]);
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_controller   build/x86_64-debug/src/des_controller.o  
+18:47:32 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:48:52 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_controller   build/x86_64-debug/src/des_controller.o  
+18:49:03 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:50:46 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_display.d,-MT,build/x86_64-debug/src/des_display.o -o build/x86_64-debug/src/des_display.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_display.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_display   build/x86_64-debug/src/des_display.o  
+18:51:40 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:51:57 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:54:16 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+src/des_controller.c: In function 'main':
+src/des_controller.c:32:8: warning: unused variable 'display_pid' [-Wunused-variable]
+  pid_t display_pid = atoi(argv[1]);
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_controller   build/x86_64-debug/src/des_controller.o  
+18:54:24 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:54:45 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:56:55 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_display.d,-MT,build/x86_64-debug/src/des_display.o -o build/x86_64-debug/src/des_display.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_display.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_display   build/x86_64-debug/src/des_display.o  
+18:57:11 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+src/des_controller.c: In function 'main':
+src/des_controller.c:32:8: warning: unused variable 'display_pid' [-Wunused-variable]
+  pid_t display_pid = atoi(argv[1]);
+        ^
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_controller   build/x86_64-debug/src/des_controller.o  
+18:57:32 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_inputs.d,-MT,build/x86_64-debug/src/des_inputs.o -o build/x86_64-debug/src/des_inputs.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_inputs.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_inputs   build/x86_64-debug/src/des_inputs.o  
+18:58:31 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_controller   build/x86_64-debug/src/des_controller.o  
+18:58:31 **** Incremental Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+18:58:32 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+make: Nothing to be done for 'all'.
+19:00:03 **** Clean-only build of configuration x86_64-debug for project des_controller ****
+make -j4 clean 
+rm -fr build/x86_64-debug
+19:00:03 **** Clean-only build of configuration x86_64-debug for project des_display ****
+make -j4 clean 
+rm -fr build/x86_64-debug
+19:00:03 **** Clean-only build of configuration x86_64-debug for project des_inputs ****
+make -j4 clean 
+rm -fr build/x86_64-debug
+19:00:09 **** Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_controller   build/x86_64-debug/src/des_controller.o  
+19:00:10 **** Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_display.d,-MT,build/x86_64-debug/src/des_display.o -o build/x86_64-debug/src/des_display.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_display.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_display   build/x86_64-debug/src/des_display.o  
+19:00:11 **** Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_inputs.d,-MT,build/x86_64-debug/src/des_inputs.o -o build/x86_64-debug/src/des_inputs.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_inputs.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_inputs   build/x86_64-debug/src/des_inputs.o  
+19:00:16 **** Clean-only build of configuration x86_64-debug for project des_controller ****
+make -j4 clean 
+rm -fr build/x86_64-debug
+19:00:16 **** Clean-only build of configuration x86_64-debug for project des_display ****
+make -j4 clean 
+rm -fr build/x86_64-debug
+19:00:16 **** Clean-only build of configuration x86_64-debug for project des_inputs ****
+make -j4 clean 
+rm -fr build/x86_64-debug
+19:00:22 **** Build of configuration x86_64-debug for project des_controller ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_controller   build/x86_64-debug/src/des_controller.o  
+19:00:23 **** Build of configuration x86_64-debug for project des_display ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_display.d,-MT,build/x86_64-debug/src/des_display.o -o build/x86_64-debug/src/des_display.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_display.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_display   build/x86_64-debug/src/des_display.o  
+19:00:23 **** Build of configuration x86_64-debug for project des_inputs ****
+make -j4 all 
+qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_inputs.d,-MT,build/x86_64-debug/src/des_inputs.o -o build/x86_64-debug/src/des_inputs.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_inputs.c
+qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_inputs   build/x86_64-debug/src/des_inputs.o  

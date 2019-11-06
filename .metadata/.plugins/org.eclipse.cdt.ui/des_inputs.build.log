@@ -1,18 +1,7 @@
-19:29:11 **** Incremental Build of configuration x86_64-debug for project des_inputs ****
+19:00:23 **** Build of configuration x86_64-debug for project des_inputs ****
 make -j4 all 
 qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_inputs.d,-MT,build/x86_64-debug/src/des_inputs.o -o build/x86_64-debug/src/des_inputs.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_inputs.c
-src/des_inputs.c: In function 'main':
-src/des_inputs.c:39:14: warning: passing argument 1 of 'strlen' makes pointer from integer without a cast [-Wint-conversion]
-   if(strlen (rplyMsg > 0)) {
-              ^
-In file included from src/des_inputs.c:6:0:
-C:/Users/Cory/qnx700/target/qnx7/usr/include/string.h:80:15: note: expected 'const char *' but argument is of type 'int'
- extern size_t strlen(const char *__s);
-               ^
-src/des_inputs.c:33:6: warning: 'rplyMsg' may be used uninitialized in this function [-Wmaybe-uninitialized]
-   if(MsgSend(coid, input_msg, strlen(input_msg) + 1, rplyMsg, sizeof (rplyMsg)) == -1){
-      ^
 qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_inputs   build/x86_64-debug/src/des_inputs.o  
 
-19:29:11 Build Finished (took 280ms)
+19:00:24 Build Finished (took 371ms)
 

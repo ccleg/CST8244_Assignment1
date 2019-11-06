@@ -1,22 +1,7 @@
-19:28:42 **** Incremental Build of configuration x86_64-debug for project des_controller ****
+19:00:22 **** Build of configuration x86_64-debug for project des_controller ****
 make -j4 all 
 qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
-src/des_controller.c: In function 'main':
-src/des_controller.c:31:6: warning: variable 'error' set but not used [-Wunused-but-set-variable]
-  int error;
-      ^
-src/des_controller.c:29:8: warning: unused variable 'display_pid' [-Wunused-variable]
-  pid_t display_pid = atoi(argv[1]);
-        ^
-src/des_controller.c: In function 'setStartSide':
-src/des_controller.c:85:1: warning: control reaches end of non-void function [-Wreturn-type]
- }
- ^
-src/des_controller.c: In function 'SCAN_FUNC':
-src/des_controller.c:94:2: warning: 'id' is used uninitialized in this function [-Wuninitialized]
-  scanf("%d", id);
-  ^
 qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_controller   build/x86_64-debug/src/des_controller.o  
 
-19:28:43 Build Finished (took 318ms)
+19:00:22 Build Finished (took 400ms)
 
