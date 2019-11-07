@@ -3,11 +3,11 @@
 # Title { DES Door entry system }
 
 ## Author { 
-Cory Chenier chen0608@algonquinlive.com 040868909
-Vicknesh Babu babu0016@algonquinlive.com 040875391
+Cory 
+Vicknesh 
 }
 ## Contributions {
-### Cory Chenier: 
+### Cory : 
 Wrote most of Des_inputs, including connection and 
 message passing, conditional statments to check user input
 and set the state machine in motion.
