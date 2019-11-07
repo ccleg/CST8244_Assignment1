@@ -1,7 +1,6 @@
-17:40:04 **** Build of configuration x86_64-debug for project des_controller ****
-make -j4 all 
-qcc -Vgcc_ntox86_64 -c -Wp,-MMD,build/x86_64-debug/src/des_controller.d,-MT,build/x86_64-debug/src/des_controller.o -o build/x86_64-debug/src/des_controller.o  -Wall -fmessage-length=0 -g -O0 -fno-builtin  src/des_controller.c
-qcc -Vgcc_ntox86_64 -o build/x86_64-debug/des_controller   build/x86_64-debug/src/des_controller.o  
+19:06:48 **** Clean-only build of configuration x86_64-debug for project des_controller ****
+make -j4 clean 
+rm -fr build/x86_64-debug
 
-17:40:04 Build Finished (took 355ms)
+19:06:49 Build Finished (took 598ms)
 
